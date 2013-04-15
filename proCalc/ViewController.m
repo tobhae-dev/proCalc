@@ -77,6 +77,8 @@
             operant = self.waitingOperant / operant;
         } else {
             NSLog(@"Fehler: Division durch Null!");
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Division durch Null!" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+            [alert show];
             return @"Fehler";
         }
     }
