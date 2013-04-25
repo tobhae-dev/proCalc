@@ -41,7 +41,7 @@
         self.userIsTypingDigit = YES;
     }
     self.resultDisplay.text = [self.resultDisplay.text stringByAppendingString:[button currentTitle]];
-    self.computationDisplay.text=[self.computationDisplay.text stringByAppendingString:[button currentTitle]];
+    self.computationDisplay.text = [self.resultDisplay.text stringByAppendingString:[button currentTitle]];
 }
 
 - (IBAction)commaPressed:(id)sender {
@@ -49,8 +49,6 @@
     
     if ([self.resultDisplay.text rangeOfString:@"."].location == NSNotFound) {
         self.resultDisplay.text = [self.resultDisplay.text stringByAppendingString:@"."];
-        self.computationDisplay.text = [self.computationDisplay.text stringByAppendingString:@"."];
-        
     }
 }
 
@@ -64,32 +62,22 @@
 
 - (NSString*) performOperation: (NSString*) operation withOperant: (double) operant
 {
-    if ([operation isEqualToString:@"DEL"]) {
-        NSString *test=@"9+9";
-        NSInteger bla2=test.
-        
-        
-        return
-        
+    if ([operation isEqualToString:@"C"]) {
+        return @"";
     } else if ([operation isEqualToString:@"AC"]) {
         self.waitingOperant = 0.0;
         self.waitingOperation = nil;
-        self.resultDisplay.text = @"";
-        self.computationDisplay.text = @"";
-        return @"";
+        self.computationDisplay.text=@"";
+        return @"0";
     } else if ([self.waitingOperation isEqualToString:@"+"]) {
         operant = self.waitingOperant + operant;
-        self.computationDisplay.text = [self.computationDisplay.text stringByAppendingString:@"+"];
-    } else if ([self.waitingOperation isEqualToString:@"−"]) {
+    } else if ([self.waitingOperation isEqualToString:@"-"]) {
         operant = self.waitingOperant - operant;
-        self.computationDisplay.text = [self.computationDisplay.text stringByAppendingString:@"-"];
     } else if ([self.waitingOperation isEqualToString:@"×"]) {
         operant = self.waitingOperant * operant;
-        self.computationDisplay.text = [self.computationDisplay.text stringByAppendingString:@"*"];
     } else if ([self.waitingOperation isEqualToString:@"÷"]) {
         if (operant != 0.0) {
             operant = self.waitingOperant / operant;
-            self.computationDisplay.text = [self.computationDisplay.text stringByAppendingString:@"/"];
         } else {
             NSLog(@"Fehler: Division durch Null!");
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Division durch Null!" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
