@@ -1256,6 +1256,21 @@
     <resources>
         <image name="Funktionsgraph1.png" width="627" height="627"/>
     </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="commaPressed:"/>
+                <relationship kind="action" name="digitPressed:"/>
+                <relationship kind="action" name="operationPressed:"/>
+                <relationship kind="outlet" name="computationDisplay" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="resultDisplay" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
