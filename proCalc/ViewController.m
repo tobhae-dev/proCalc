@@ -68,7 +68,7 @@
         return @"";
     } else if ([self.waitingOperation isEqualToString:@"+"]) {
         operant = self.waitingOperant + operant;
-    } else if ([self.waitingOperation isEqualToString:@"-"]) {
+    } else if ([self.waitingOperation isEqualToString:@"−"]) {
         operant = self.waitingOperant - operant;
     } else if ([self.waitingOperation isEqualToString:@"×"]) {
         operant = self.waitingOperant * operant;
