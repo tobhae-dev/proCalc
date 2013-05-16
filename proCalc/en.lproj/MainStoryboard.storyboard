@@ -260,6 +260,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="operationPressed:" destination="2" eventType="touchUpInside" id="wR0-La-9H1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="131-uh-loJ">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -274,6 +277,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="operationPressed:" destination="2" eventType="touchUpInside" id="z17-xq-y7Z"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aS6-Xu-3lW">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -366,7 +372,7 @@
                                     <constraint firstAttribute="width" constant="64" type="user" id="6KG-3i-XKJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="DEL">
+                                <state key="normal" title="C">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -404,6 +410,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="mc_button:" destination="2" eventType="touchUpInside" id="GNP-cR-c26"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q66-7W-bps">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -418,6 +427,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="m_plus:" destination="2" eventType="touchUpInside" id="5OU-yN-X3z"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIv-Mf-sDM">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -432,6 +444,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="m_minus:" destination="2" eventType="touchUpInside" id="MZU-xJ-Zxm"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOe-Pm-e2r">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -446,6 +461,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="m_zeige:" destination="2" eventType="touchUpInside" id="Zio-RE-oDh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxv-J0-EdQ">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -460,9 +478,13 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="operationPressed:" destination="2" eventType="touchUpInside" id="coK-Xd-6ee"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.12649987289187267" green="0.17286808386676653" blue="0.27359693877551017" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Tyt-CS-GL3" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="1Dk-pr-d8V"/>
                             <constraint firstAttribute="trailing" secondItem="4CZ-j4-rR1" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="4Df-Nv-FPC"/>
@@ -529,6 +551,10 @@
                             <constraint firstItem="q66-7W-bps" firstAttribute="leading" secondItem="fuJ-oZ-pac" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="zQ5-mR-4fi"/>
                             <constraint firstItem="xpL-Qt-ryL" firstAttribute="top" secondItem="GQP-xC-RoS" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="zTW-ka-CPx"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="t1j-bP-Xor" appends="YES" id="OKY-gk-3aC"/>
+                            <outletCollection property="gestureRecognizers" destination="Vbx-BE-rXd" appends="YES" id="roM-2M-G3u"/>
+                        </connections>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
@@ -538,8 +564,18 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="t1j-bP-Xor">
+                    <connections>
+                        <segue destination="Sdp-aQ-qaw" kind="modal" id="mv1-6v-THt"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="Vbx-BE-rXd">
+                    <connections>
+                        <segue destination="Sdp-aQ-qaw" kind="modal" id="l3P-bC-Z9d"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="54" y="107"/>
+            <point key="canvasLocation" x="102" y="90"/>
         </scene>
         <!--View Controller - Scientific Calculator-->
         <scene sceneID="Eif-Kd-nQJ">
@@ -748,7 +784,7 @@
                                     <constraint firstAttribute="height" constant="43" type="user" id="oH2-q7-zHr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <state key="normal" title="DEL">
+                                <state key="normal" title="C">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -1218,6 +1254,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="QJc-kf-cGm" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="1s5-f9-Ocp"/>
                             <constraint firstItem="Nyy-IH-bcU" firstAttribute="top" secondItem="dHd-AN-w7v" secondAttribute="top" constant="20" symbolic="YES" type="default" id="2mJ-go-qNg"/>
@@ -1245,20 +1282,57 @@
                             <constraint firstItem="eza-e9-Nhq" firstAttribute="top" secondItem="Pid-So-kNl" secondAttribute="top" type="default" id="w4n-La-wjh"/>
                             <constraint firstAttribute="trailing" secondItem="Pid-So-kNl" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="xPn-3A-emF"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="QRM-no-T8M" appends="YES" id="8dp-vq-YJU"/>
+                            <outletCollection property="gestureRecognizers" destination="8cG-7A-jos" appends="YES" id="XYi-Ai-OwI"/>
+                        </connections>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YgL-vi-wFe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="QRM-no-T8M">
+                    <connections>
+                        <segue destination="2" kind="modal" id="YFE-IL-RkA"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="8cG-7A-jos">
+                    <connections>
+                        <segue destination="2" kind="modal" id="Ud1-fA-oX3"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="437" y="107"/>
+            <point key="canvasLocation" x="589" y="107"/>
         </scene>
     </scenes>
     <resources>
         <image name="Funktionsgraph1.png" width="627" height="627"/>
     </resources>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="commaPressed:"/>
+                <relationship kind="action" name="digitPressed:"/>
+                <relationship kind="action" name="m_minus:"/>
+                <relationship kind="action" name="m_plus:"/>
+                <relationship kind="action" name="m_zeige:"/>
+                <relationship kind="action" name="mc_button:"/>
+                <relationship kind="action" name="operationPressed:"/>
+                <relationship kind="outlet" name="computationDisplay" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="resultDisplay" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="YFE-IL-RkA"/>
+        <segue reference="mv1-6v-THt"/>
+    </inferredMetricsTieBreakers>
 </document>
