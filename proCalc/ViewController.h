@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+
 @property (weak, nonatomic) IBOutlet UILabel *resultDisplay;
 @property (weak, nonatomic) IBOutlet UILabel *computationDisplay;
 
@@ -19,6 +20,12 @@
 - (IBAction)digitPressed:(id)sender;
 - (IBAction)commaPressed:(id)sender;
 - (IBAction)operationPressed:(id)sender;
+- (IBAction)mc_button:(id)sender;
+- (IBAction)m_plus:(id)sender;
+- (IBAction)m_zeige:(id)sender;
+- (IBAction)m_minus:(id)sender;
+
+
 
 - (NSString*) performOperation: (NSString*) operation withOperant: (double) operant;
 

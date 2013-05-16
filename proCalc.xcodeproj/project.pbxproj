@@ -40,6 +40,7 @@
 		0E6406D41729838200CC6107 /* DDTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6406BE1729838200CC6107 /* DDTypes.m */; };
 		0E6406D51729838200CC6107 /* NSString+DDMathParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6406C01729838200CC6107 /* NSString+DDMathParsing.m */; };
 		0E96E4A3171816E1004CF2AF /* Funktionsgraph1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E96E4A2171816E1004CF2AF /* Funktionsgraph1.png */; };
+		DD7E6F3C17298C0900438777 /* taschenrechner.png in Resources */ = {isa = PBXBuildFile; fileRef = DD7E6F3B17298C0900438777 /* taschenrechner.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +106,7 @@
 		0E6406BF1729838200CC6107 /* NSString+DDMathParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DDMathParsing.h"; sourceTree = "<group>"; };
 		0E6406C01729838200CC6107 /* NSString+DDMathParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DDMathParsing.m"; sourceTree = "<group>"; };
 		0E96E4A2171816E1004CF2AF /* Funktionsgraph1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Funktionsgraph1.png; sourceTree = "<group>"; };
+		DD7E6F3B17298C0900438777 /* taschenrechner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = taschenrechner.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 		0E21BC19170E2640001AE5AE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DD7E6F3B17298C0900438777 /* taschenrechner.png */,
 				0E96E4A2171816E1004CF2AF /* Funktionsgraph1.png */,
 				0E21BC1A170E2640001AE5AE /* proCalc-Info.plist */,
 				0E21BC1B170E2640001AE5AE /* InfoPlist.strings */,
@@ -286,6 +289,7 @@
 				0E21BC29170E2640001AE5AE /* Default-568h@2x.png in Resources */,
 				0E21BC2C170E2640001AE5AE /* MainStoryboard.storyboard in Resources */,
 				0E96E4A3171816E1004CF2AF /* Funktionsgraph1.png in Resources */,
+				DD7E6F3C17298C0900438777 /* taschenrechner.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
