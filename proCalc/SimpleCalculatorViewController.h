@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  ViewController.h
 //  proCalc
 //
 //  Created by Tobias Hähnel on 04.04.13.
@@ -7,12 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Calculator.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
+@interface SimpleCalculatorViewController : UIViewController
 
 
-     
 
 @end

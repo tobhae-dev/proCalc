@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E1EA9411748292700012C3F /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1EA9401748292700012C3F /* Calculator.m */; };
+		0E1EA9C4174A7D8F00012C3F /* ComplexCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1EA9C3174A7D8F00012C3F /* ComplexCalculatorViewController.m */; };
+		0E1EA9C7174A7FB000012C3F /* GraphPlotterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1EA9C6174A7FB000012C3F /* GraphPlotterViewController.m */; };
+		0E1EA9CA174B424B00012C3F /* GraphPlotterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1EA9C9174B424B00012C3F /* GraphPlotterView.m */; };
 		0E21BC13170E2640001AE5AE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E21BC12170E2640001AE5AE /* UIKit.framework */; };
 		0E21BC15170E2640001AE5AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E21BC14170E2640001AE5AE /* Foundation.framework */; };
 		0E21BC17170E2640001AE5AE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E21BC16170E2640001AE5AE /* CoreGraphics.framework */; };
@@ -17,33 +21,38 @@
 		0E21BC27170E2640001AE5AE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E21BC26170E2640001AE5AE /* Default@2x.png */; };
 		0E21BC29170E2640001AE5AE /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E21BC28170E2640001AE5AE /* Default-568h@2x.png */; };
 		0E21BC2C170E2640001AE5AE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E21BC2A170E2640001AE5AE /* MainStoryboard.storyboard */; };
-		0E21BC2F170E2640001AE5AE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E21BC2E170E2640001AE5AE /* ViewController.m */; };
-		0E6406C11729838200CC6107 /* _DDFunctionContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6406951729838200CC6107 /* _DDFunctionContainer.m */; };
-		0E6406C21729838200CC6107 /* _DDFunctionExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6406971729838200CC6107 /* _DDFunctionExpression.m */; };
-		0E6406C31729838200CC6107 /* _DDFunctionTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6406991729838200CC6107 /* _DDFunctionTerm.m */; };
-		0E6406C41729838200CC6107 /* _DDFunctionUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E64069B1729838200CC6107 /* _DDFunctionUtilities.m */; };
-		0E6406C51729838200CC6107 /* _DDGroupTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E64069D1729838200CC6107 /* _DDGroupTerm.m */; };
-		0E6406C61729838200CC6107 /* _DDNumberExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E64069F1729838200CC6107 /* _DDNumberExpression.m */; };
-		0E6406C71729838200CC6107 /* _DDNumberTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6406A11729838200CC6107 /* _DDNumberTerm.m */; };
-		0E6406C81729838200CC6107 /* _DDOperatorInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6406A31729838200CC6107 /* _DDOperatorInfo.m */; };
-		0E6406C91729838200CC6107 /* _DDOperatorTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6406A51729838200CC6107 /* _DDOperatorTerm.m */; };
-		0E6406CA1729838200CC6107 /* _DDParserTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6406A71729838200CC6107 /* _DDParserTerm.m */; };
-		0E6406CB1729838200CC6107 /* _DDRewriteRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6406A91729838200CC6107 /* _DDRewriteRule.m */; };
-		0E6406CC1729838200CC6107 /* _DDVariableExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6406AB1729838200CC6107 /* _DDVariableExpression.m */; };
-		0E6406CD1729838200CC6107 /* _DDVariableTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6406AD1729838200CC6107 /* _DDVariableTerm.m */; };
-		0E6406CE1729838200CC6107 /* DDExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6406AF1729838200CC6107 /* DDExpression.m */; };
-		0E6406CF1729838200CC6107 /* DDMathEvaluator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6406B21729838200CC6107 /* DDMathEvaluator.m */; };
-		0E6406D01729838200CC6107 /* DDMathStringToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6406B61729838200CC6107 /* DDMathStringToken.m */; };
-		0E6406D11729838200CC6107 /* DDMathStringTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6406B81729838200CC6107 /* DDMathStringTokenizer.m */; };
-		0E6406D21729838200CC6107 /* DDParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6406BA1729838200CC6107 /* DDParser.m */; };
-		0E6406D31729838200CC6107 /* DDParserTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6406BC1729838200CC6107 /* DDParserTypes.m */; };
-		0E6406D41729838200CC6107 /* DDTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6406BE1729838200CC6107 /* DDTypes.m */; };
-		0E6406D51729838200CC6107 /* NSString+DDMathParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6406C01729838200CC6107 /* NSString+DDMathParsing.m */; };
-		0E96E4A3171816E1004CF2AF /* Funktionsgraph1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E96E4A2171816E1004CF2AF /* Funktionsgraph1.png */; };
+		0E21BC2F170E2640001AE5AE /* SimpleCalculatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E21BC2E170E2640001AE5AE /* SimpleCalculatorViewController.m */; };
+		0EC074BD174CCB6700194B8D /* proCalc_MemoryButton_smpl.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EC074BA174CCB6700194B8D /* proCalc_MemoryButton_smpl.png */; };
+		0EC074BE174CCB6700194B8D /* proCalc_MemoryButton_smpl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EC074BB174CCB6700194B8D /* proCalc_MemoryButton_smpl@2x.png */; };
+		0EC074BF174CCB6700194B8D /* proCalc_NumberButton_smpl.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EC074BC174CCB6700194B8D /* proCalc_NumberButton_smpl.png */; };
+		0EC074C2174CCD1000194B8D /* proCalc_ClearButtons_smpl.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EC074C0174CCD1000194B8D /* proCalc_ClearButtons_smpl.png */; };
+		0EC074C3174CCD1000194B8D /* proCalc_ClearButtons_smpl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EC074C1174CCD1000194B8D /* proCalc_ClearButtons_smpl@2x.png */; };
+		0EC074C6174CCE8300194B8D /* proCalc_RevPeriod_smpl.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EC074C4174CCE8300194B8D /* proCalc_RevPeriod_smpl.png */; };
+		0EC074C7174CCE8300194B8D /* proCalc_RevPeriod_smpl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EC074C5174CCE8300194B8D /* proCalc_RevPeriod_smpl@2x.png */; };
+		0EC074CA174CD03000194B8D /* proCalc_specFunct_smpl.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EC074C8174CD03000194B8D /* proCalc_specFunct_smpl.png */; };
+		0EC074CB174CD03000194B8D /* proCalc_specFunct_smpl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EC074C9174CD03000194B8D /* proCalc_specFunct_smpl@2x.png */; };
+		0EC074CE174CD1B400194B8D /* proCalc_4Funct_smpl.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EC074CC174CD1B400194B8D /* proCalc_4Funct_smpl.png */; };
+		0EC074CF174CD1B400194B8D /* proCalc_4Funct_smpl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EC074CD174CD1B400194B8D /* proCalc_4Funct_smpl@2x.png */; };
+		0EC074D2174CD38A00194B8D /* proCalc_enter_smpl.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EC074D0174CD38A00194B8D /* proCalc_enter_smpl.png */; };
+		0EC074D3174CD38A00194B8D /* proCalc_enter_smpl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EC074D1174CD38A00194B8D /* proCalc_enter_smpl@2x.png */; };
+		0EC074D5174D02BC00194B8D /* PCappicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EC074D4174D02BC00194B8D /* PCappicon@2x.png */; };
+		0EC074D7174D02C300194B8D /* PCappicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EC074D6174D02C300194B8D /* PCappicon.png */; };
+		0EC074D9174D088F00194B8D /* splashScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EC074D8174D088F00194B8D /* splashScreen.png */; };
+		0EC074DB174D089600194B8D /* splashScreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EC074DA174D089600194B8D /* splashScreen@2x.png */; };
+		0EC074DD174D089C00194B8D /* splashScreen-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EC074DC174D089C00194B8D /* splashScreen-568h@2x.png */; };
+		0ED1FB02174CB9DC00CAAB3A /* proCalc_NumberButton_smpl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ED1FB01174CB9DC00CAAB3A /* proCalc_NumberButton_smpl@2x.png */; };
 		DD7E6F3C17298C0900438777 /* taschenrechner.png in Resources */ = {isa = PBXBuildFile; fileRef = DD7E6F3B17298C0900438777 /* taschenrechner.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E1EA93F1748292700012C3F /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Calculator.h; path = Model/Calculator.h; sourceTree = "<group>"; };
+		0E1EA9401748292700012C3F /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Calculator.m; path = Model/Calculator.m; sourceTree = "<group>"; };
+		0E1EA9C2174A7D8F00012C3F /* ComplexCalculatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComplexCalculatorViewController.h; sourceTree = "<group>"; };
+		0E1EA9C3174A7D8F00012C3F /* ComplexCalculatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComplexCalculatorViewController.m; sourceTree = "<group>"; };
+		0E1EA9C5174A7FB000012C3F /* GraphPlotterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphPlotterViewController.h; sourceTree = "<group>"; };
+		0E1EA9C6174A7FB000012C3F /* GraphPlotterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphPlotterViewController.m; sourceTree = "<group>"; };
+		0E1EA9C8174B424B00012C3F /* GraphPlotterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphPlotterView.h; sourceTree = "<group>"; };
+		0E1EA9C9174B424B00012C3F /* GraphPlotterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphPlotterView.m; sourceTree = "<group>"; };
 		0E21BC0F170E2640001AE5AE /* proCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = proCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E21BC12170E2640001AE5AE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0E21BC14170E2640001AE5AE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -58,54 +67,27 @@
 		0E21BC26170E2640001AE5AE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		0E21BC28170E2640001AE5AE /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		0E21BC2B170E2640001AE5AE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		0E21BC2D170E2640001AE5AE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		0E21BC2E170E2640001AE5AE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		0E6406941729838200CC6107 /* _DDFunctionContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDFunctionContainer.h; sourceTree = "<group>"; };
-		0E6406951729838200CC6107 /* _DDFunctionContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDFunctionContainer.m; sourceTree = "<group>"; };
-		0E6406961729838200CC6107 /* _DDFunctionExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDFunctionExpression.h; sourceTree = "<group>"; };
-		0E6406971729838200CC6107 /* _DDFunctionExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDFunctionExpression.m; sourceTree = "<group>"; };
-		0E6406981729838200CC6107 /* _DDFunctionTerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDFunctionTerm.h; sourceTree = "<group>"; };
-		0E6406991729838200CC6107 /* _DDFunctionTerm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDFunctionTerm.m; sourceTree = "<group>"; };
-		0E64069A1729838200CC6107 /* _DDFunctionUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDFunctionUtilities.h; sourceTree = "<group>"; };
-		0E64069B1729838200CC6107 /* _DDFunctionUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDFunctionUtilities.m; sourceTree = "<group>"; };
-		0E64069C1729838200CC6107 /* _DDGroupTerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDGroupTerm.h; sourceTree = "<group>"; };
-		0E64069D1729838200CC6107 /* _DDGroupTerm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDGroupTerm.m; sourceTree = "<group>"; };
-		0E64069E1729838200CC6107 /* _DDNumberExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDNumberExpression.h; sourceTree = "<group>"; };
-		0E64069F1729838200CC6107 /* _DDNumberExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDNumberExpression.m; sourceTree = "<group>"; };
-		0E6406A01729838200CC6107 /* _DDNumberTerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDNumberTerm.h; sourceTree = "<group>"; };
-		0E6406A11729838200CC6107 /* _DDNumberTerm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDNumberTerm.m; sourceTree = "<group>"; };
-		0E6406A21729838200CC6107 /* _DDOperatorInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDOperatorInfo.h; sourceTree = "<group>"; };
-		0E6406A31729838200CC6107 /* _DDOperatorInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDOperatorInfo.m; sourceTree = "<group>"; };
-		0E6406A41729838200CC6107 /* _DDOperatorTerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDOperatorTerm.h; sourceTree = "<group>"; };
-		0E6406A51729838200CC6107 /* _DDOperatorTerm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDOperatorTerm.m; sourceTree = "<group>"; };
-		0E6406A61729838200CC6107 /* _DDParserTerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDParserTerm.h; sourceTree = "<group>"; };
-		0E6406A71729838200CC6107 /* _DDParserTerm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDParserTerm.m; sourceTree = "<group>"; };
-		0E6406A81729838200CC6107 /* _DDRewriteRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDRewriteRule.h; sourceTree = "<group>"; };
-		0E6406A91729838200CC6107 /* _DDRewriteRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDRewriteRule.m; sourceTree = "<group>"; };
-		0E6406AA1729838200CC6107 /* _DDVariableExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDVariableExpression.h; sourceTree = "<group>"; };
-		0E6406AB1729838200CC6107 /* _DDVariableExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDVariableExpression.m; sourceTree = "<group>"; };
-		0E6406AC1729838200CC6107 /* _DDVariableTerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDVariableTerm.h; sourceTree = "<group>"; };
-		0E6406AD1729838200CC6107 /* _DDVariableTerm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDVariableTerm.m; sourceTree = "<group>"; };
-		0E6406AE1729838200CC6107 /* DDExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDExpression.h; sourceTree = "<group>"; };
-		0E6406AF1729838200CC6107 /* DDExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDExpression.m; sourceTree = "<group>"; };
-		0E6406B01729838200CC6107 /* DDMathEvaluator+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DDMathEvaluator+Private.h"; sourceTree = "<group>"; };
-		0E6406B11729838200CC6107 /* DDMathEvaluator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMathEvaluator.h; sourceTree = "<group>"; };
-		0E6406B21729838200CC6107 /* DDMathEvaluator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMathEvaluator.m; sourceTree = "<group>"; };
-		0E6406B31729838200CC6107 /* DDMathParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMathParser.h; sourceTree = "<group>"; };
-		0E6406B41729838200CC6107 /* DDMathParserMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMathParserMacros.h; sourceTree = "<group>"; };
-		0E6406B51729838200CC6107 /* DDMathStringToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMathStringToken.h; sourceTree = "<group>"; };
-		0E6406B61729838200CC6107 /* DDMathStringToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMathStringToken.m; sourceTree = "<group>"; };
-		0E6406B71729838200CC6107 /* DDMathStringTokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMathStringTokenizer.h; sourceTree = "<group>"; };
-		0E6406B81729838200CC6107 /* DDMathStringTokenizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMathStringTokenizer.m; sourceTree = "<group>"; };
-		0E6406B91729838200CC6107 /* DDParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDParser.h; sourceTree = "<group>"; };
-		0E6406BA1729838200CC6107 /* DDParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDParser.m; sourceTree = "<group>"; };
-		0E6406BB1729838200CC6107 /* DDParserTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDParserTypes.h; sourceTree = "<group>"; };
-		0E6406BC1729838200CC6107 /* DDParserTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDParserTypes.m; sourceTree = "<group>"; };
-		0E6406BD1729838200CC6107 /* DDTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTypes.h; sourceTree = "<group>"; };
-		0E6406BE1729838200CC6107 /* DDTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTypes.m; sourceTree = "<group>"; };
-		0E6406BF1729838200CC6107 /* NSString+DDMathParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DDMathParsing.h"; sourceTree = "<group>"; };
-		0E6406C01729838200CC6107 /* NSString+DDMathParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DDMathParsing.m"; sourceTree = "<group>"; };
-		0E96E4A2171816E1004CF2AF /* Funktionsgraph1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Funktionsgraph1.png; sourceTree = "<group>"; };
+		0E21BC2D170E2640001AE5AE /* SimpleCalculatorViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleCalculatorViewController.h; sourceTree = "<group>"; };
+		0E21BC2E170E2640001AE5AE /* SimpleCalculatorViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleCalculatorViewController.m; sourceTree = "<group>"; };
+		0EC074BA174CCB6700194B8D /* proCalc_MemoryButton_smpl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = proCalc_MemoryButton_smpl.png; sourceTree = "<group>"; };
+		0EC074BB174CCB6700194B8D /* proCalc_MemoryButton_smpl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "proCalc_MemoryButton_smpl@2x.png"; sourceTree = "<group>"; };
+		0EC074BC174CCB6700194B8D /* proCalc_NumberButton_smpl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = proCalc_NumberButton_smpl.png; sourceTree = "<group>"; };
+		0EC074C0174CCD1000194B8D /* proCalc_ClearButtons_smpl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = proCalc_ClearButtons_smpl.png; sourceTree = "<group>"; };
+		0EC074C1174CCD1000194B8D /* proCalc_ClearButtons_smpl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "proCalc_ClearButtons_smpl@2x.png"; sourceTree = "<group>"; };
+		0EC074C4174CCE8300194B8D /* proCalc_RevPeriod_smpl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = proCalc_RevPeriod_smpl.png; sourceTree = "<group>"; };
+		0EC074C5174CCE8300194B8D /* proCalc_RevPeriod_smpl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "proCalc_RevPeriod_smpl@2x.png"; sourceTree = "<group>"; };
+		0EC074C8174CD03000194B8D /* proCalc_specFunct_smpl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = proCalc_specFunct_smpl.png; sourceTree = "<group>"; };
+		0EC074C9174CD03000194B8D /* proCalc_specFunct_smpl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "proCalc_specFunct_smpl@2x.png"; sourceTree = "<group>"; };
+		0EC074CC174CD1B400194B8D /* proCalc_4Funct_smpl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = proCalc_4Funct_smpl.png; sourceTree = "<group>"; };
+		0EC074CD174CD1B400194B8D /* proCalc_4Funct_smpl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "proCalc_4Funct_smpl@2x.png"; sourceTree = "<group>"; };
+		0EC074D0174CD38A00194B8D /* proCalc_enter_smpl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = proCalc_enter_smpl.png; sourceTree = "<group>"; };
+		0EC074D1174CD38A00194B8D /* proCalc_enter_smpl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "proCalc_enter_smpl@2x.png"; sourceTree = "<group>"; };
+		0EC074D4174D02BC00194B8D /* PCappicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PCappicon@2x.png"; sourceTree = "<group>"; };
+		0EC074D6174D02C300194B8D /* PCappicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PCappicon.png; sourceTree = "<group>"; };
+		0EC074D8174D088F00194B8D /* splashScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splashScreen.png; sourceTree = "<group>"; };
+		0EC074DA174D089600194B8D /* splashScreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splashScreen@2x.png"; sourceTree = "<group>"; };
+		0EC074DC174D089C00194B8D /* splashScreen-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splashScreen-568h@2x.png"; sourceTree = "<group>"; };
+		0ED1FB01174CB9DC00CAAB3A /* proCalc_NumberButton_smpl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "proCalc_NumberButton_smpl@2x.png"; path = "proCalc/proCalc_NumberButton_smpl@2x.png"; sourceTree = "<group>"; };
 		DD7E6F3B17298C0900438777 /* taschenrechner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = taschenrechner.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,10 +105,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E1EA94217482A3000012C3F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0E1EA93F1748292700012C3F /* Calculator.h */,
+				0E1EA9401748292700012C3F /* Calculator.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		0E21BC06170E2640001AE5AE = {
 			isa = PBXGroup;
 			children = (
-				0E6406931729838200CC6107 /* DDMathParser */,
+				0EC074DC174D089C00194B8D /* splashScreen-568h@2x.png */,
+				0EC074DA174D089600194B8D /* splashScreen@2x.png */,
+				0EC074D8174D088F00194B8D /* splashScreen.png */,
+				0ED1FB00174CB53C00CAAB3A /* Icons */,
+				0ED1FAF9174BAF5400CAAB3A /* Images */,
 				0E21BC18170E2640001AE5AE /* proCalc */,
 				0E21BC11170E2640001AE5AE /* Frameworks */,
 				0E21BC10170E2640001AE5AE /* Products */,
@@ -154,11 +149,16 @@
 		0E21BC18170E2640001AE5AE /* proCalc */ = {
 			isa = PBXGroup;
 			children = (
-				0E21BC21170E2640001AE5AE /* AppDelegate.h */,
-				0E21BC22170E2640001AE5AE /* AppDelegate.m */,
 				0E21BC2A170E2640001AE5AE /* MainStoryboard.storyboard */,
-				0E21BC2D170E2640001AE5AE /* ViewController.h */,
-				0E21BC2E170E2640001AE5AE /* ViewController.m */,
+				0E21BC2D170E2640001AE5AE /* SimpleCalculatorViewController.h */,
+				0E21BC2E170E2640001AE5AE /* SimpleCalculatorViewController.m */,
+				0E1EA9C2174A7D8F00012C3F /* ComplexCalculatorViewController.h */,
+				0E1EA9C8174B424B00012C3F /* GraphPlotterView.h */,
+				0E1EA9C9174B424B00012C3F /* GraphPlotterView.m */,
+				0E1EA9C3174A7D8F00012C3F /* ComplexCalculatorViewController.m */,
+				0E1EA9C5174A7FB000012C3F /* GraphPlotterViewController.h */,
+				0E1EA9C6174A7FB000012C3F /* GraphPlotterViewController.m */,
+				0E1EA94217482A3000012C3F /* Model */,
 				0E21BC19170E2640001AE5AE /* Supporting Files */,
 			);
 			path = proCalc;
@@ -167,8 +167,9 @@
 		0E21BC19170E2640001AE5AE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0E21BC21170E2640001AE5AE /* AppDelegate.h */,
+				0E21BC22170E2640001AE5AE /* AppDelegate.m */,
 				DD7E6F3B17298C0900438777 /* taschenrechner.png */,
-				0E96E4A2171816E1004CF2AF /* Funktionsgraph1.png */,
 				0E21BC1A170E2640001AE5AE /* proCalc-Info.plist */,
 				0E21BC1B170E2640001AE5AE /* InfoPlist.strings */,
 				0E21BC1E170E2640001AE5AE /* main.m */,
@@ -180,56 +181,34 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		0E6406931729838200CC6107 /* DDMathParser */ = {
+		0ED1FAF9174BAF5400CAAB3A /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				0E6406941729838200CC6107 /* _DDFunctionContainer.h */,
-				0E6406951729838200CC6107 /* _DDFunctionContainer.m */,
-				0E6406961729838200CC6107 /* _DDFunctionExpression.h */,
-				0E6406971729838200CC6107 /* _DDFunctionExpression.m */,
-				0E6406981729838200CC6107 /* _DDFunctionTerm.h */,
-				0E6406991729838200CC6107 /* _DDFunctionTerm.m */,
-				0E64069A1729838200CC6107 /* _DDFunctionUtilities.h */,
-				0E64069B1729838200CC6107 /* _DDFunctionUtilities.m */,
-				0E64069C1729838200CC6107 /* _DDGroupTerm.h */,
-				0E64069D1729838200CC6107 /* _DDGroupTerm.m */,
-				0E64069E1729838200CC6107 /* _DDNumberExpression.h */,
-				0E64069F1729838200CC6107 /* _DDNumberExpression.m */,
-				0E6406A01729838200CC6107 /* _DDNumberTerm.h */,
-				0E6406A11729838200CC6107 /* _DDNumberTerm.m */,
-				0E6406A21729838200CC6107 /* _DDOperatorInfo.h */,
-				0E6406A31729838200CC6107 /* _DDOperatorInfo.m */,
-				0E6406A41729838200CC6107 /* _DDOperatorTerm.h */,
-				0E6406A51729838200CC6107 /* _DDOperatorTerm.m */,
-				0E6406A61729838200CC6107 /* _DDParserTerm.h */,
-				0E6406A71729838200CC6107 /* _DDParserTerm.m */,
-				0E6406A81729838200CC6107 /* _DDRewriteRule.h */,
-				0E6406A91729838200CC6107 /* _DDRewriteRule.m */,
-				0E6406AA1729838200CC6107 /* _DDVariableExpression.h */,
-				0E6406AB1729838200CC6107 /* _DDVariableExpression.m */,
-				0E6406AC1729838200CC6107 /* _DDVariableTerm.h */,
-				0E6406AD1729838200CC6107 /* _DDVariableTerm.m */,
-				0E6406AE1729838200CC6107 /* DDExpression.h */,
-				0E6406AF1729838200CC6107 /* DDExpression.m */,
-				0E6406B01729838200CC6107 /* DDMathEvaluator+Private.h */,
-				0E6406B11729838200CC6107 /* DDMathEvaluator.h */,
-				0E6406B21729838200CC6107 /* DDMathEvaluator.m */,
-				0E6406B31729838200CC6107 /* DDMathParser.h */,
-				0E6406B41729838200CC6107 /* DDMathParserMacros.h */,
-				0E6406B51729838200CC6107 /* DDMathStringToken.h */,
-				0E6406B61729838200CC6107 /* DDMathStringToken.m */,
-				0E6406B71729838200CC6107 /* DDMathStringTokenizer.h */,
-				0E6406B81729838200CC6107 /* DDMathStringTokenizer.m */,
-				0E6406B91729838200CC6107 /* DDParser.h */,
-				0E6406BA1729838200CC6107 /* DDParser.m */,
-				0E6406BB1729838200CC6107 /* DDParserTypes.h */,
-				0E6406BC1729838200CC6107 /* DDParserTypes.m */,
-				0E6406BD1729838200CC6107 /* DDTypes.h */,
-				0E6406BE1729838200CC6107 /* DDTypes.m */,
-				0E6406BF1729838200CC6107 /* NSString+DDMathParsing.h */,
-				0E6406C01729838200CC6107 /* NSString+DDMathParsing.m */,
 			);
-			path = DDMathParser;
+			name = Images;
+			sourceTree = "<group>";
+		};
+		0ED1FB00174CB53C00CAAB3A /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				0EC074D6174D02C300194B8D /* PCappicon.png */,
+				0EC074D4174D02BC00194B8D /* PCappicon@2x.png */,
+				0EC074D0174CD38A00194B8D /* proCalc_enter_smpl.png */,
+				0EC074D1174CD38A00194B8D /* proCalc_enter_smpl@2x.png */,
+				0EC074CC174CD1B400194B8D /* proCalc_4Funct_smpl.png */,
+				0EC074CD174CD1B400194B8D /* proCalc_4Funct_smpl@2x.png */,
+				0EC074C8174CD03000194B8D /* proCalc_specFunct_smpl.png */,
+				0EC074C9174CD03000194B8D /* proCalc_specFunct_smpl@2x.png */,
+				0ED1FB01174CB9DC00CAAB3A /* proCalc_NumberButton_smpl@2x.png */,
+				0EC074BC174CCB6700194B8D /* proCalc_NumberButton_smpl.png */,
+				0EC074BA174CCB6700194B8D /* proCalc_MemoryButton_smpl.png */,
+				0EC074BB174CCB6700194B8D /* proCalc_MemoryButton_smpl@2x.png */,
+				0EC074C0174CCD1000194B8D /* proCalc_ClearButtons_smpl.png */,
+				0EC074C1174CCD1000194B8D /* proCalc_ClearButtons_smpl@2x.png */,
+				0EC074C4174CCE8300194B8D /* proCalc_RevPeriod_smpl.png */,
+				0EC074C5174CCE8300194B8D /* proCalc_RevPeriod_smpl@2x.png */,
+			);
+			name = Icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,8 +267,26 @@
 				0E21BC27170E2640001AE5AE /* Default@2x.png in Resources */,
 				0E21BC29170E2640001AE5AE /* Default-568h@2x.png in Resources */,
 				0E21BC2C170E2640001AE5AE /* MainStoryboard.storyboard in Resources */,
-				0E96E4A3171816E1004CF2AF /* Funktionsgraph1.png in Resources */,
 				DD7E6F3C17298C0900438777 /* taschenrechner.png in Resources */,
+				0ED1FB02174CB9DC00CAAB3A /* proCalc_NumberButton_smpl@2x.png in Resources */,
+				0EC074BD174CCB6700194B8D /* proCalc_MemoryButton_smpl.png in Resources */,
+				0EC074BE174CCB6700194B8D /* proCalc_MemoryButton_smpl@2x.png in Resources */,
+				0EC074BF174CCB6700194B8D /* proCalc_NumberButton_smpl.png in Resources */,
+				0EC074C2174CCD1000194B8D /* proCalc_ClearButtons_smpl.png in Resources */,
+				0EC074C3174CCD1000194B8D /* proCalc_ClearButtons_smpl@2x.png in Resources */,
+				0EC074C6174CCE8300194B8D /* proCalc_RevPeriod_smpl.png in Resources */,
+				0EC074C7174CCE8300194B8D /* proCalc_RevPeriod_smpl@2x.png in Resources */,
+				0EC074CA174CD03000194B8D /* proCalc_specFunct_smpl.png in Resources */,
+				0EC074CB174CD03000194B8D /* proCalc_specFunct_smpl@2x.png in Resources */,
+				0EC074CE174CD1B400194B8D /* proCalc_4Funct_smpl.png in Resources */,
+				0EC074CF174CD1B400194B8D /* proCalc_4Funct_smpl@2x.png in Resources */,
+				0EC074D2174CD38A00194B8D /* proCalc_enter_smpl.png in Resources */,
+				0EC074D3174CD38A00194B8D /* proCalc_enter_smpl@2x.png in Resources */,
+				0EC074D5174D02BC00194B8D /* PCappicon@2x.png in Resources */,
+				0EC074D7174D02C300194B8D /* PCappicon.png in Resources */,
+				0EC074D9174D088F00194B8D /* splashScreen.png in Resources */,
+				0EC074DB174D089600194B8D /* splashScreen@2x.png in Resources */,
+				0EC074DD174D089C00194B8D /* splashScreen-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,28 +299,11 @@
 			files = (
 				0E21BC1F170E2640001AE5AE /* main.m in Sources */,
 				0E21BC23170E2640001AE5AE /* AppDelegate.m in Sources */,
-				0E21BC2F170E2640001AE5AE /* ViewController.m in Sources */,
-				0E6406C11729838200CC6107 /* _DDFunctionContainer.m in Sources */,
-				0E6406C21729838200CC6107 /* _DDFunctionExpression.m in Sources */,
-				0E6406C31729838200CC6107 /* _DDFunctionTerm.m in Sources */,
-				0E6406C41729838200CC6107 /* _DDFunctionUtilities.m in Sources */,
-				0E6406C51729838200CC6107 /* _DDGroupTerm.m in Sources */,
-				0E6406C61729838200CC6107 /* _DDNumberExpression.m in Sources */,
-				0E6406C71729838200CC6107 /* _DDNumberTerm.m in Sources */,
-				0E6406C81729838200CC6107 /* _DDOperatorInfo.m in Sources */,
-				0E6406C91729838200CC6107 /* _DDOperatorTerm.m in Sources */,
-				0E6406CA1729838200CC6107 /* _DDParserTerm.m in Sources */,
-				0E6406CB1729838200CC6107 /* _DDRewriteRule.m in Sources */,
-				0E6406CC1729838200CC6107 /* _DDVariableExpression.m in Sources */,
-				0E6406CD1729838200CC6107 /* _DDVariableTerm.m in Sources */,
-				0E6406CE1729838200CC6107 /* DDExpression.m in Sources */,
-				0E6406CF1729838200CC6107 /* DDMathEvaluator.m in Sources */,
-				0E6406D01729838200CC6107 /* DDMathStringToken.m in Sources */,
-				0E6406D11729838200CC6107 /* DDMathStringTokenizer.m in Sources */,
-				0E6406D21729838200CC6107 /* DDParser.m in Sources */,
-				0E6406D31729838200CC6107 /* DDParserTypes.m in Sources */,
-				0E6406D41729838200CC6107 /* DDTypes.m in Sources */,
-				0E6406D51729838200CC6107 /* NSString+DDMathParsing.m in Sources */,
+				0E21BC2F170E2640001AE5AE /* SimpleCalculatorViewController.m in Sources */,
+				0E1EA9411748292700012C3F /* Calculator.m in Sources */,
+				0E1EA9C4174A7D8F00012C3F /* ComplexCalculatorViewController.m in Sources */,
+				0E1EA9C7174A7FB000012C3F /* GraphPlotterViewController.m in Sources */,
+				0E1EA9CA174B424B00012C3F /* GraphPlotterView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

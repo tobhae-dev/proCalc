@@ -4,35 +4,34 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Normal Calculator-->
+        <!--Simple Calculator View Controller - Simple Calculator-->
         <scene sceneID="5">
             <objects>
-                <viewController title="Normal Calculator" id="2" customClass="ViewController" sceneMemberID="viewController">
+                <viewController title="Simple Calculator" id="2" customClass="SimpleCalculatorViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xpg-zX-7R2">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xpg-zX-7R2">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="0">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="0" backgroundImage="proCalc_NumberButton_smpl@2x.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="Sw2-hI-RgS"/>
+                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="CY0-xf-IJH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmT-h5-f78">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmT-h5-f78">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" type="user" id="N4p-xJ-V0z"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="∙">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="∙" backgroundImage="proCalc_RevPeriod_smpl@2x.png">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -40,438 +39,419 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="commaPressed:" destination="2" eventType="touchUpInside" id="Fzc-sm-D9Y"/>
+                                    <action selector="period" destination="2" eventType="touchUpInside" id="f2U-u5-zSR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wfp-2s-7su">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wfp-2s-7su">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" type="user" id="0kf-K1-yXb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="=">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="=" backgroundImage="proCalc_enter_smpl@2x.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="operationPressed:" destination="2" eventType="touchUpInside" id="9aC-3x-v7W"/>
+                                    <action selector="solveExpression" destination="2" eventType="touchUpInside" id="0ZW-48-g4c"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWz-AU-64H">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWz-AU-64H">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" type="user" id="KXy-ZQ-vCB"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="1">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="1" backgroundImage="proCalc_NumberButton_smpl@2x.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="BhJ-0e-exF"/>
+                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="ESi-35-71g"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntS-gY-rDQ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntS-gY-rDQ">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" type="user" id="grN-bA-qgz"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="2">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="2" backgroundImage="proCalc_NumberButton_smpl@2x.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="vXY-c0-x5f"/>
+                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="wdN-qh-BMl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oc0-Mx-6v7">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oc0-Mx-6v7">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" type="user" id="pdk-Gc-NzP"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="3">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="3" backgroundImage="proCalc_NumberButton_smpl@2x.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="YGp-b6-LvP"/>
+                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="bzV-c9-s1f"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5A-Yv-nG4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5A-Yv-nG4">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" type="user" id="uGg-ia-Sf9"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="4">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="4" backgroundImage="proCalc_NumberButton_smpl@2x.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="Ygd-hO-uvb"/>
+                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="MlS-6m-YyA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cvv-6e-J8K">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cvv-6e-J8K">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" type="user" id="Daj-Ws-Hb2"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="5">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="5" backgroundImage="proCalc_NumberButton_smpl@2x.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="ccD-pp-9Fh"/>
+                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="nXc-bL-pfE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65O-JQ-0xN">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65O-JQ-0xN">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="moC-KM-nGo"/>
                                     <constraint firstAttribute="width" constant="64" type="user" id="sFd-3g-xd0"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="6">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="6" backgroundImage="proCalc_NumberButton_smpl@2x.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="7lY-iM-LnA"/>
+                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="aED-LM-sGa"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IS5-Nw-ouI">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IS5-Nw-ouI">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" type="user" id="tXB-P3-3Uw"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="+">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <state key="normal" title="+" backgroundImage="proCalc_4Funct_smpl@2x.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="operationPressed:" destination="2" eventType="touchUpInside" id="73k-v2-4Pc"/>
+                                    <action selector="addExpressionToComputationDisplay:" destination="2" eventType="touchUpInside" id="9ky-DT-Kvm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="960-LA-kl3">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="960-LA-kl3">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" type="user" id="7A9-t6-liM"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="7">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="7" backgroundImage="proCalc_NumberButton_smpl@2x.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="rCD-Oa-xfe"/>
+                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="zhs-lW-bZ5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdU-O5-9ba">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdU-O5-9ba">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" type="user" id="hgq-dH-vTU"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="8">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="8" backgroundImage="proCalc_NumberButton_smpl@2x.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="m7L-mO-MTJ"/>
+                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="wSB-X8-US3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2i-mm-431">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2i-mm-431">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" type="user" id="Gsy-U8-XKM"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="9">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="9" backgroundImage="proCalc_NumberButton_smpl@2x.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="1BJ-FI-W5h"/>
+                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="vWt-Ml-uxO"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMa-Ch-k83">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMa-Ch-k83">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" type="user" id="jxL-vb-cSu"/>
+                                    <constraint firstAttribute="height" constant="42" id="mA3-Iq-LuN"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="−">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <state key="normal" title="−" backgroundImage="proCalc_4Funct_smpl@2x.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="operationPressed:" destination="2" eventType="touchUpInside" id="HTH-Yh-25n"/>
+                                    <action selector="addExpressionToComputationDisplay:" destination="2" eventType="touchUpInside" id="Zud-FL-TaD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpL-Qt-ryL">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpL-Qt-ryL">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" type="user" id="Fu9-z6-VU8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="(">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="log" backgroundImage="proCalc_specFunct_smpl@2x.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="operationPressed:" destination="2" eventType="touchUpInside" id="wR0-La-9H1"/>
+                                    <action selector="specialFunctionPressed:" destination="2" eventType="touchUpInside" id="hn8-lp-Yrr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="131-uh-loJ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="131-uh-loJ">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" type="user" id="dOh-0k-laj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title=")">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="%" backgroundImage="proCalc_specFunct_smpl@2x.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="operationPressed:" destination="2" eventType="touchUpInside" id="z17-xq-y7Z"/>
+                                    <action selector="specialFunctionPressed:" destination="2" eventType="touchUpInside" id="148-rV-MIC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aS6-Xu-3lW">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aS6-Xu-3lW">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" type="user" id="s6l-GX-CZ7"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="÷">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <state key="normal" title="÷" backgroundImage="proCalc_4Funct_smpl@2x.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="operationPressed:" destination="2" eventType="touchUpInside" id="bXA-Dp-8nT"/>
+                                    <action selector="addExpressionToComputationDisplay:" destination="2" eventType="touchUpInside" id="WCd-wO-XGN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdN-uz-bU2">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdN-uz-bU2">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" type="user" id="dM5-Tz-KDl"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="×">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <state key="normal" title="×" backgroundImage="proCalc_4Funct_smpl@2x.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="operationPressed:" destination="2" eventType="touchUpInside" id="dEq-8n-GcT"/>
+                                    <action selector="addExpressionToComputationDisplay:" destination="2" eventType="touchUpInside" id="uPq-zB-l5X"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQP-xC-RoS">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQP-xC-RoS">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" type="user" id="Bd9-KL-apb"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="√x">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="√x" backgroundImage="proCalc_specFunct_smpl@2x.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="operationPressed:" destination="2" eventType="touchUpInside" id="USd-uN-5Hd"/>
+                                    <action selector="specialFunctionPressed:" destination="2" eventType="touchUpInside" id="iAE-x8-abi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKa-xv-Ypw">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKa-xv-Ypw">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" type="user" id="eg6-LA-PRV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="x²">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="x²" backgroundImage="proCalc_specFunct_smpl@2x.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="operationPressed:" destination="2" eventType="touchUpInside" id="A8J-Sr-aRM"/>
+                                    <action selector="specialFunctionPressed:" destination="2" eventType="touchUpInside" id="cXU-cj-zBZ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAB-TR-Bbz">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAB-TR-Bbz">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" type="user" id="T8F-Ws-Ft9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="AC">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="AC" backgroundImage="proCalc_ClearButtons_smpl@2x.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="operationPressed:" destination="2" eventType="touchUpInside" id="sBk-cf-b8X"/>
+                                    <action selector="clearTheDisplay:" destination="2" eventType="touchUpInside" id="7dN-EM-gWU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qai-2W-SXv">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qai-2W-SXv">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" type="user" id="6KG-3i-XKJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="C">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="C" backgroundImage="proCalc_ClearButtons_smpl@2x.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="operationPressed:" destination="2" eventType="touchUpInside" id="eJv-7M-ctn"/>
-                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="right" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4CZ-j4-rR1">
-                                <color key="backgroundColor" red="0.78555188914967311" green="0.89843586097608119" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="29"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tyt-CS-GL3">
-                                <color key="backgroundColor" red="0.78555188914967311" green="0.89843586097608119" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.74265437477536778" green="0.88147103858373743" blue="0.95348373724489799" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="23" id="11L-Gj-ctf"/>
+                                    <constraint firstAttribute="height" constant="25" id="M8i-sf-Qrj"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="12312323" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tyt-CS-GL3">
+                                <color key="backgroundColor" red="0.74265437477536778" green="0.88147103858373743" blue="0.95348373724489799" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="JAo-8A-ena"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuJ-oZ-pac">
+                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuJ-oZ-pac">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" type="user" id="yMg-fl-z4S"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="MC">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="MC" backgroundImage="proCalc_MemoryButton_smpl@2x.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="mc_button:" destination="2" eventType="touchUpInside" id="GNP-cR-c26"/>
+                                    <action selector="memoryFunctionPressed:" destination="2" eventType="touchUpInside" id="Mg0-Ml-LRL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q66-7W-bps">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q66-7W-bps">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" type="user" id="i4g-b8-cKe"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="M+">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="M+" backgroundImage="proCalc_MemoryButton_smpl@2x.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="m_plus:" destination="2" eventType="touchUpInside" id="5OU-yN-X3z"/>
+                                    <action selector="memoryFunctionPressed:" destination="2" eventType="touchUpInside" id="aqb-tn-8RT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIv-Mf-sDM">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIv-Mf-sDM">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" type="user" id="Kfd-Gy-Izx"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="M-">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="M-" backgroundImage="proCalc_MemoryButton_smpl@2x.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="m_minus:" destination="2" eventType="touchUpInside" id="MZU-xJ-Zxm"/>
+                                    <action selector="memoryFunctionPressed:" destination="2" eventType="touchUpInside" id="OS3-Up-eoF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOe-Pm-e2r">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOe-Pm-e2r">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" type="user" id="0an-QD-LwQ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="MR">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="MR" backgroundImage="proCalc_MemoryButton_smpl@2x.png">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="m_zeige:" destination="2" eventType="touchUpInside" id="Zio-RE-oDh"/>
+                                    <action selector="memoryFunctionPressed:" destination="2" eventType="touchUpInside" id="kFY-Hv-fuX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxv-J0-EdQ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxv-J0-EdQ">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" type="user" id="JCK-7Q-Ijo"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="±">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <state key="normal" title="±" backgroundImage="proCalc_RevPeriod_smpl@2x.png">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -479,109 +459,107 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="operationPressed:" destination="2" eventType="touchUpInside" id="coK-Xd-6ee"/>
+                                    <action selector="reverseSign" destination="2" eventType="touchUpInside" id="QwG-op-enw"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.12649987289187267" green="0.17286808386676653" blue="0.27359693877551017" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Tyt-CS-GL3" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="1Dk-pr-d8V"/>
-                            <constraint firstAttribute="trailing" secondItem="4CZ-j4-rR1" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="4Df-Nv-FPC"/>
-                            <constraint firstItem="4CZ-j4-rR1" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="5ir-sT-GwB"/>
+                            <constraint firstItem="ntS-gY-rDQ" firstAttribute="top" secondItem="Cvv-6e-J8K" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="1lj-rf-SfL"/>
+                            <constraint firstItem="131-uh-loJ" firstAttribute="baseline" secondItem="aS6-Xu-3lW" secondAttribute="baseline" type="default" id="2Iz-0z-U49"/>
+                            <constraint firstItem="jIv-Mf-sDM" firstAttribute="leading" secondItem="q66-7W-bps" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="60v-rc-W2U"/>
                             <constraint firstItem="Cvv-6e-J8K" firstAttribute="leading" secondItem="C5A-Yv-nG4" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="75F-dh-U6m"/>
-                            <constraint firstItem="oc0-Mx-6v7" firstAttribute="top" secondItem="65O-JQ-0xN" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="9Ai-zQ-AyZ"/>
+                            <constraint firstItem="jIv-Mf-sDM" firstAttribute="top" secondItem="4CZ-j4-rR1" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="7NQ-Gb-Yap"/>
+                            <constraint firstItem="131-uh-loJ" firstAttribute="top" secondItem="eKa-xv-Ypw" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="AFf-ql-Ph1"/>
                             <constraint firstAttribute="bottom" secondItem="Xpg-zX-7R2" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="AH6-7p-abv"/>
-                            <constraint firstItem="65O-JQ-0xN" firstAttribute="top" secondItem="Q2i-mm-431" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="C8j-nL-EOz"/>
+                            <constraint firstItem="cMa-Ch-k83" firstAttribute="top" secondItem="FdN-uz-bU2" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="AzP-Vd-lZI"/>
+                            <constraint firstItem="VWz-AU-64H" firstAttribute="baseline" secondItem="ntS-gY-rDQ" secondAttribute="baseline" type="default" id="B8C-6l-WAl"/>
+                            <constraint firstItem="Cvv-6e-J8K" firstAttribute="baseline" secondItem="C5A-Yv-nG4" secondAttribute="baseline" type="default" id="Cjx-5n-ILN"/>
+                            <constraint firstAttribute="trailing" secondItem="cMa-Ch-k83" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="DNb-y6-YCf"/>
                             <constraint firstItem="kxv-J0-EdQ" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="DeN-F4-iWc"/>
-                            <constraint firstItem="65O-JQ-0xN" firstAttribute="leading" secondItem="aS6-Xu-3lW" secondAttribute="leading" type="default" id="E1U-md-YPU"/>
-                            <constraint firstItem="aS6-Xu-3lW" firstAttribute="top" secondItem="lAB-TR-Bbz" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="EDo-Vy-OrR"/>
-                            <constraint firstItem="65O-JQ-0xN" firstAttribute="leading" secondItem="jIv-Mf-sDM" secondAttribute="leading" type="default" id="HCA-Y8-Cxk"/>
-                            <constraint firstItem="GQP-xC-RoS" firstAttribute="baseline" secondItem="eKa-xv-Ypw" secondAttribute="baseline" type="default" id="I8W-HU-NCP"/>
-                            <constraint firstItem="Wfp-2s-7su" firstAttribute="top" secondItem="oc0-Mx-6v7" secondAttribute="top" type="default" id="II3-66-L4d"/>
-                            <constraint firstAttribute="bottom" secondItem="kxv-J0-EdQ" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="ILU-Sq-ANV"/>
-                            <constraint firstItem="kxv-J0-EdQ" firstAttribute="top" secondItem="VWz-AU-64H" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Mlj-RL-zTo"/>
+                            <constraint firstAttribute="trailing" secondItem="Qai-2W-SXv" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="FQJ-pf-PCx"/>
+                            <constraint firstAttribute="trailing" secondItem="FdN-uz-bU2" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Ftw-Uf-nea"/>
+                            <constraint firstItem="aS6-Xu-3lW" firstAttribute="top" secondItem="lAB-TR-Bbz" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Hi1-WB-1l0"/>
+                            <constraint firstItem="4CZ-j4-rR1" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="I25-s9-k9Z"/>
                             <constraint firstAttribute="bottom" secondItem="fmT-h5-f78" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="N9R-U7-0ds"/>
-                            <constraint firstItem="C5A-Yv-nG4" firstAttribute="baseline" secondItem="Cvv-6e-J8K" secondAttribute="baseline" type="default" id="NVp-yg-MhL"/>
-                            <constraint firstAttribute="bottom" secondItem="Wfp-2s-7su" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="Ni7-8J-d1a"/>
-                            <constraint firstItem="VWz-AU-64H" firstAttribute="top" secondItem="C5A-Yv-nG4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="PdG-tj-1VJ"/>
+                            <constraint firstItem="Qai-2W-SXv" firstAttribute="top" secondItem="gOe-Pm-e2r" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="NLU-9z-AlV"/>
+                            <constraint firstItem="FdN-uz-bU2" firstAttribute="centerY" secondItem="aS6-Xu-3lW" secondAttribute="centerY" type="default" id="Of5-5j-oKR"/>
                             <constraint firstItem="C5A-Yv-nG4" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Pkk-Y7-m5f"/>
-                            <constraint firstItem="Q2i-mm-431" firstAttribute="baseline" secondItem="cMa-Ch-k83" secondAttribute="baseline" type="default" id="R0Q-Vm-NcC"/>
-                            <constraint firstItem="fuJ-oZ-pac" firstAttribute="baseline" secondItem="q66-7W-bps" secondAttribute="baseline" type="default" id="RTJ-Ha-h7K"/>
-                            <constraint firstAttribute="trailing" secondItem="IS5-Nw-ouI" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Sw4-da-too"/>
+                            <constraint firstItem="Q2i-mm-431" firstAttribute="leading" secondItem="FdU-O5-9ba" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Q7L-rl-SKS"/>
+                            <constraint firstItem="eKa-xv-Ypw" firstAttribute="top" secondItem="q66-7W-bps" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="QKT-oO-exU"/>
+                            <constraint firstItem="oc0-Mx-6v7" firstAttribute="top" secondItem="ntS-gY-rDQ" secondAttribute="top" type="default" id="RKu-w2-faW"/>
+                            <constraint firstItem="ntS-gY-rDQ" firstAttribute="leading" secondItem="VWz-AU-64H" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="SVU-2n-csv"/>
+                            <constraint firstItem="131-uh-loJ" firstAttribute="baseline" secondItem="xpL-Qt-ryL" secondAttribute="baseline" type="default" id="Sye-7a-96J"/>
                             <constraint firstItem="960-LA-kl3" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Tc3-3l-3dG"/>
                             <constraint firstItem="eKa-xv-Ypw" firstAttribute="leading" secondItem="GQP-xC-RoS" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="TtW-ai-mKr"/>
-                            <constraint firstItem="jIv-Mf-sDM" firstAttribute="top" secondItem="Tyt-CS-GL3" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="UdK-T3-HEQ"/>
-                            <constraint firstItem="aS6-Xu-3lW" firstAttribute="baseline" secondItem="FdN-uz-bU2" secondAttribute="baseline" type="default" id="X78-FY-EiW"/>
-                            <constraint firstAttribute="trailing" secondItem="cMa-Ch-k83" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="YpP-ms-wUD"/>
-                            <constraint firstItem="lAB-TR-Bbz" firstAttribute="top" secondItem="jIv-Mf-sDM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Zo0-3Z-cWr"/>
+                            <constraint firstItem="oc0-Mx-6v7" firstAttribute="top" secondItem="65O-JQ-0xN" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Uc6-bU-dSw"/>
+                            <constraint firstItem="65O-JQ-0xN" firstAttribute="top" secondItem="Q2i-mm-431" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="WgB-G8-oct"/>
+                            <constraint firstItem="Q2i-mm-431" firstAttribute="top" secondItem="aS6-Xu-3lW" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Wse-er-hCb"/>
+                            <constraint firstItem="FdU-O5-9ba" firstAttribute="baseline" secondItem="960-LA-kl3" secondAttribute="baseline" type="default" id="XOW-ip-D8X"/>
+                            <constraint firstItem="fuJ-oZ-pac" firstAttribute="baseline" secondItem="q66-7W-bps" secondAttribute="baseline" type="default" id="Ybs-bS-cxt"/>
                             <constraint firstItem="fmT-h5-f78" firstAttribute="leading" secondItem="Xpg-zX-7R2" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="aYe-uW-8pR"/>
-                            <constraint firstItem="Wfp-2s-7su" firstAttribute="leading" secondItem="fmT-h5-f78" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="b1J-Rj-Xpj"/>
+                            <constraint firstItem="IS5-Nw-ouI" firstAttribute="baseline" secondItem="65O-JQ-0xN" secondAttribute="baseline" type="default" id="axG-bz-5F6"/>
+                            <constraint firstItem="q66-7W-bps" firstAttribute="top" secondItem="4CZ-j4-rR1" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ayi-Tt-na1"/>
+                            <constraint firstItem="Tyt-CS-GL3" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="b2s-MP-Skl"/>
                             <constraint firstItem="Xpg-zX-7R2" firstAttribute="leading" secondItem="kxv-J0-EdQ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="bjU-XU-gAh"/>
-                            <constraint firstItem="65O-JQ-0xN" firstAttribute="baseline" secondItem="IS5-Nw-ouI" secondAttribute="baseline" type="default" id="c9s-zF-Hb7"/>
-                            <constraint firstItem="fuJ-oZ-pac" firstAttribute="top" secondItem="Tyt-CS-GL3" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="clf-g2-xhG"/>
-                            <constraint firstItem="960-LA-kl3" firstAttribute="baseline" secondItem="FdU-O5-9ba" secondAttribute="baseline" type="default" id="dMI-8l-Sz0"/>
-                            <constraint firstItem="65O-JQ-0xN" firstAttribute="top" secondItem="Cvv-6e-J8K" secondAttribute="top" type="default" id="dn3-LB-HcF"/>
-                            <constraint firstItem="65O-JQ-0xN" firstAttribute="leading" secondItem="lAB-TR-Bbz" secondAttribute="leading" type="default" id="dpT-R4-PYk"/>
-                            <constraint firstItem="4CZ-j4-rR1" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="dqz-LL-Tjo"/>
-                            <constraint firstItem="C5A-Yv-nG4" firstAttribute="top" secondItem="960-LA-kl3" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="eji-kS-HB9"/>
-                            <constraint firstItem="jIv-Mf-sDM" firstAttribute="baseline" secondItem="gOe-Pm-e2r" secondAttribute="baseline" type="default" id="gvi-Gt-UP3"/>
-                            <constraint firstItem="65O-JQ-0xN" firstAttribute="baseline" secondItem="Cvv-6e-J8K" secondAttribute="baseline" type="default" id="ilE-M5-qZ0"/>
+                            <constraint firstItem="aS6-Xu-3lW" firstAttribute="leading" secondItem="131-uh-loJ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="dta-Sm-nNK"/>
+                            <constraint firstAttribute="bottom" secondItem="Wfp-2s-7su" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="eZP-Ac-bgd"/>
+                            <constraint firstItem="aS6-Xu-3lW" firstAttribute="baseline" secondItem="FdN-uz-bU2" secondAttribute="baseline" type="default" id="hC9-0i-wB0"/>
+                            <constraint firstItem="GQP-xC-RoS" firstAttribute="baseline" secondItem="eKa-xv-Ypw" secondAttribute="baseline" type="default" id="im5-Zm-MNU"/>
                             <constraint firstItem="131-uh-loJ" firstAttribute="leading" secondItem="xpL-Qt-ryL" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="jbQ-Sr-OKb"/>
-                            <constraint firstItem="960-LA-kl3" firstAttribute="top" secondItem="xpL-Qt-ryL" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="kCc-iS-aRX"/>
-                            <constraint firstItem="Qai-2W-SXv" firstAttribute="baseline" secondItem="lAB-TR-Bbz" secondAttribute="baseline" type="default" id="kxB-ur-Aab"/>
-                            <constraint firstItem="GQP-xC-RoS" firstAttribute="top" secondItem="fuJ-oZ-pac" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="lOS-BC-xDa"/>
-                            <constraint firstItem="131-uh-loJ" firstAttribute="baseline" secondItem="xpL-Qt-ryL" secondAttribute="baseline" type="default" id="lYd-xS-nXC"/>
-                            <constraint firstItem="65O-JQ-0xN" firstAttribute="leading" secondItem="Q2i-mm-431" secondAttribute="leading" type="default" id="lhm-XH-eWW"/>
+                            <constraint firstItem="FdN-uz-bU2" firstAttribute="top" secondItem="Qai-2W-SXv" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="jpn-1u-MB1"/>
+                            <constraint firstItem="Cvv-6e-J8K" firstAttribute="top" secondItem="FdU-O5-9ba" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="kea-QS-1ci"/>
+                            <constraint firstItem="gOe-Pm-e2r" firstAttribute="top" secondItem="4CZ-j4-rR1" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="lMY-N1-WPc"/>
+                            <constraint firstAttribute="trailing" secondItem="gOe-Pm-e2r" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="mCc-YG-zNg"/>
                             <constraint firstItem="Tyt-CS-GL3" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="maj-PX-ONw"/>
-                            <constraint firstAttribute="trailing" secondItem="gOe-Pm-e2r" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="oT6-vb-Nju"/>
+                            <constraint firstItem="FdU-O5-9ba" firstAttribute="top" secondItem="131-uh-loJ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="nO0-ek-R9J"/>
+                            <constraint firstItem="lAB-TR-Bbz" firstAttribute="leading" secondItem="eKa-xv-Ypw" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="pJZ-MK-mqf"/>
                             <constraint firstItem="GQP-xC-RoS" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pdZ-9M-aCf"/>
                             <constraint firstItem="oc0-Mx-6v7" firstAttribute="leading" secondItem="ntS-gY-rDQ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="pgl-WG-s8Y"/>
                             <constraint firstItem="fuJ-oZ-pac" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pjB-Mc-nsa"/>
-                            <constraint firstItem="ntS-gY-rDQ" firstAttribute="baseline" secondItem="VWz-AU-64H" secondAttribute="baseline" type="default" id="pjX-D6-pEN"/>
                             <constraint firstItem="65O-JQ-0xN" firstAttribute="leading" secondItem="Cvv-6e-J8K" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="pzH-ff-uSz"/>
+                            <constraint firstAttribute="trailing" secondItem="4CZ-j4-rR1" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="q9g-bZ-AKX"/>
                             <constraint firstItem="FdU-O5-9ba" firstAttribute="leading" secondItem="960-LA-kl3" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="sPT-ak-UTG"/>
-                            <constraint firstItem="Wfp-2s-7su" firstAttribute="leading" secondItem="oc0-Mx-6v7" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="t6K-PM-Ub7"/>
-                            <constraint firstAttribute="trailing" secondItem="FdN-uz-bU2" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="tCP-Ok-GPw"/>
+                            <constraint firstItem="FdN-uz-bU2" firstAttribute="top" secondItem="aS6-Xu-3lW" secondAttribute="top" type="default" id="tSU-ah-1BM"/>
+                            <constraint firstAttribute="trailing" secondItem="IS5-Nw-ouI" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="tcu-T3-Nla"/>
+                            <constraint firstItem="Wfp-2s-7su" firstAttribute="top" secondItem="IS5-Nw-ouI" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="upy-1g-3tQ"/>
                             <constraint firstItem="VWz-AU-64H" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="vhy-0Y-Z7E"/>
                             <constraint firstItem="xpL-Qt-ryL" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="vwa-df-HHK"/>
-                            <constraint firstAttribute="trailing" secondItem="Qai-2W-SXv" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="xXI-hn-iYS"/>
+                            <constraint firstItem="oc0-Mx-6v7" firstAttribute="top" secondItem="Wfp-2s-7su" secondAttribute="top" type="default" id="wtX-mC-pj8"/>
+                            <constraint firstItem="IS5-Nw-ouI" firstAttribute="top" secondItem="cMa-Ch-k83" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="x5U-yR-Icn"/>
+                            <constraint firstAttribute="bottom" secondItem="kxv-J0-EdQ" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="y19-OI-sgx"/>
                             <constraint firstAttribute="trailing" secondItem="Wfp-2s-7su" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ytK-fn-ZF4"/>
-                            <constraint firstItem="Q2i-mm-431" firstAttribute="top" secondItem="aS6-Xu-3lW" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="zJC-9v-kUR"/>
                             <constraint firstItem="q66-7W-bps" firstAttribute="leading" secondItem="fuJ-oZ-pac" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="zQ5-mR-4fi"/>
-                            <constraint firstItem="xpL-Qt-ryL" firstAttribute="top" secondItem="GQP-xC-RoS" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="zTW-ka-CPx"/>
+                            <constraint firstItem="lAB-TR-Bbz" firstAttribute="top" secondItem="jIv-Mf-sDM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="zS2-4h-5td"/>
                         </constraints>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="t1j-bP-Xor" appends="YES" id="OKY-gk-3aC"/>
-                            <outletCollection property="gestureRecognizers" destination="Vbx-BE-rXd" appends="YES" id="roM-2M-G3u"/>
+                            <outletCollection property="gestureRecognizers" destination="fby-DH-dwB" appends="YES" id="ral-Hy-3hL"/>
                         </connections>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="computationDisplay" destination="Tyt-CS-GL3" id="lvL-J5-pn0"/>
-                        <outlet property="resultDisplay" destination="4CZ-j4-rR1" id="erB-Dl-X37"/>
+                        <outlet property="computationDisplay" destination="Tyt-CS-GL3" id="6gx-o1-YZW"/>
+                        <outlet property="inputAndAnswerDisplay" destination="4CZ-j4-rR1" id="ZSc-hB-rfh"/>
+                        <segue destination="tIy-8r-wN4" kind="modal" identifier="fromSimpleToGraph" id="vf0-Ta-y7p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="t1j-bP-Xor">
+                <swipeGestureRecognizer direction="right" id="fby-DH-dwB">
                     <connections>
-                        <segue destination="Sdp-aQ-qaw" kind="modal" id="mv1-6v-THt"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="left" id="Vbx-BE-rXd">
-                    <connections>
-                        <segue destination="Sdp-aQ-qaw" kind="modal" id="l3P-bC-Z9d"/>
+                        <action selector="swipe:" destination="2" id="LX5-mt-FfT"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="102" y="90"/>
+            <point key="canvasLocation" x="-714" y="-22"/>
         </scene>
-        <!--View Controller - Scientific Calculator-->
+        <!--Complex Calculator View Controller - Complex Calculator-->
         <scene sceneID="Eif-Kd-nQJ">
             <objects>
-                <viewController title="Scientific Calculator" id="eix-Tb-IHm" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="brv-BA-U8d">
+                <viewController title="Complex Calculator" id="eix-Tb-IHm" customClass="ComplexCalculatorViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="brv-BA-U8d" customClass="ComplexCalculatorViewController">
                         <rect key="frame" x="0.0" y="20" width="480" height="300"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -1190,21 +1168,19 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jPR-Uh-SLq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="172" y="682"/>
+            <point key="canvasLocation" x="-500" y="634"/>
         </scene>
-        <!--View Controller - Function Plotter-->
-        <scene sceneID="Rv3-Iq-1NQ">
+        <!--Graph Plotter View Controller - Graph Plotter-->
+        <scene sceneID="HP6-eZ-Eli">
             <objects>
-                <viewController title="Function Plotter" id="Sdp-aQ-qaw" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dHd-AN-w7v">
+                <viewController title="Graph Plotter" id="tIy-8r-wN4" customClass="GraphPlotterViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hfa-7C-s2Z">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Funktionsgraph1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Nyy-IH-bcU">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="280" id="zi2-KP-rZR"/>
-                                </constraints>
-                            </imageView>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jgX-Rc-bWp" customClass="GraphPlotterView">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter function here ..." borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rSJ-G0-LGF">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -1253,82 +1229,98 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="QJc-kf-cGm" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="1s5-f9-Ocp"/>
-                            <constraint firstItem="Nyy-IH-bcU" firstAttribute="top" secondItem="dHd-AN-w7v" secondAttribute="top" constant="20" symbolic="YES" type="default" id="2mJ-go-qNg"/>
-                            <constraint firstItem="rSJ-G0-LGF" firstAttribute="top" secondItem="Nyy-IH-bcU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="4wl-fq-vrZ"/>
-                            <constraint firstItem="rSJ-G0-LGF" firstAttribute="leading" secondItem="dHd-AN-w7v" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="9OB-Z5-vrp"/>
-                            <constraint firstItem="7du-xI-kXe" firstAttribute="leading" secondItem="dHd-AN-w7v" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="A2y-0W-k8v"/>
-                            <constraint firstItem="QJc-kf-cGm" firstAttribute="top" secondItem="Pid-So-kNl" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="A9b-i1-Cmp"/>
-                            <constraint firstAttribute="trailing" secondItem="3hJ-Xl-tC7" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="B6X-GZ-9lK"/>
-                            <constraint firstItem="x3b-gR-6A6" firstAttribute="top" secondItem="eza-e9-Nhq" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="CKs-us-z5U"/>
-                            <constraint firstItem="QJc-kf-cGm" firstAttribute="baseline" secondItem="x3b-gR-6A6" secondAttribute="baseline" type="default" id="Dc2-iX-pkk"/>
-                            <constraint firstItem="7du-xI-kXe" firstAttribute="top" secondItem="x3b-gR-6A6" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="FGu-TA-0Qf"/>
-                            <constraint firstItem="7du-xI-kXe" firstAttribute="trailing" secondItem="x3b-gR-6A6" secondAttribute="trailing" type="default" id="G0s-Fl-eFd"/>
-                            <constraint firstAttribute="bottom" secondItem="3hJ-Xl-tC7" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="JYm-zE-54W"/>
-                            <constraint firstItem="Nyy-IH-bcU" firstAttribute="leading" secondItem="dHd-AN-w7v" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ML6-Y3-nK3"/>
-                            <constraint firstItem="3hJ-Xl-tC7" firstAttribute="top" secondItem="QJc-kf-cGm" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="OHE-45-ygQ"/>
-                            <constraint firstItem="x3b-gR-6A6" firstAttribute="leading" secondItem="dHd-AN-w7v" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="WgO-v1-MRF"/>
-                            <constraint firstItem="3hJ-Xl-tC7" firstAttribute="leading" secondItem="QJc-kf-cGm" secondAttribute="leading" type="default" id="afW-tC-VTd"/>
-                            <constraint firstItem="Pid-So-kNl" firstAttribute="baseline" secondItem="eza-e9-Nhq" secondAttribute="baseline" type="default" id="j5g-lS-Jw5"/>
-                            <constraint firstItem="x3b-gR-6A6" firstAttribute="trailing" secondItem="eza-e9-Nhq" secondAttribute="trailing" type="default" id="jAQ-KC-oTN"/>
-                            <constraint firstAttribute="trailing" secondItem="Nyy-IH-bcU" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="k6e-kk-Tk7"/>
-                            <constraint firstItem="eza-e9-Nhq" firstAttribute="leading" secondItem="dHd-AN-w7v" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="kC8-h7-vkm"/>
-                            <constraint firstAttribute="trailing" secondItem="rSJ-G0-LGF" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="rP0-lH-YEd"/>
-                            <constraint firstAttribute="bottom" secondItem="7du-xI-kXe" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="ssi-Qh-Ncq"/>
-                            <constraint firstItem="QJc-kf-cGm" firstAttribute="leading" secondItem="Pid-So-kNl" secondAttribute="leading" type="default" id="unx-5S-AwH"/>
-                            <constraint firstItem="eza-e9-Nhq" firstAttribute="top" secondItem="Pid-So-kNl" secondAttribute="top" type="default" id="w4n-La-wjh"/>
-                            <constraint firstAttribute="trailing" secondItem="Pid-So-kNl" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="xPn-3A-emF"/>
+                            <constraint firstItem="QJc-kf-cGm" firstAttribute="top" secondItem="Pid-So-kNl" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="09g-3c-9e9"/>
+                            <constraint firstItem="eza-e9-Nhq" firstAttribute="leading" secondItem="hfa-7C-s2Z" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="2W7-oH-0Im"/>
+                            <constraint firstItem="jgX-Rc-bWp" firstAttribute="leading" secondItem="hfa-7C-s2Z" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="2ow-sc-AKL"/>
+                            <constraint firstItem="7du-xI-kXe" firstAttribute="top" secondItem="x3b-gR-6A6" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="36Q-li-voC"/>
+                            <constraint firstAttribute="bottom" secondItem="3hJ-Xl-tC7" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="49s-Ya-7Hd"/>
+                            <constraint firstAttribute="trailing" secondItem="jgX-Rc-bWp" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="7B1-c0-tDT"/>
+                            <constraint firstItem="eza-e9-Nhq" firstAttribute="trailing" secondItem="x3b-gR-6A6" secondAttribute="trailing" type="default" id="ATb-pY-2Zu"/>
+                            <constraint firstItem="Pid-So-kNl" firstAttribute="leading" secondItem="QJc-kf-cGm" secondAttribute="leading" type="default" id="Beb-N8-4E9"/>
+                            <constraint firstItem="rSJ-G0-LGF" firstAttribute="leading" secondItem="hfa-7C-s2Z" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="H2N-8j-cRc"/>
+                            <constraint firstItem="jgX-Rc-bWp" firstAttribute="top" secondItem="hfa-7C-s2Z" secondAttribute="top" constant="20" symbolic="YES" type="default" id="JYB-AK-Ifi"/>
+                            <constraint firstItem="x3b-gR-6A6" firstAttribute="top" secondItem="eza-e9-Nhq" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="LAk-dg-grd"/>
+                            <constraint firstItem="x3b-gR-6A6" firstAttribute="trailing" secondItem="7du-xI-kXe" secondAttribute="trailing" type="default" id="PWy-Yr-dBk"/>
+                            <constraint firstItem="7du-xI-kXe" firstAttribute="leading" secondItem="hfa-7C-s2Z" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="RLB-g6-P7s"/>
+                            <constraint firstAttribute="trailing" secondItem="QJc-kf-cGm" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="WtS-XK-1ES"/>
+                            <constraint firstItem="Pid-So-kNl" firstAttribute="top" secondItem="eza-e9-Nhq" secondAttribute="top" type="default" id="ald-Xt-ZbN"/>
+                            <constraint firstItem="x3b-gR-6A6" firstAttribute="leading" secondItem="hfa-7C-s2Z" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="c30-zJ-BG5"/>
+                            <constraint firstAttribute="trailing" secondItem="3hJ-Xl-tC7" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="hhW-d2-IaJ"/>
+                            <constraint firstItem="eza-e9-Nhq" firstAttribute="baseline" secondItem="Pid-So-kNl" secondAttribute="baseline" type="default" id="j8B-S5-uPD"/>
+                            <constraint firstItem="QJc-kf-cGm" firstAttribute="leading" secondItem="3hJ-Xl-tC7" secondAttribute="leading" type="default" id="ldv-Fg-pcg"/>
+                            <constraint firstItem="3hJ-Xl-tC7" firstAttribute="top" secondItem="QJc-kf-cGm" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="leK-MQ-CjJ"/>
+                            <constraint firstItem="rSJ-G0-LGF" firstAttribute="top" secondItem="jgX-Rc-bWp" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="mHe-kJ-FHo"/>
+                            <constraint firstAttribute="bottom" secondItem="7du-xI-kXe" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="oac-lL-uXK"/>
+                            <constraint firstItem="x3b-gR-6A6" firstAttribute="baseline" secondItem="QJc-kf-cGm" secondAttribute="baseline" type="default" id="pju-Lz-8iU"/>
+                            <constraint firstAttribute="trailing" secondItem="rSJ-G0-LGF" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="sqn-CS-d7O"/>
+                            <constraint firstAttribute="trailing" secondItem="Pid-So-kNl" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="xiy-AV-YCh"/>
+                            <constraint firstAttribute="bottom" secondItem="rSJ-G0-LGF" secondAttribute="bottom" constant="122" id="xwn-5O-Fhw"/>
                         </constraints>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="QRM-no-T8M" appends="YES" id="8dp-vq-YJU"/>
-                            <outletCollection property="gestureRecognizers" destination="8cG-7A-jos" appends="YES" id="XYi-Ai-OwI"/>
+                            <outletCollection property="gestureRecognizers" destination="Rs8-FN-d14" appends="YES" id="MPc-In-Gna"/>
                         </connections>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YgL-vi-wFe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="left" id="QRM-no-T8M">
                     <connections>
-                        <segue destination="2" kind="modal" id="YFE-IL-RkA"/>
+                        <segue destination="2" kind="modal" identifier="fromGraphToSpimple" id="dWK-fA-2cL"/>
                     </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="right" id="8cG-7A-jos">
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y63-FK-Brc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="Rs8-FN-d14">
                     <connections>
-                        <segue destination="2" kind="modal" id="Ud1-fA-oX3"/>
+                        <action selector="swipeToSimpleCalc:" destination="tIy-8r-wN4" id="CWx-F0-cnU"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="589" y="107"/>
+            <point key="canvasLocation" x="-184" y="-22"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Funktionsgraph1.png" width="627" height="627"/>
+        <image name="proCalc_4Funct_smpl@2x.png" width="64" height="44"/>
+        <image name="proCalc_ClearButtons_smpl@2x.png" width="64" height="44"/>
+        <image name="proCalc_MemoryButton_smpl@2x.png" width="64" height="44"/>
+        <image name="proCalc_NumberButton_smpl@2x.png" width="64" height="44"/>
+        <image name="proCalc_RevPeriod_smpl@2x.png" width="64" height="44"/>
+        <image name="proCalc_enter_smpl@2x.png" width="64" height="94"/>
+        <image name="proCalc_specFunct_smpl@2x.png" width="64" height="44"/>
     </resources>
     <classes>
+        <class className="ComplexCalculatorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ComplexCalculatorViewController.h"/>
+        </class>
+        <class className="GraphPlotterView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphPlotterView.h"/>
+        </class>
+        <class className="GraphPlotterViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphPlotterViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="swipeToSimpleCalc:" candidateClass="UISwipeGestureRecognizer"/>
+                <relationship kind="outlet" name="functionField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="graphPlotterView" candidateClass="GraphPlotterView"/>
+            </relationships>
+        </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+        <class className="SimpleCalculatorViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SimpleCalculatorViewController.h"/>
             <relationships>
-                <relationship kind="action" name="commaPressed:"/>
-                <relationship kind="action" name="digitPressed:"/>
-                <relationship kind="action" name="operationPressed:"/>
+                <relationship kind="action" name="addExpressionToComputationDisplay:" candidateClass="UIButton"/>
+                <relationship kind="action" name="clearTheDisplay:" candidateClass="UIButton"/>
+                <relationship kind="action" name="digitPressed:" candidateClass="UIButton"/>
+                <relationship kind="action" name="memoryFunctionPressed:" candidateClass="UIButton"/>
+                <relationship kind="action" name="specialFunctionPressed:" candidateClass="UIButton"/>
+                <relationship kind="action" name="swipe:" candidateClass="UISwipeGestureRecognizer"/>
                 <relationship kind="outlet" name="computationDisplay" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="resultDisplay" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="inputAndAnswerDisplay" candidateClass="UILabel"/>
             </relationships>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="YFE-IL-RkA"/>
-        <segue reference="mv1-6v-THt"/>
-    </inferredMetricsTieBreakers>
 </document>
