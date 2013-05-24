@@ -27,9 +27,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmT-h5-f78">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" type="user" id="N4p-xJ-V0z"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="∙" backgroundImage="proCalc_RevPeriod_smpl@2x.png">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -45,7 +42,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wfp-2s-7su">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="64" type="user" id="0kf-K1-yXb"/>
+                                    <constraint firstAttribute="height" constant="95" id="JHU-85-Uv7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <state key="normal" title="=" backgroundImage="proCalc_enter_smpl@2x.png">
@@ -60,9 +57,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWz-AU-64H">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" type="user" id="KXy-ZQ-vCB"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="1" backgroundImage="proCalc_NumberButton_smpl@2x.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -77,9 +71,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntS-gY-rDQ">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" type="user" id="grN-bA-qgz"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="2" backgroundImage="proCalc_NumberButton_smpl@2x.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -93,9 +84,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oc0-Mx-6v7">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" type="user" id="pdk-Gc-NzP"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="3" backgroundImage="proCalc_NumberButton_smpl@2x.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -109,9 +97,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5A-Yv-nG4">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" type="user" id="uGg-ia-Sf9"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="4" backgroundImage="proCalc_NumberButton_smpl@2x.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -125,9 +110,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cvv-6e-J8K">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" type="user" id="Daj-Ws-Hb2"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="5" backgroundImage="proCalc_NumberButton_smpl@2x.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -141,10 +123,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65O-JQ-0xN">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="moC-KM-nGo"/>
-                                    <constraint firstAttribute="width" constant="64" type="user" id="sFd-3g-xd0"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="6" backgroundImage="proCalc_NumberButton_smpl@2x.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -158,9 +136,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IS5-Nw-ouI">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" type="user" id="tXB-P3-3Uw"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <state key="normal" title="+" backgroundImage="proCalc_4Funct_smpl@2x.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -174,9 +149,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="960-LA-kl3">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" type="user" id="7A9-t6-liM"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="7" backgroundImage="proCalc_NumberButton_smpl@2x.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -190,9 +162,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdU-O5-9ba">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" type="user" id="hgq-dH-vTU"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="8" backgroundImage="proCalc_NumberButton_smpl@2x.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -206,9 +175,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2i-mm-431">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" type="user" id="Gsy-U8-XKM"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="9" backgroundImage="proCalc_NumberButton_smpl@2x.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -222,10 +188,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMa-Ch-k83">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" type="user" id="jxL-vb-cSu"/>
-                                    <constraint firstAttribute="height" constant="42" id="mA3-Iq-LuN"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <state key="normal" title="−" backgroundImage="proCalc_4Funct_smpl@2x.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -239,9 +201,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpL-Qt-ryL">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" type="user" id="Fu9-z6-VU8"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <state key="normal" title="log" backgroundImage="proCalc_specFunct_smpl@2x.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -255,9 +214,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="131-uh-loJ">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" type="user" id="dOh-0k-laj"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <state key="normal" title="%" backgroundImage="proCalc_specFunct_smpl@2x.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -271,9 +227,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aS6-Xu-3lW">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" type="user" id="s6l-GX-CZ7"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <state key="normal" title="÷" backgroundImage="proCalc_4Funct_smpl@2x.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -287,9 +240,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdN-uz-bU2">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" type="user" id="dM5-Tz-KDl"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <state key="normal" title="×" backgroundImage="proCalc_4Funct_smpl@2x.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -303,9 +253,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQP-xC-RoS">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" type="user" id="Bd9-KL-apb"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <state key="normal" title="√x" backgroundImage="proCalc_specFunct_smpl@2x.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -319,9 +266,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKa-xv-Ypw">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" type="user" id="eg6-LA-PRV"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <state key="normal" title="x²" backgroundImage="proCalc_specFunct_smpl@2x.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -335,9 +279,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAB-TR-Bbz">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" type="user" id="T8F-Ws-Ft9"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <state key="normal" title="AC" backgroundImage="proCalc_ClearButtons_smpl@2x.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -351,9 +292,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qai-2W-SXv">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" type="user" id="6KG-3i-XKJ"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <state key="normal" title="C" backgroundImage="proCalc_ClearButtons_smpl@2x.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -364,18 +302,12 @@
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="right" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4CZ-j4-rR1">
                                 <color key="backgroundColor" red="0.74265437477536778" green="0.88147103858373743" blue="0.95348373724489799" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="M8i-sf-Qrj"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="12312323" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tyt-CS-GL3">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="800" text="12312323" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="Tyt-CS-GL3">
                                 <color key="backgroundColor" red="0.74265437477536778" green="0.88147103858373743" blue="0.95348373724489799" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="38" id="JAo-8A-ena"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -383,9 +315,6 @@
                             </label>
                             <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuJ-oZ-pac">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" type="user" id="yMg-fl-z4S"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="MC" backgroundImage="proCalc_MemoryButton_smpl@2x.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -399,9 +328,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q66-7W-bps">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" type="user" id="i4g-b8-cKe"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="M+" backgroundImage="proCalc_MemoryButton_smpl@2x.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -415,9 +341,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIv-Mf-sDM">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" type="user" id="Kfd-Gy-Izx"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="M-" backgroundImage="proCalc_MemoryButton_smpl@2x.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -431,9 +354,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOe-Pm-e2r">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" type="user" id="0an-QD-LwQ"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="MR" backgroundImage="proCalc_MemoryButton_smpl@2x.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -447,9 +367,6 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxv-J0-EdQ">
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="64" type="user" id="JCK-7Q-Ijo"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <state key="normal" title="±" backgroundImage="proCalc_RevPeriod_smpl@2x.png">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -466,73 +383,85 @@
                         <color key="backgroundColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Tyt-CS-GL3" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="1Dk-pr-d8V"/>
-                            <constraint firstItem="ntS-gY-rDQ" firstAttribute="top" secondItem="Cvv-6e-J8K" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="1lj-rf-SfL"/>
+                            <constraint firstItem="oc0-Mx-6v7" firstAttribute="leading" secondItem="ntS-gY-rDQ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="0rU-xk-vP5"/>
+                            <constraint firstItem="IS5-Nw-ouI" firstAttribute="top" secondItem="65O-JQ-0xN" secondAttribute="top" type="user" id="1pi-ln-bWp"/>
                             <constraint firstItem="131-uh-loJ" firstAttribute="baseline" secondItem="aS6-Xu-3lW" secondAttribute="baseline" type="default" id="2Iz-0z-U49"/>
-                            <constraint firstItem="jIv-Mf-sDM" firstAttribute="leading" secondItem="q66-7W-bps" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="60v-rc-W2U"/>
-                            <constraint firstItem="Cvv-6e-J8K" firstAttribute="leading" secondItem="C5A-Yv-nG4" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="75F-dh-U6m"/>
-                            <constraint firstItem="jIv-Mf-sDM" firstAttribute="top" secondItem="4CZ-j4-rR1" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="7NQ-Gb-Yap"/>
-                            <constraint firstItem="131-uh-loJ" firstAttribute="top" secondItem="eKa-xv-Ypw" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="AFf-ql-Ph1"/>
-                            <constraint firstAttribute="bottom" secondItem="Xpg-zX-7R2" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="AH6-7p-abv"/>
-                            <constraint firstItem="cMa-Ch-k83" firstAttribute="top" secondItem="FdN-uz-bU2" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="AzP-Vd-lZI"/>
-                            <constraint firstItem="VWz-AU-64H" firstAttribute="baseline" secondItem="ntS-gY-rDQ" secondAttribute="baseline" type="default" id="B8C-6l-WAl"/>
-                            <constraint firstItem="Cvv-6e-J8K" firstAttribute="baseline" secondItem="C5A-Yv-nG4" secondAttribute="baseline" type="default" id="Cjx-5n-ILN"/>
-                            <constraint firstAttribute="trailing" secondItem="cMa-Ch-k83" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="DNb-y6-YCf"/>
-                            <constraint firstItem="kxv-J0-EdQ" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="DeN-F4-iWc"/>
-                            <constraint firstAttribute="trailing" secondItem="Qai-2W-SXv" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="FQJ-pf-PCx"/>
-                            <constraint firstAttribute="trailing" secondItem="FdN-uz-bU2" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Ftw-Uf-nea"/>
-                            <constraint firstItem="aS6-Xu-3lW" firstAttribute="top" secondItem="lAB-TR-Bbz" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Hi1-WB-1l0"/>
-                            <constraint firstItem="4CZ-j4-rR1" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="I25-s9-k9Z"/>
-                            <constraint firstAttribute="bottom" secondItem="fmT-h5-f78" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="N9R-U7-0ds"/>
-                            <constraint firstItem="Qai-2W-SXv" firstAttribute="top" secondItem="gOe-Pm-e2r" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="NLU-9z-AlV"/>
-                            <constraint firstItem="FdN-uz-bU2" firstAttribute="centerY" secondItem="aS6-Xu-3lW" secondAttribute="centerY" type="default" id="Of5-5j-oKR"/>
-                            <constraint firstItem="C5A-Yv-nG4" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Pkk-Y7-m5f"/>
-                            <constraint firstItem="Q2i-mm-431" firstAttribute="leading" secondItem="FdU-O5-9ba" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Q7L-rl-SKS"/>
-                            <constraint firstItem="eKa-xv-Ypw" firstAttribute="top" secondItem="q66-7W-bps" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="QKT-oO-exU"/>
-                            <constraint firstItem="oc0-Mx-6v7" firstAttribute="top" secondItem="ntS-gY-rDQ" secondAttribute="top" type="default" id="RKu-w2-faW"/>
-                            <constraint firstItem="ntS-gY-rDQ" firstAttribute="leading" secondItem="VWz-AU-64H" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="SVU-2n-csv"/>
-                            <constraint firstItem="131-uh-loJ" firstAttribute="baseline" secondItem="xpL-Qt-ryL" secondAttribute="baseline" type="default" id="Sye-7a-96J"/>
-                            <constraint firstItem="960-LA-kl3" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Tc3-3l-3dG"/>
-                            <constraint firstItem="eKa-xv-Ypw" firstAttribute="leading" secondItem="GQP-xC-RoS" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="TtW-ai-mKr"/>
-                            <constraint firstItem="oc0-Mx-6v7" firstAttribute="top" secondItem="65O-JQ-0xN" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Uc6-bU-dSw"/>
-                            <constraint firstItem="65O-JQ-0xN" firstAttribute="top" secondItem="Q2i-mm-431" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="WgB-G8-oct"/>
-                            <constraint firstItem="Q2i-mm-431" firstAttribute="top" secondItem="aS6-Xu-3lW" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Wse-er-hCb"/>
-                            <constraint firstItem="FdU-O5-9ba" firstAttribute="baseline" secondItem="960-LA-kl3" secondAttribute="baseline" type="default" id="XOW-ip-D8X"/>
-                            <constraint firstItem="fuJ-oZ-pac" firstAttribute="baseline" secondItem="q66-7W-bps" secondAttribute="baseline" type="default" id="Ybs-bS-cxt"/>
-                            <constraint firstItem="fmT-h5-f78" firstAttribute="leading" secondItem="Xpg-zX-7R2" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="aYe-uW-8pR"/>
+                            <constraint firstItem="C5A-Yv-nG4" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="2eK-Ok-c7z"/>
+                            <constraint firstAttribute="bottom" secondItem="kxv-J0-EdQ" secondAttribute="bottom" constant="19" type="user" id="31X-97-06L"/>
+                            <constraint firstItem="kxv-J0-EdQ" firstAttribute="baseline" secondItem="Xpg-zX-7R2" secondAttribute="baseline" type="user" id="3VZ-Qw-Qc6"/>
+                            <constraint firstItem="fmT-h5-f78" firstAttribute="bottom" secondItem="Wfp-2s-7su" secondAttribute="bottom" type="user" id="4Fv-HI-Cef"/>
+                            <constraint firstItem="Q2i-mm-431" firstAttribute="baseline" secondItem="cMa-Ch-k83" secondAttribute="baseline" type="default" id="4xy-XH-Awv"/>
+                            <constraint firstItem="960-LA-kl3" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="52b-jn-wZD"/>
+                            <constraint firstAttribute="trailing" secondItem="FdN-uz-bU2" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="6Bw-Xm-prx"/>
+                            <constraint firstItem="lAB-TR-Bbz" firstAttribute="baseline" secondItem="Qai-2W-SXv" secondAttribute="baseline" type="user" id="78O-wN-gEq"/>
+                            <constraint firstItem="Qai-2W-SXv" firstAttribute="leading" secondItem="lAB-TR-Bbz" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="79s-5k-LJQ"/>
+                            <constraint firstItem="q66-7W-bps" firstAttribute="centerX" secondItem="eKa-xv-Ypw" secondAttribute="centerX" type="default" id="7cm-da-ELs"/>
+                            <constraint firstAttribute="trailing" secondItem="cMa-Ch-k83" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="844-WG-0tm"/>
+                            <constraint firstAttribute="trailing" secondItem="IS5-Nw-ouI" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="8Qj-Zw-01B"/>
+                            <constraint firstItem="cMa-Ch-k83" firstAttribute="top" secondItem="960-LA-kl3" secondAttribute="top" type="default" id="9PP-0m-txt"/>
+                            <constraint firstItem="Q2i-mm-431" firstAttribute="top" secondItem="aS6-Xu-3lW" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="9iQ-W7-UWe"/>
+                            <constraint firstItem="Q2i-mm-431" firstAttribute="baseline" secondItem="FdU-O5-9ba" secondAttribute="baseline" type="user" id="BJN-DV-tXK"/>
+                            <constraint firstAttribute="bottom" secondItem="Wfp-2s-7su" secondAttribute="bottom" constant="19" type="user" id="CqK-6U-FiY"/>
+                            <constraint firstItem="131-uh-loJ" firstAttribute="top" secondItem="xpL-Qt-ryL" secondAttribute="top" type="default" id="DFC-Kd-Dkw"/>
+                            <constraint firstItem="gOe-Pm-e2r" firstAttribute="baseline" secondItem="jIv-Mf-sDM" secondAttribute="baseline" type="default" id="DsZ-JF-Qah"/>
+                            <constraint firstItem="Qai-2W-SXv" firstAttribute="top" secondItem="lAB-TR-Bbz" secondAttribute="top" type="default" id="E5P-cy-bQm"/>
+                            <constraint firstItem="jIv-Mf-sDM" firstAttribute="leading" secondItem="q66-7W-bps" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="EHU-n4-CBv"/>
+                            <constraint firstItem="GQP-xC-RoS" firstAttribute="baseline" secondItem="Qai-2W-SXv" secondAttribute="baseline" type="user" id="FFG-GB-jOJ"/>
+                            <constraint firstItem="xpL-Qt-ryL" firstAttribute="top" secondItem="GQP-xC-RoS" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="JDu-no-028"/>
+                            <constraint firstItem="aS6-Xu-3lW" firstAttribute="leading" secondItem="131-uh-loJ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Jfc-yy-xmk"/>
+                            <constraint firstItem="q66-7W-bps" firstAttribute="leading" secondItem="fuJ-oZ-pac" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Kc2-Vb-hkp"/>
+                            <constraint firstItem="aS6-Xu-3lW" firstAttribute="top" secondItem="lAB-TR-Bbz" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="Kgs-lh-aqz"/>
+                            <constraint firstItem="lAB-TR-Bbz" firstAttribute="leading" secondItem="eKa-xv-Ypw" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="M2C-OJ-Aue"/>
+                            <constraint firstItem="FdN-uz-bU2" firstAttribute="top" secondItem="Qai-2W-SXv" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="MEK-rp-W1c"/>
+                            <constraint firstItem="cMa-Ch-k83" firstAttribute="top" secondItem="FdN-uz-bU2" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="MTK-uY-VVp"/>
+                            <constraint firstItem="FdU-O5-9ba" firstAttribute="top" secondItem="131-uh-loJ" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="Nxs-9p-NtP"/>
+                            <constraint firstItem="131-uh-loJ" firstAttribute="leading" secondItem="xpL-Qt-ryL" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="OUs-Le-gWx"/>
+                            <constraint firstItem="Cvv-6e-J8K" firstAttribute="leading" secondItem="C5A-Yv-nG4" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Olg-Fy-Ku8"/>
+                            <constraint firstItem="xpL-Qt-ryL" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="PCz-3A-8Kc"/>
+                            <constraint firstItem="Cvv-6e-J8K" firstAttribute="baseline" secondItem="C5A-Yv-nG4" secondAttribute="baseline" type="default" id="PbA-gU-SYz"/>
+                            <constraint firstItem="GQP-xC-RoS" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="PwK-dY-LzI"/>
+                            <constraint firstAttribute="trailing" secondItem="gOe-Pm-e2r" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="QI3-F9-5oq"/>
+                            <constraint firstItem="Wfp-2s-7su" firstAttribute="top" secondItem="IS5-Nw-ouI" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="RJz-g1-NgZ"/>
+                            <constraint firstItem="jIv-Mf-sDM" firstAttribute="baseline" secondItem="q66-7W-bps" secondAttribute="baseline" type="user" id="S0F-HY-0wm"/>
+                            <constraint firstItem="Xpg-zX-7R2" firstAttribute="leading" secondItem="kxv-J0-EdQ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="SbF-gA-htP"/>
+                            <constraint firstItem="eKa-xv-Ypw" firstAttribute="baseline" secondItem="lAB-TR-Bbz" secondAttribute="baseline" type="user" id="SdY-KF-efS"/>
+                            <constraint firstItem="fuJ-oZ-pac" firstAttribute="top" secondItem="4CZ-j4-rR1" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Som-qr-U11"/>
+                            <constraint firstItem="fmT-h5-f78" firstAttribute="leading" secondItem="Xpg-zX-7R2" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="U28-Zi-j17"/>
+                            <constraint firstAttribute="trailing" secondItem="Wfp-2s-7su" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Ugk-kM-O7L"/>
+                            <constraint firstAttribute="trailing" secondItem="Qai-2W-SXv" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="VDi-LT-CG7"/>
+                            <constraint firstItem="GQP-xC-RoS" firstAttribute="top" secondItem="fuJ-oZ-pac" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="Wv2-UY-2lY"/>
+                            <constraint firstItem="fmT-h5-f78" firstAttribute="baseline" secondItem="Xpg-zX-7R2" secondAttribute="baseline" type="user" id="X6K-9b-iJ2"/>
+                            <constraint firstItem="131-uh-loJ" firstAttribute="baseline" secondItem="xpL-Qt-ryL" secondAttribute="baseline" type="default" id="Yec-a8-eIS"/>
+                            <constraint firstItem="VWz-AU-64H" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ZVO-rW-dIa"/>
+                            <constraint firstItem="960-LA-kl3" firstAttribute="top" secondItem="xpL-Qt-ryL" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="aa1-em-RB8"/>
                             <constraint firstItem="IS5-Nw-ouI" firstAttribute="baseline" secondItem="65O-JQ-0xN" secondAttribute="baseline" type="default" id="axG-bz-5F6"/>
-                            <constraint firstItem="q66-7W-bps" firstAttribute="top" secondItem="4CZ-j4-rR1" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ayi-Tt-na1"/>
                             <constraint firstItem="Tyt-CS-GL3" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="b2s-MP-Skl"/>
-                            <constraint firstItem="Xpg-zX-7R2" firstAttribute="leading" secondItem="kxv-J0-EdQ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="bjU-XU-gAh"/>
-                            <constraint firstItem="aS6-Xu-3lW" firstAttribute="leading" secondItem="131-uh-loJ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="dta-Sm-nNK"/>
-                            <constraint firstAttribute="bottom" secondItem="Wfp-2s-7su" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="eZP-Ac-bgd"/>
+                            <constraint firstItem="Qai-2W-SXv" firstAttribute="baseline" secondItem="eKa-xv-Ypw" secondAttribute="baseline" type="user" id="csg-jL-N7K"/>
+                            <constraint firstItem="jIv-Mf-sDM" firstAttribute="top" secondItem="4CZ-j4-rR1" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="eIl-Yc-QzQ"/>
+                            <constraint firstItem="kxv-J0-EdQ" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="fAh-1E-6PK"/>
+                            <constraint firstAttribute="bottom" secondItem="fmT-h5-f78" secondAttribute="bottom" constant="19" type="user" id="fIr-z4-Me8"/>
+                            <constraint firstItem="GQP-xC-RoS" firstAttribute="baseline" secondItem="lAB-TR-Bbz" secondAttribute="baseline" type="user" id="fqk-jy-PqX"/>
+                            <constraint firstItem="65O-JQ-0xN" firstAttribute="leading" secondItem="Cvv-6e-J8K" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="gku-Gy-OPp"/>
                             <constraint firstItem="aS6-Xu-3lW" firstAttribute="baseline" secondItem="FdN-uz-bU2" secondAttribute="baseline" type="default" id="hC9-0i-wB0"/>
-                            <constraint firstItem="GQP-xC-RoS" firstAttribute="baseline" secondItem="eKa-xv-Ypw" secondAttribute="baseline" type="default" id="im5-Zm-MNU"/>
-                            <constraint firstItem="131-uh-loJ" firstAttribute="leading" secondItem="xpL-Qt-ryL" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="jbQ-Sr-OKb"/>
-                            <constraint firstItem="FdN-uz-bU2" firstAttribute="top" secondItem="Qai-2W-SXv" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="jpn-1u-MB1"/>
-                            <constraint firstItem="Cvv-6e-J8K" firstAttribute="top" secondItem="FdU-O5-9ba" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="kea-QS-1ci"/>
-                            <constraint firstItem="gOe-Pm-e2r" firstAttribute="top" secondItem="4CZ-j4-rR1" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="lMY-N1-WPc"/>
-                            <constraint firstAttribute="trailing" secondItem="gOe-Pm-e2r" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="mCc-YG-zNg"/>
+                            <constraint firstAttribute="trailing" secondItem="Tyt-CS-GL3" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="hbV-Gd-4sx"/>
+                            <constraint firstItem="VWz-AU-64H" firstAttribute="top" secondItem="C5A-Yv-nG4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="hkp-pQ-0kh"/>
+                            <constraint firstItem="4CZ-j4-rR1" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="i2G-wZ-JVR"/>
+                            <constraint firstItem="lAB-TR-Bbz" firstAttribute="top" secondItem="jIv-Mf-sDM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="i7y-YJ-f42"/>
+                            <constraint firstItem="Cvv-6e-J8K" firstAttribute="top" secondItem="FdU-O5-9ba" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="i7y-to-JK6"/>
+                            <constraint firstAttribute="bottom" secondItem="Xpg-zX-7R2" secondAttribute="bottom" constant="19" type="user" id="iLe-6R-QWd"/>
+                            <constraint firstAttribute="trailing" secondItem="4CZ-j4-rR1" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="j88-KC-rKd"/>
+                            <constraint firstItem="eKa-xv-Ypw" firstAttribute="baseline" secondItem="GQP-xC-RoS" secondAttribute="baseline" type="user" id="jmP-sc-xbl"/>
+                            <constraint firstItem="fuJ-oZ-pac" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="kpY-JG-AnZ"/>
+                            <constraint firstItem="VWz-AU-64H" firstAttribute="baseline" secondItem="ntS-gY-rDQ" secondAttribute="baseline" type="default" id="kt9-b9-bPd"/>
+                            <constraint firstItem="fuJ-oZ-pac" firstAttribute="baseline" secondItem="q66-7W-bps" secondAttribute="baseline" type="user" id="m9E-je-RKp"/>
                             <constraint firstItem="Tyt-CS-GL3" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="maj-PX-ONw"/>
-                            <constraint firstItem="FdU-O5-9ba" firstAttribute="top" secondItem="131-uh-loJ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="nO0-ek-R9J"/>
-                            <constraint firstItem="lAB-TR-Bbz" firstAttribute="leading" secondItem="eKa-xv-Ypw" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="pJZ-MK-mqf"/>
-                            <constraint firstItem="GQP-xC-RoS" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pdZ-9M-aCf"/>
-                            <constraint firstItem="oc0-Mx-6v7" firstAttribute="leading" secondItem="ntS-gY-rDQ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="pgl-WG-s8Y"/>
-                            <constraint firstItem="fuJ-oZ-pac" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="pjB-Mc-nsa"/>
-                            <constraint firstItem="65O-JQ-0xN" firstAttribute="leading" secondItem="Cvv-6e-J8K" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="pzH-ff-uSz"/>
-                            <constraint firstAttribute="trailing" secondItem="4CZ-j4-rR1" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="q9g-bZ-AKX"/>
-                            <constraint firstItem="FdU-O5-9ba" firstAttribute="leading" secondItem="960-LA-kl3" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="sPT-ak-UTG"/>
-                            <constraint firstItem="FdN-uz-bU2" firstAttribute="top" secondItem="aS6-Xu-3lW" secondAttribute="top" type="default" id="tSU-ah-1BM"/>
-                            <constraint firstAttribute="trailing" secondItem="IS5-Nw-ouI" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="tcu-T3-Nla"/>
-                            <constraint firstItem="Wfp-2s-7su" firstAttribute="top" secondItem="IS5-Nw-ouI" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="upy-1g-3tQ"/>
-                            <constraint firstItem="VWz-AU-64H" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="vhy-0Y-Z7E"/>
-                            <constraint firstItem="xpL-Qt-ryL" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="vwa-df-HHK"/>
-                            <constraint firstItem="oc0-Mx-6v7" firstAttribute="top" secondItem="Wfp-2s-7su" secondAttribute="top" type="default" id="wtX-mC-pj8"/>
-                            <constraint firstItem="IS5-Nw-ouI" firstAttribute="top" secondItem="cMa-Ch-k83" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="x5U-yR-Icn"/>
-                            <constraint firstAttribute="bottom" secondItem="kxv-J0-EdQ" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="y19-OI-sgx"/>
-                            <constraint firstAttribute="trailing" secondItem="Wfp-2s-7su" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="ytK-fn-ZF4"/>
-                            <constraint firstItem="q66-7W-bps" firstAttribute="leading" secondItem="fuJ-oZ-pac" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="zQ5-mR-4fi"/>
-                            <constraint firstItem="lAB-TR-Bbz" firstAttribute="top" secondItem="jIv-Mf-sDM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="zS2-4h-5td"/>
+                            <constraint firstItem="ntS-gY-rDQ" firstAttribute="leading" secondItem="VWz-AU-64H" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="nOH-kx-KdQ"/>
+                            <constraint firstItem="Q2i-mm-431" firstAttribute="leading" secondItem="FdU-O5-9ba" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="nfw-XI-Y2n"/>
+                            <constraint firstItem="FdU-O5-9ba" firstAttribute="leading" secondItem="960-LA-kl3" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="ps5-rZ-LNp"/>
+                            <constraint firstItem="131-uh-loJ" firstAttribute="centerY" secondItem="xpL-Qt-ryL" secondAttribute="centerY" type="default" id="s7r-cY-6Zw"/>
+                            <constraint firstItem="oc0-Mx-6v7" firstAttribute="baseline" secondItem="ntS-gY-rDQ" secondAttribute="baseline" type="default" id="t2u-Ua-vSB"/>
+                            <constraint firstItem="Cvv-6e-J8K" firstAttribute="baseline" secondItem="65O-JQ-0xN" secondAttribute="baseline" type="user" id="wry-W7-JVD"/>
+                            <constraint firstItem="q66-7W-bps" firstAttribute="leading" secondItem="eKa-xv-Ypw" secondAttribute="leading" type="default" id="xKr-rp-w8V"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="fby-DH-dwB" appends="YES" id="ral-Hy-3hL"/>
@@ -1307,12 +1236,6 @@
         <class className="SimpleCalculatorViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SimpleCalculatorViewController.h"/>
             <relationships>
-                <relationship kind="action" name="addExpressionToComputationDisplay:" candidateClass="UIButton"/>
-                <relationship kind="action" name="clearTheDisplay:" candidateClass="UIButton"/>
-                <relationship kind="action" name="digitPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="memoryFunctionPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="specialFunctionPressed:" candidateClass="UIButton"/>
-                <relationship kind="action" name="swipe:" candidateClass="UISwipeGestureRecognizer"/>
                 <relationship kind="outlet" name="computationDisplay" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="inputAndAnswerDisplay" candidateClass="UILabel"/>
             </relationships>
