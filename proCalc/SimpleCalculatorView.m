@@ -1,14 +1,14 @@
 //
-//  GraphPlotterView.m
+//  SimpleCalculatorView.m
 //  proCalc
 //
 //  Created by Tobias Hähnel on 01.06.13.
 //  Copyright (c) 2013 jonatobi. All rights reserved.
 //
 
-#import "GraphPlotterView.h"
+#import "SimpleCalculatorView.h"
 
-@implementation GraphPlotterView
+@implementation SimpleCalculatorView
 
 - (void)setup
 {
@@ -28,13 +28,12 @@
 }
 
 /*
- // Only override drawRect: if you perform custom drawing.
- // An empty implementation adversely affects performance during animation.
- - (void)drawRect:(CGRect)rect
- {
- // Drawing code
- }
- */
-
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect
+{
+    // Drawing code
+}
+*/
 
 @end
