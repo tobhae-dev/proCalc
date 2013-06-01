@@ -1,488 +1,422 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="7hi-Xn-WZs">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--Simple Calculator View Controller - Simple Calculator-->
-        <scene sceneID="5">
+        <!--Root View Controller-->
+        <scene sceneID="yI0-3J-2dV">
             <objects>
-                <viewController title="Simple Calculator" id="2" customClass="SimpleCalculatorViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3">
+                <viewController storyboardIdentifier="" id="7hi-Xn-WZs" customClass="RootViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ktz-xA-Zos">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xpg-zX-7R2">
-                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <state key="normal" title="0" backgroundImage="proCalc_NumberButton_smpl@2x.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="7vv-AP-j1D">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="440"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" id="3" customClass="SimpleCalculatorView">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Xpg-zX-7R2">
+                                                <rect key="frame" x="92" y="397" width="65" height="44"/>
+                                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                <state key="normal" title="0" backgroundImage="proCalc_NumberButton_smpl@2x.png">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fmT-h5-f78">
+                                                <rect key="frame" x="165" y="397" width="64" height="44"/>
+                                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                <state key="normal" title="∙" backgroundImage="proCalc_RevPeriod_smpl@2x.png">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Wfp-2s-7su">
+                                                <rect key="frame" x="237" y="346" width="64" height="95"/>
+                                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                <state key="normal" title="=" backgroundImage="proCalc_enter_smpl@2x.png">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VWz-AU-64H">
+                                                <rect key="frame" x="20" y="346" width="64" height="44"/>
+                                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                <state key="normal" title="1" backgroundImage="proCalc_NumberButton_smpl@2x.png">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ntS-gY-rDQ">
+                                                <rect key="frame" x="92" y="346" width="65" height="44"/>
+                                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                <state key="normal" title="2" backgroundImage="proCalc_NumberButton_smpl@2x.png">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oc0-Mx-6v7">
+                                                <rect key="frame" x="165" y="346" width="64" height="44"/>
+                                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                <state key="normal" title="3" backgroundImage="proCalc_NumberButton_smpl@2x.png">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="C5A-Yv-nG4">
+                                                <rect key="frame" x="20" y="294" width="64" height="44"/>
+                                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                <state key="normal" title="4" backgroundImage="proCalc_NumberButton_smpl@2x.png">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Cvv-6e-J8K">
+                                                <rect key="frame" x="92" y="294" width="65" height="44"/>
+                                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                <state key="normal" title="5" backgroundImage="proCalc_NumberButton_smpl@2x.png">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="65O-JQ-0xN">
+                                                <rect key="frame" x="165" y="294" width="64" height="44"/>
+                                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                <state key="normal" title="6" backgroundImage="proCalc_NumberButton_smpl@2x.png">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="IS5-Nw-ouI">
+                                                <rect key="frame" x="237" y="294" width="64" height="44"/>
+                                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                <state key="normal" title="+" backgroundImage="proCalc_4Funct_smpl@2x.png">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="960-LA-kl3">
+                                                <rect key="frame" x="20" y="242" width="64" height="44"/>
+                                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                <state key="normal" title="7" backgroundImage="proCalc_NumberButton_smpl@2x.png">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FdU-O5-9ba">
+                                                <rect key="frame" x="92" y="242" width="65" height="44"/>
+                                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                <state key="normal" title="8" backgroundImage="proCalc_NumberButton_smpl@2x.png">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Q2i-mm-431">
+                                                <rect key="frame" x="165" y="242" width="64" height="44"/>
+                                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                <state key="normal" title="9" backgroundImage="proCalc_NumberButton_smpl@2x.png">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cMa-Ch-k83">
+                                                <rect key="frame" x="237" y="242" width="64" height="44"/>
+                                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                <state key="normal" title="−" backgroundImage="proCalc_4Funct_smpl@2x.png">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xpL-Qt-ryL">
+                                                <rect key="frame" x="20" y="190" width="64" height="44"/>
+                                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                <state key="normal" title="log" backgroundImage="proCalc_specFunct_smpl@2x.png">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="131-uh-loJ">
+                                                <rect key="frame" x="92" y="190" width="65" height="44"/>
+                                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                <state key="normal" title="%" backgroundImage="proCalc_specFunct_smpl@2x.png">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aS6-Xu-3lW">
+                                                <rect key="frame" x="165" y="190" width="64" height="44"/>
+                                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                <state key="normal" title="÷" backgroundImage="proCalc_4Funct_smpl@2x.png">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FdN-uz-bU2">
+                                                <rect key="frame" x="237" y="190" width="64" height="44"/>
+                                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                <state key="normal" title="×" backgroundImage="proCalc_4Funct_smpl@2x.png">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="GQP-xC-RoS">
+                                                <rect key="frame" x="20" y="138" width="64" height="44"/>
+                                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                <state key="normal" title="√x" backgroundImage="proCalc_specFunct_smpl@2x.png">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eKa-xv-Ypw">
+                                                <rect key="frame" x="92" y="138" width="65" height="44"/>
+                                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                <state key="normal" title="x²" backgroundImage="proCalc_specFunct_smpl@2x.png">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="lAB-TR-Bbz">
+                                                <rect key="frame" x="165" y="138" width="64" height="44"/>
+                                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                <state key="normal" title="AC" backgroundImage="proCalc_ClearButtons_smpl@2x.png">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Qai-2W-SXv">
+                                                <rect key="frame" x="237" y="138" width="64" height="44"/>
+                                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                <state key="normal" title="C" backgroundImage="proCalc_ClearButtons_smpl@2x.png">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="right" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4CZ-j4-rR1">
+                                                <rect key="frame" x="20" y="51" width="281" height="27"/>
+                                                <color key="backgroundColor" red="0.74265437477536778" green="0.88147103858373743" blue="0.95348373724489799" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="800" text="12312323" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" id="Tyt-CS-GL3">
+                                                <rect key="frame" x="20" y="20" width="281" height="27"/>
+                                                <color key="backgroundColor" red="0.74265437477536778" green="0.88147103858373743" blue="0.95348373724489799" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                            </label>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fuJ-oZ-pac">
+                                                <rect key="frame" x="20" y="86" width="64" height="44"/>
+                                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <state key="normal" title="MC" backgroundImage="proCalc_MemoryButton_smpl@2x.png">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="q66-7W-bps">
+                                                <rect key="frame" x="92" y="86" width="65" height="44"/>
+                                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <state key="normal" title="M+" backgroundImage="proCalc_MemoryButton_smpl@2x.png">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jIv-Mf-sDM">
+                                                <rect key="frame" x="165" y="86" width="64" height="44"/>
+                                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <state key="normal" title="M-" backgroundImage="proCalc_MemoryButton_smpl@2x.png">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gOe-Pm-e2r">
+                                                <rect key="frame" x="237" y="86" width="64" height="44"/>
+                                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <state key="normal" title="MR" backgroundImage="proCalc_MemoryButton_smpl@2x.png">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kxv-J0-EdQ">
+                                                <rect key="frame" x="20" y="397" width="64" height="44"/>
+                                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                <state key="normal" title="±" backgroundImage="proCalc_RevPeriod_smpl@2x.png">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="hfa-7C-s2Z" customClass="GraphPlotterView">
+                                        <rect key="frame" x="320" y="-10" width="320" height="460"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <view opaque="NO" contentMode="scaleToFill" id="jgX-Rc-bWp" customClass="GraphDrawingView">
+                                                <rect key="frame" x="20" y="20" width="280" height="280"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter function here ..." borderStyle="roundedRect" minimumFontSize="17" id="rSJ-G0-LGF">
+                                                <rect key="frame" x="20" y="308" width="280" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Ergebnis" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eza-e9-Nhq">
+                                                <rect key="frame" x="20" y="352" width="134" height="24"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Nullpunkte" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pid-So-kNl">
+                                                <rect key="frame" x="166" y="352" width="134" height="24"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1. Ableitung" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="x3b-gR-6A6">
+                                                <rect key="frame" x="20" y="384" width="134" height="24"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2. Ableitung" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QJc-kf-cGm">
+                                                <rect key="frame" x="166" y="384" width="134" height="24"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Wendepunkte" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7du-xI-kXe">
+                                                <rect key="frame" x="20" y="416" width="134" height="24"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Extrema" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3hJ-Xl-tC7">
+                                                <rect key="frame" x="166" y="416" width="134" height="24"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outlet property="functionField" destination="rSJ-G0-LGF" id="EJf-xM-32w"/>
+                                            <outlet property="graphDrawingView" destination="jgX-Rc-bWp" id="koR-h5-fTJ"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" id="Ncf-ua-gJw">
+                                <rect key="frame" x="141" y="430" width="38" height="36"/>
                                 <connections>
-                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="CY0-xf-IJH"/>
+                                    <action selector="changePage:" destination="7hi-Xn-WZs" eventType="valueChanged" id="bWA-fL-8jE"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmT-h5-f78">
-                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <state key="normal" title="∙" backgroundImage="proCalc_RevPeriod_smpl@2x.png">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="period" destination="2" eventType="touchUpInside" id="f2U-u5-zSR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wfp-2s-7su">
-                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="95" id="JHU-85-Uv7"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="=" backgroundImage="proCalc_enter_smpl@2x.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="solveExpression" destination="2" eventType="touchUpInside" id="0ZW-48-g4c"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VWz-AU-64H">
-                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <state key="normal" title="1" backgroundImage="proCalc_NumberButton_smpl@2x.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="ESi-35-71g"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntS-gY-rDQ">
-                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <state key="normal" title="2" backgroundImage="proCalc_NumberButton_smpl@2x.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="wdN-qh-BMl"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oc0-Mx-6v7">
-                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <state key="normal" title="3" backgroundImage="proCalc_NumberButton_smpl@2x.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="bzV-c9-s1f"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C5A-Yv-nG4">
-                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <state key="normal" title="4" backgroundImage="proCalc_NumberButton_smpl@2x.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="MlS-6m-YyA"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cvv-6e-J8K">
-                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <state key="normal" title="5" backgroundImage="proCalc_NumberButton_smpl@2x.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="nXc-bL-pfE"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65O-JQ-0xN">
-                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <state key="normal" title="6" backgroundImage="proCalc_NumberButton_smpl@2x.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="aED-LM-sGa"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IS5-Nw-ouI">
-                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                <state key="normal" title="+" backgroundImage="proCalc_4Funct_smpl@2x.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="addExpressionToComputationDisplay:" destination="2" eventType="touchUpInside" id="9ky-DT-Kvm"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="960-LA-kl3">
-                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <state key="normal" title="7" backgroundImage="proCalc_NumberButton_smpl@2x.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="zhs-lW-bZ5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdU-O5-9ba">
-                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <state key="normal" title="8" backgroundImage="proCalc_NumberButton_smpl@2x.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="wSB-X8-US3"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2i-mm-431">
-                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <state key="normal" title="9" backgroundImage="proCalc_NumberButton_smpl@2x.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="digitPressed:" destination="2" eventType="touchUpInside" id="vWt-Ml-uxO"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMa-Ch-k83">
-                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                <state key="normal" title="−" backgroundImage="proCalc_4Funct_smpl@2x.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="addExpressionToComputationDisplay:" destination="2" eventType="touchUpInside" id="Zud-FL-TaD"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xpL-Qt-ryL">
-                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="log" backgroundImage="proCalc_specFunct_smpl@2x.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="specialFunctionPressed:" destination="2" eventType="touchUpInside" id="hn8-lp-Yrr"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="131-uh-loJ">
-                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="%" backgroundImage="proCalc_specFunct_smpl@2x.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="specialFunctionPressed:" destination="2" eventType="touchUpInside" id="148-rV-MIC"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aS6-Xu-3lW">
-                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                <state key="normal" title="÷" backgroundImage="proCalc_4Funct_smpl@2x.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="addExpressionToComputationDisplay:" destination="2" eventType="touchUpInside" id="WCd-wO-XGN"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdN-uz-bU2">
-                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                <state key="normal" title="×" backgroundImage="proCalc_4Funct_smpl@2x.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="addExpressionToComputationDisplay:" destination="2" eventType="touchUpInside" id="uPq-zB-l5X"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQP-xC-RoS">
-                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="√x" backgroundImage="proCalc_specFunct_smpl@2x.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="specialFunctionPressed:" destination="2" eventType="touchUpInside" id="iAE-x8-abi"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKa-xv-Ypw">
-                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="x²" backgroundImage="proCalc_specFunct_smpl@2x.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="specialFunctionPressed:" destination="2" eventType="touchUpInside" id="cXU-cj-zBZ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lAB-TR-Bbz">
-                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="AC" backgroundImage="proCalc_ClearButtons_smpl@2x.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="clearTheDisplay:" destination="2" eventType="touchUpInside" id="7dN-EM-gWU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qai-2W-SXv">
-                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="C" backgroundImage="proCalc_ClearButtons_smpl@2x.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="right" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4CZ-j4-rR1">
-                                <color key="backgroundColor" red="0.74265437477536778" green="0.88147103858373743" blue="0.95348373724489799" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="800" text="12312323" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="Tyt-CS-GL3">
-                                <color key="backgroundColor" red="0.74265437477536778" green="0.88147103858373743" blue="0.95348373724489799" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <size key="shadowOffset" width="0.0" height="0.0"/>
-                            </label>
-                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuJ-oZ-pac">
-                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="MC" backgroundImage="proCalc_MemoryButton_smpl@2x.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="memoryFunctionPressed:" destination="2" eventType="touchUpInside" id="Mg0-Ml-LRL"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q66-7W-bps">
-                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="M+" backgroundImage="proCalc_MemoryButton_smpl@2x.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="memoryFunctionPressed:" destination="2" eventType="touchUpInside" id="aqb-tn-8RT"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jIv-Mf-sDM">
-                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="M-" backgroundImage="proCalc_MemoryButton_smpl@2x.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="memoryFunctionPressed:" destination="2" eventType="touchUpInside" id="OS3-Up-eoF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOe-Pm-e2r">
-                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="MR" backgroundImage="proCalc_MemoryButton_smpl@2x.png">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="memoryFunctionPressed:" destination="2" eventType="touchUpInside" id="kFY-Hv-fuX"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxv-J0-EdQ">
-                                <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                <state key="normal" title="±" backgroundImage="proCalc_RevPeriod_smpl@2x.png">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="reverseSign" destination="2" eventType="touchUpInside" id="QwG-op-enw"/>
-                                </connections>
-                            </button>
+                            </pageControl>
                         </subviews>
-                        <color key="backgroundColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                        <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstItem="oc0-Mx-6v7" firstAttribute="leading" secondItem="ntS-gY-rDQ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="0rU-xk-vP5"/>
-                            <constraint firstItem="IS5-Nw-ouI" firstAttribute="top" secondItem="65O-JQ-0xN" secondAttribute="top" type="user" id="1pi-ln-bWp"/>
-                            <constraint firstItem="131-uh-loJ" firstAttribute="baseline" secondItem="aS6-Xu-3lW" secondAttribute="baseline" type="default" id="2Iz-0z-U49"/>
-                            <constraint firstItem="C5A-Yv-nG4" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="2eK-Ok-c7z"/>
-                            <constraint firstAttribute="bottom" secondItem="kxv-J0-EdQ" secondAttribute="bottom" constant="19" type="user" id="31X-97-06L"/>
-                            <constraint firstItem="kxv-J0-EdQ" firstAttribute="baseline" secondItem="Xpg-zX-7R2" secondAttribute="baseline" type="user" id="3VZ-Qw-Qc6"/>
-                            <constraint firstItem="fmT-h5-f78" firstAttribute="bottom" secondItem="Wfp-2s-7su" secondAttribute="bottom" type="user" id="4Fv-HI-Cef"/>
-                            <constraint firstItem="Q2i-mm-431" firstAttribute="baseline" secondItem="cMa-Ch-k83" secondAttribute="baseline" type="default" id="4xy-XH-Awv"/>
-                            <constraint firstItem="960-LA-kl3" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="52b-jn-wZD"/>
-                            <constraint firstAttribute="trailing" secondItem="FdN-uz-bU2" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="6Bw-Xm-prx"/>
-                            <constraint firstItem="lAB-TR-Bbz" firstAttribute="baseline" secondItem="Qai-2W-SXv" secondAttribute="baseline" type="user" id="78O-wN-gEq"/>
-                            <constraint firstItem="Qai-2W-SXv" firstAttribute="leading" secondItem="lAB-TR-Bbz" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="79s-5k-LJQ"/>
-                            <constraint firstItem="q66-7W-bps" firstAttribute="centerX" secondItem="eKa-xv-Ypw" secondAttribute="centerX" type="default" id="7cm-da-ELs"/>
-                            <constraint firstAttribute="trailing" secondItem="cMa-Ch-k83" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="844-WG-0tm"/>
-                            <constraint firstAttribute="trailing" secondItem="IS5-Nw-ouI" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="8Qj-Zw-01B"/>
-                            <constraint firstItem="cMa-Ch-k83" firstAttribute="top" secondItem="960-LA-kl3" secondAttribute="top" type="default" id="9PP-0m-txt"/>
-                            <constraint firstItem="Q2i-mm-431" firstAttribute="top" secondItem="aS6-Xu-3lW" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="9iQ-W7-UWe"/>
-                            <constraint firstItem="Q2i-mm-431" firstAttribute="baseline" secondItem="FdU-O5-9ba" secondAttribute="baseline" type="user" id="BJN-DV-tXK"/>
-                            <constraint firstAttribute="bottom" secondItem="Wfp-2s-7su" secondAttribute="bottom" constant="19" type="user" id="CqK-6U-FiY"/>
-                            <constraint firstItem="131-uh-loJ" firstAttribute="top" secondItem="xpL-Qt-ryL" secondAttribute="top" type="default" id="DFC-Kd-Dkw"/>
-                            <constraint firstItem="gOe-Pm-e2r" firstAttribute="baseline" secondItem="jIv-Mf-sDM" secondAttribute="baseline" type="default" id="DsZ-JF-Qah"/>
-                            <constraint firstItem="Qai-2W-SXv" firstAttribute="top" secondItem="lAB-TR-Bbz" secondAttribute="top" type="default" id="E5P-cy-bQm"/>
-                            <constraint firstItem="jIv-Mf-sDM" firstAttribute="leading" secondItem="q66-7W-bps" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="EHU-n4-CBv"/>
-                            <constraint firstItem="GQP-xC-RoS" firstAttribute="baseline" secondItem="Qai-2W-SXv" secondAttribute="baseline" type="user" id="FFG-GB-jOJ"/>
-                            <constraint firstItem="xpL-Qt-ryL" firstAttribute="top" secondItem="GQP-xC-RoS" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="JDu-no-028"/>
-                            <constraint firstItem="aS6-Xu-3lW" firstAttribute="leading" secondItem="131-uh-loJ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Jfc-yy-xmk"/>
-                            <constraint firstItem="q66-7W-bps" firstAttribute="leading" secondItem="fuJ-oZ-pac" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Kc2-Vb-hkp"/>
-                            <constraint firstItem="aS6-Xu-3lW" firstAttribute="top" secondItem="lAB-TR-Bbz" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="Kgs-lh-aqz"/>
-                            <constraint firstItem="lAB-TR-Bbz" firstAttribute="leading" secondItem="eKa-xv-Ypw" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="M2C-OJ-Aue"/>
-                            <constraint firstItem="FdN-uz-bU2" firstAttribute="top" secondItem="Qai-2W-SXv" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="MEK-rp-W1c"/>
-                            <constraint firstItem="cMa-Ch-k83" firstAttribute="top" secondItem="FdN-uz-bU2" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="MTK-uY-VVp"/>
-                            <constraint firstItem="FdU-O5-9ba" firstAttribute="top" secondItem="131-uh-loJ" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="Nxs-9p-NtP"/>
-                            <constraint firstItem="131-uh-loJ" firstAttribute="leading" secondItem="xpL-Qt-ryL" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="OUs-Le-gWx"/>
-                            <constraint firstItem="Cvv-6e-J8K" firstAttribute="leading" secondItem="C5A-Yv-nG4" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Olg-Fy-Ku8"/>
-                            <constraint firstItem="xpL-Qt-ryL" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="PCz-3A-8Kc"/>
-                            <constraint firstItem="Cvv-6e-J8K" firstAttribute="baseline" secondItem="C5A-Yv-nG4" secondAttribute="baseline" type="default" id="PbA-gU-SYz"/>
-                            <constraint firstItem="GQP-xC-RoS" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="PwK-dY-LzI"/>
-                            <constraint firstAttribute="trailing" secondItem="gOe-Pm-e2r" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="QI3-F9-5oq"/>
-                            <constraint firstItem="Wfp-2s-7su" firstAttribute="top" secondItem="IS5-Nw-ouI" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="RJz-g1-NgZ"/>
-                            <constraint firstItem="jIv-Mf-sDM" firstAttribute="baseline" secondItem="q66-7W-bps" secondAttribute="baseline" type="user" id="S0F-HY-0wm"/>
-                            <constraint firstItem="Xpg-zX-7R2" firstAttribute="leading" secondItem="kxv-J0-EdQ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="SbF-gA-htP"/>
-                            <constraint firstItem="eKa-xv-Ypw" firstAttribute="baseline" secondItem="lAB-TR-Bbz" secondAttribute="baseline" type="user" id="SdY-KF-efS"/>
-                            <constraint firstItem="fuJ-oZ-pac" firstAttribute="top" secondItem="4CZ-j4-rR1" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Som-qr-U11"/>
-                            <constraint firstItem="fmT-h5-f78" firstAttribute="leading" secondItem="Xpg-zX-7R2" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="U28-Zi-j17"/>
-                            <constraint firstAttribute="trailing" secondItem="Wfp-2s-7su" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Ugk-kM-O7L"/>
-                            <constraint firstAttribute="trailing" secondItem="Qai-2W-SXv" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="VDi-LT-CG7"/>
-                            <constraint firstItem="GQP-xC-RoS" firstAttribute="top" secondItem="fuJ-oZ-pac" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="Wv2-UY-2lY"/>
-                            <constraint firstItem="fmT-h5-f78" firstAttribute="baseline" secondItem="Xpg-zX-7R2" secondAttribute="baseline" type="user" id="X6K-9b-iJ2"/>
-                            <constraint firstItem="131-uh-loJ" firstAttribute="baseline" secondItem="xpL-Qt-ryL" secondAttribute="baseline" type="default" id="Yec-a8-eIS"/>
-                            <constraint firstItem="VWz-AU-64H" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ZVO-rW-dIa"/>
-                            <constraint firstItem="960-LA-kl3" firstAttribute="top" secondItem="xpL-Qt-ryL" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="aa1-em-RB8"/>
-                            <constraint firstItem="IS5-Nw-ouI" firstAttribute="baseline" secondItem="65O-JQ-0xN" secondAttribute="baseline" type="default" id="axG-bz-5F6"/>
-                            <constraint firstItem="Tyt-CS-GL3" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="b2s-MP-Skl"/>
-                            <constraint firstItem="Qai-2W-SXv" firstAttribute="baseline" secondItem="eKa-xv-Ypw" secondAttribute="baseline" type="user" id="csg-jL-N7K"/>
-                            <constraint firstItem="jIv-Mf-sDM" firstAttribute="top" secondItem="4CZ-j4-rR1" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="eIl-Yc-QzQ"/>
-                            <constraint firstItem="kxv-J0-EdQ" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="fAh-1E-6PK"/>
-                            <constraint firstAttribute="bottom" secondItem="fmT-h5-f78" secondAttribute="bottom" constant="19" type="user" id="fIr-z4-Me8"/>
-                            <constraint firstItem="GQP-xC-RoS" firstAttribute="baseline" secondItem="lAB-TR-Bbz" secondAttribute="baseline" type="user" id="fqk-jy-PqX"/>
-                            <constraint firstItem="65O-JQ-0xN" firstAttribute="leading" secondItem="Cvv-6e-J8K" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="gku-Gy-OPp"/>
-                            <constraint firstItem="aS6-Xu-3lW" firstAttribute="baseline" secondItem="FdN-uz-bU2" secondAttribute="baseline" type="default" id="hC9-0i-wB0"/>
-                            <constraint firstAttribute="trailing" secondItem="Tyt-CS-GL3" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="hbV-Gd-4sx"/>
-                            <constraint firstItem="VWz-AU-64H" firstAttribute="top" secondItem="C5A-Yv-nG4" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="hkp-pQ-0kh"/>
-                            <constraint firstItem="4CZ-j4-rR1" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="i2G-wZ-JVR"/>
-                            <constraint firstItem="lAB-TR-Bbz" firstAttribute="top" secondItem="jIv-Mf-sDM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="i7y-YJ-f42"/>
-                            <constraint firstItem="Cvv-6e-J8K" firstAttribute="top" secondItem="FdU-O5-9ba" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="i7y-to-JK6"/>
-                            <constraint firstAttribute="bottom" secondItem="Xpg-zX-7R2" secondAttribute="bottom" constant="19" type="user" id="iLe-6R-QWd"/>
-                            <constraint firstAttribute="trailing" secondItem="4CZ-j4-rR1" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="j88-KC-rKd"/>
-                            <constraint firstItem="eKa-xv-Ypw" firstAttribute="baseline" secondItem="GQP-xC-RoS" secondAttribute="baseline" type="user" id="jmP-sc-xbl"/>
-                            <constraint firstItem="fuJ-oZ-pac" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="kpY-JG-AnZ"/>
-                            <constraint firstItem="VWz-AU-64H" firstAttribute="baseline" secondItem="ntS-gY-rDQ" secondAttribute="baseline" type="default" id="kt9-b9-bPd"/>
-                            <constraint firstItem="fuJ-oZ-pac" firstAttribute="baseline" secondItem="q66-7W-bps" secondAttribute="baseline" type="user" id="m9E-je-RKp"/>
-                            <constraint firstItem="Tyt-CS-GL3" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="maj-PX-ONw"/>
-                            <constraint firstItem="ntS-gY-rDQ" firstAttribute="leading" secondItem="VWz-AU-64H" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="nOH-kx-KdQ"/>
-                            <constraint firstItem="Q2i-mm-431" firstAttribute="leading" secondItem="FdU-O5-9ba" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="nfw-XI-Y2n"/>
-                            <constraint firstItem="FdU-O5-9ba" firstAttribute="leading" secondItem="960-LA-kl3" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="ps5-rZ-LNp"/>
-                            <constraint firstItem="131-uh-loJ" firstAttribute="centerY" secondItem="xpL-Qt-ryL" secondAttribute="centerY" type="default" id="s7r-cY-6Zw"/>
-                            <constraint firstItem="oc0-Mx-6v7" firstAttribute="baseline" secondItem="ntS-gY-rDQ" secondAttribute="baseline" type="default" id="t2u-Ua-vSB"/>
-                            <constraint firstItem="Cvv-6e-J8K" firstAttribute="baseline" secondItem="65O-JQ-0xN" secondAttribute="baseline" type="user" id="wry-W7-JVD"/>
-                            <constraint firstItem="q66-7W-bps" firstAttribute="leading" secondItem="eKa-xv-Ypw" secondAttribute="leading" type="default" id="xKr-rp-w8V"/>
-                        </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="fby-DH-dwB" appends="YES" id="ral-Hy-3hL"/>
-                        </connections>
+                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="computationDisplay" destination="Tyt-CS-GL3" id="6gx-o1-YZW"/>
-                        <outlet property="inputAndAnswerDisplay" destination="4CZ-j4-rR1" id="ZSc-hB-rfh"/>
-                        <segue destination="tIy-8r-wN4" kind="modal" identifier="fromSimpleToGraph" id="vf0-Ta-y7p"/>
+                        <outlet property="computationDisplay" destination="Tyt-CS-GL3" id="kRV-fA-x3D"/>
+                        <outlet property="inputAndAnswerDisplay" destination="4CZ-j4-rR1" id="cgV-Cm-bVh"/>
+                        <outlet property="pageControl" destination="Ncf-ua-gJw" id="tDO-9C-1YM"/>
+                        <outlet property="scrollView" destination="7vv-AP-j1D" id="5zo-6b-OPS"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="fby-DH-dwB">
-                    <connections>
-                        <action selector="swipe:" destination="2" id="LX5-mt-FfT"/>
-                    </connections>
-                </swipeGestureRecognizer>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I9g-dn-0AE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-714" y="-22"/>
+            <point key="canvasLocation" x="-667" y="-21"/>
         </scene>
         <!--Complex Calculator View Controller - Complex Calculator-->
         <scene sceneID="Eif-Kd-nQJ">
@@ -492,11 +426,9 @@
                         <rect key="frame" x="0.0" y="20" width="480" height="300"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yk-Gd-dlh">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2yk-Gd-dlh">
+                                <rect key="frame" x="190" y="237" width="48" height="44"/>
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" type="user" id="VOx-eP-xFa"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="±">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -506,11 +438,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3Q-wc-Ms2">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="C3Q-wc-Ms2">
+                                <rect key="frame" x="302" y="237" width="48" height="44"/>
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" type="user" id="oXH-IJ-jUN"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="∙">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -520,11 +450,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfs-Bc-JcQ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nfs-Bc-JcQ">
+                                <rect key="frame" x="246" y="237" width="48" height="44"/>
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" type="user" id="gx5-df-5VL"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="0">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -534,11 +462,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1U-hj-2GZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="H1U-hj-2GZ">
+                                <rect key="frame" x="134" y="237" width="48" height="44"/>
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" type="user" id="xUm-gL-6fM"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="ln">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -548,11 +474,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cM0-ea-teg">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cM0-ea-teg">
+                                <rect key="frame" x="76" y="237" width="50" height="44"/>
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" type="user" id="uFT-ik-dez"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="log">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -562,11 +486,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W2x-Am-EmT">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="W2x-Am-EmT">
+                                <rect key="frame" x="20" y="237" width="48" height="44"/>
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" type="user" id="njw-Fh-2zo"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="MC">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -576,11 +498,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBy-p2-peP">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="vBy-p2-peP">
+                                <rect key="frame" x="358" y="237" width="48" height="44"/>
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" type="user" id="E0m-vG-xYj"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="+">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -590,7 +510,8 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukm-O5-ZRa">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ukm-O5-ZRa">
+                                <rect key="frame" x="414" y="186" width="46" height="95"/>
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="=">
@@ -601,11 +522,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xfu-gs-ols">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Xfu-gs-ols">
+                                <rect key="frame" x="246" y="186" width="48" height="44"/>
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" type="user" id="r1w-Wy-Yfc"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="2">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -615,11 +534,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ogc-nw-tV0">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ogc-nw-tV0">
+                                <rect key="frame" x="302" y="186" width="48" height="44"/>
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" type="user" id="BhI-YU-qr0"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="3">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -629,11 +546,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bk5-sQ-N93">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bk5-sQ-N93">
+                                <rect key="frame" x="358" y="186" width="48" height="44"/>
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" type="user" id="hFe-pQ-duB"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="−">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -643,11 +558,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IvG-Cz-WVU">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IvG-Cz-WVU">
+                                <rect key="frame" x="246" y="135" width="48" height="44"/>
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" type="user" id="Muk-Cr-Kuo"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="5">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -657,11 +570,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IG6-Xr-PQC">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IG6-Xr-PQC">
+                                <rect key="frame" x="302" y="135" width="48" height="44"/>
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" type="user" id="zDW-Ku-j9F"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="6">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -671,11 +582,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1c-3M-E65">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="m1c-3M-E65">
+                                <rect key="frame" x="358" y="135" width="48" height="44"/>
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" type="user" id="trI-wX-qSv"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="×">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -685,11 +594,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="spe-5P-jTn">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="spe-5P-jTn">
+                                <rect key="frame" x="414" y="135" width="46" height="44"/>
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" type="user" id="oH2-q7-zHr"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="C">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -699,12 +606,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3s3-IQ-zpt">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3s3-IQ-zpt">
+                                <rect key="frame" x="246" y="84" width="48" height="44"/>
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" type="user" id="UEq-9v-mlH"/>
-                                    <constraint firstAttribute="width" constant="48" id="qAT-sc-hV6"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="8">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -714,12 +618,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGK-re-M4E">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nGK-re-M4E">
+                                <rect key="frame" x="302" y="84" width="48" height="44"/>
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="48" id="L0q-A4-2g4"/>
-                                    <constraint firstAttribute="height" constant="43" type="user" id="Pnb-Ua-Ryj"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="9">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -729,12 +630,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UH-Lt-LnC">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7UH-Lt-LnC">
+                                <rect key="frame" x="358" y="84" width="48" height="44"/>
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="48" id="5xa-YD-AXk"/>
-                                    <constraint firstAttribute="height" constant="43" type="user" id="ZQ8-dl-7vA"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="÷">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -744,12 +642,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEW-bm-keZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gEW-bm-keZ">
+                                <rect key="frame" x="414" y="84" width="46" height="44"/>
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="OKC-bx-i2B"/>
-                                    <constraint firstAttribute="height" constant="43" type="user" id="fBJ-5j-rET"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="AC">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -759,11 +654,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9zg-g5-1an">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9zg-g5-1an">
+                                <rect key="frame" x="190" y="186" width="48" height="44"/>
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" type="user" id="A29-85-7IT"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="1">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -773,11 +666,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QeY-OI-deG">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QeY-OI-deG">
+                                <rect key="frame" x="134" y="186" width="48" height="44"/>
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" type="user" id="0kB-ae-ype"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="¹/x">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -787,11 +678,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHD-jV-ykf">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WHD-jV-ykf">
+                                <rect key="frame" x="76" y="186" width="50" height="44"/>
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" type="user" id="bpc-ft-O3d"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="%">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -801,11 +690,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIW-ju-sJc">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="YIW-ju-sJc">
+                                <rect key="frame" x="20" y="186" width="48" height="44"/>
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" type="user" id="91j-KR-bQi"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="M+">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -815,11 +702,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7pk-2i-avX">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7pk-2i-avX">
+                                <rect key="frame" x="190" y="135" width="48" height="44"/>
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" type="user" id="ODr-SX-CCZ"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="4">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -829,11 +714,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfT-Qd-zEM">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wfT-Qd-zEM">
+                                <rect key="frame" x="134" y="135" width="48" height="44"/>
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" type="user" id="gY1-9e-3KG"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title=")">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -843,11 +726,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GqM-Tg-WbF">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GqM-Tg-WbF">
+                                <rect key="frame" x="76" y="135" width="50" height="44"/>
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" type="user" id="kFe-9n-PQ6"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="(">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -857,11 +738,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0MA-kW-MiX">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0MA-kW-MiX">
+                                <rect key="frame" x="20" y="135" width="48" height="44"/>
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" type="user" id="SEX-1o-BFc"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="M-">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -871,12 +750,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgO-6Y-W0N">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tgO-6Y-W0N">
+                                <rect key="frame" x="190" y="84" width="48" height="44"/>
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" type="user" id="Qel-Mu-MS7"/>
-                                    <constraint firstAttribute="width" constant="48" id="ow7-O1-cIU"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="7">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -886,12 +762,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTR-0f-HCK">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XTR-0f-HCK">
+                                <rect key="frame" x="134" y="84" width="48" height="44"/>
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="48" id="g41-5b-IYx"/>
-                                    <constraint firstAttribute="height" constant="43" type="user" id="het-aT-5Tx"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="x²">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -901,11 +774,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KWZ-hB-gy8">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KWZ-hB-gy8">
+                                <rect key="frame" x="76" y="84" width="50" height="44"/>
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" type="user" id="JTL-m9-nwv"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="√x">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -915,11 +786,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r58-Uk-AKg">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="r58-Uk-AKg">
+                                <rect key="frame" x="20" y="84" width="48" height="44"/>
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" type="user" id="tGm-wr-7gi"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="MR">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -929,11 +798,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3m8-3k-KNd">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3m8-3k-KNd">
+                                <rect key="frame" x="20" y="20" width="48" height="57"/>
                                 <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="48" id="nRm-Cq-So5"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="⬆">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -943,153 +810,21 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="181" textAlignment="right" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hks-qO-bFz">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="181" textAlignment="right" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hks-qO-bFz">
+                                <rect key="frame" x="76" y="20" width="384" height="33"/>
                                 <color key="backgroundColor" red="0.78555188909999996" green="0.89843586099999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="33" id="7kH-yL-eFH"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="29"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="(8+2)+(72+2)+(99-2)=" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jTc-eG-B9S">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="(8+2)+(72+2)+(99-2)=" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jTc-eG-B9S">
+                                <rect key="frame" x="76" y="53" width="384" height="23"/>
                                 <color key="backgroundColor" red="0.78555188909999996" green="0.89843586099999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="23" id="f0N-4M-otQ"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="15"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1264998729" green="0.1728680839" blue="0.27359693880000002" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="3s3-IQ-zpt" firstAttribute="leading" secondItem="tgO-6Y-W0N" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="0RH-tF-Cvc"/>
-                            <constraint firstItem="7UH-Lt-LnC" firstAttribute="leading" secondItem="nGK-re-M4E" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="1IO-NI-fUf"/>
-                            <constraint firstItem="Ogc-nw-tV0" firstAttribute="baseline" secondItem="Xfu-gs-ols" secondAttribute="baseline" type="default" id="1gi-Xt-8Ky"/>
-                            <constraint firstItem="2yk-Gd-dlh" firstAttribute="leading" secondItem="9zg-g5-1an" secondAttribute="leading" type="default" id="1tc-O3-ViR"/>
-                            <constraint firstAttribute="bottom" secondItem="H1U-hj-2GZ" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="2rD-D1-ROF"/>
-                            <constraint firstItem="ukm-O5-ZRa" firstAttribute="baseline" secondItem="cM0-ea-teg" secondAttribute="baseline" type="default" id="3Kv-zF-W4o"/>
-                            <constraint firstItem="Hks-qO-bFz" firstAttribute="leading" secondItem="3m8-3k-KNd" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="3za-Ub-Ldk"/>
-                            <constraint firstItem="IG6-Xr-PQC" firstAttribute="leading" secondItem="IvG-Cz-WVU" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="43t-qC-NXh"/>
-                            <constraint firstAttribute="trailing" secondItem="ukm-O5-ZRa" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="543-St-y0E"/>
-                            <constraint firstItem="IvG-Cz-WVU" firstAttribute="top" secondItem="3s3-IQ-zpt" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="6Ih-VW-bCi"/>
-                            <constraint firstItem="cM0-ea-teg" firstAttribute="top" secondItem="WHD-jV-ykf" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="6j7-fo-EtR"/>
-                            <constraint firstItem="2yk-Gd-dlh" firstAttribute="leading" secondItem="H1U-hj-2GZ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="6v2-Pg-Qh2"/>
-                            <constraint firstItem="XTR-0f-HCK" firstAttribute="top" secondItem="jTc-eG-B9S" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="7oa-fs-0Yh"/>
-                            <constraint firstAttribute="trailing" secondItem="Hks-qO-bFz" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="85L-Wv-xXH"/>
-                            <constraint firstItem="spe-5P-jTn" firstAttribute="leading" secondItem="m1c-3M-E65" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="AMK-fS-cDr"/>
-                            <constraint firstAttribute="bottom" secondItem="W2x-Am-EmT" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="AT5-l8-R7g"/>
-                            <constraint firstItem="H1U-hj-2GZ" firstAttribute="leading" secondItem="cM0-ea-teg" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Awr-O4-S4N"/>
-                            <constraint firstItem="Ogc-nw-tV0" firstAttribute="leading" secondItem="Xfu-gs-ols" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Azz-qz-I01"/>
-                            <constraint firstItem="nfs-Bc-JcQ" firstAttribute="leading" secondItem="Xfu-gs-ols" secondAttribute="leading" type="default" id="BGu-Ob-tm7"/>
-                            <constraint firstItem="ukm-O5-ZRa" firstAttribute="leading" secondItem="bk5-sQ-N93" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="BtM-Uk-fXv"/>
-                            <constraint firstItem="YIW-ju-sJc" firstAttribute="leading" secondItem="brv-BA-U8d" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="CRP-fn-88f"/>
-                            <constraint firstAttribute="bottom" secondItem="cM0-ea-teg" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="CUx-35-V5g"/>
-                            <constraint firstAttribute="bottom" secondItem="C3Q-wc-Ms2" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="DD0-Og-Ggy"/>
-                            <constraint firstItem="ukm-O5-ZRa" firstAttribute="top" secondItem="spe-5P-jTn" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="DTd-4G-0aS"/>
-                            <constraint firstAttribute="bottom" secondItem="2yk-Gd-dlh" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="Efo-Uo-SjX"/>
-                            <constraint firstItem="9zg-g5-1an" firstAttribute="leading" secondItem="QeY-OI-deG" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="EnV-tV-4fr"/>
-                            <constraint firstItem="jTc-eG-B9S" firstAttribute="leading" secondItem="3m8-3k-KNd" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Erv-Qd-56X"/>
-                            <constraint firstItem="7pk-2i-avX" firstAttribute="top" secondItem="tgO-6Y-W0N" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="GSn-Dn-d9z"/>
-                            <constraint firstItem="vBy-p2-peP" firstAttribute="leading" secondItem="C3Q-wc-Ms2" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="GWt-0H-egQ"/>
-                            <constraint firstItem="C3Q-wc-Ms2" firstAttribute="leading" secondItem="nfs-Bc-JcQ" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Gib-FY-ewI"/>
-                            <constraint firstItem="9zg-g5-1an" firstAttribute="top" secondItem="7pk-2i-avX" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="HCK-e7-fcJ"/>
-                            <constraint firstItem="7pk-2i-avX" firstAttribute="leading" secondItem="wfT-Qd-zEM" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="HRI-9P-Euz"/>
-                            <constraint firstItem="IvG-Cz-WVU" firstAttribute="baseline" secondItem="IG6-Xr-PQC" secondAttribute="baseline" type="default" id="HZy-js-6FZ"/>
-                            <constraint firstItem="WHD-jV-ykf" firstAttribute="top" secondItem="GqM-Tg-WbF" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="IqD-l4-KhG"/>
-                            <constraint firstItem="7pk-2i-avX" firstAttribute="baseline" secondItem="wfT-Qd-zEM" secondAttribute="baseline" type="default" id="JVb-Mq-Qdh"/>
-                            <constraint firstItem="XTR-0f-HCK" firstAttribute="leading" secondItem="KWZ-hB-gy8" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="K1b-eA-9ar"/>
-                            <constraint firstItem="ukm-O5-ZRa" firstAttribute="baseline" secondItem="vBy-p2-peP" secondAttribute="baseline" type="default" id="K80-70-EwI"/>
-                            <constraint firstItem="ukm-O5-ZRa" firstAttribute="baseline" secondItem="nfs-Bc-JcQ" secondAttribute="baseline" type="default" id="L3j-3D-V2P"/>
-                            <constraint firstItem="WHD-jV-ykf" firstAttribute="baseline" secondItem="YIW-ju-sJc" secondAttribute="baseline" type="default" id="LAh-27-2GL"/>
-                            <constraint firstItem="XTR-0f-HCK" firstAttribute="leading" secondItem="wfT-Qd-zEM" secondAttribute="leading" type="default" id="LHl-9w-1M2"/>
-                            <constraint firstItem="tgO-6Y-W0N" firstAttribute="baseline" secondItem="XTR-0f-HCK" secondAttribute="baseline" type="default" id="LXh-cM-ugs"/>
-                            <constraint firstItem="XTR-0f-HCK" firstAttribute="baseline" secondItem="KWZ-hB-gy8" secondAttribute="baseline" type="default" id="Nix-DI-twc"/>
-                            <constraint firstItem="GqM-Tg-WbF" firstAttribute="leading" secondItem="0MA-kW-MiX" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="NnI-tf-0Nt"/>
-                            <constraint firstItem="m1c-3M-E65" firstAttribute="top" secondItem="7UH-Lt-LnC" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Nq7-y8-hGg"/>
-                            <constraint firstItem="9zg-g5-1an" firstAttribute="baseline" secondItem="Xfu-gs-ols" secondAttribute="baseline" type="default" id="O6K-63-whL"/>
-                            <constraint firstItem="bk5-sQ-N93" firstAttribute="top" secondItem="m1c-3M-E65" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="OIF-ox-tgb"/>
-                            <constraint firstItem="nGK-re-M4E" firstAttribute="baseline" secondItem="3s3-IQ-zpt" secondAttribute="baseline" type="default" id="ONm-iW-CaO"/>
-                            <constraint firstItem="QeY-OI-deG" firstAttribute="leading" secondItem="H1U-hj-2GZ" secondAttribute="leading" type="default" id="OVK-we-F6t"/>
-                            <constraint firstItem="QeY-OI-deG" firstAttribute="leading" secondItem="WHD-jV-ykf" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Oms-GS-ahv"/>
-                            <constraint firstItem="7pk-2i-avX" firstAttribute="baseline" secondItem="IvG-Cz-WVU" secondAttribute="baseline" type="default" id="P69-fF-ScG"/>
-                            <constraint firstItem="Ogc-nw-tV0" firstAttribute="baseline" secondItem="bk5-sQ-N93" secondAttribute="baseline" type="default" id="PZH-Gr-clp"/>
-                            <constraint firstItem="GqM-Tg-WbF" firstAttribute="leading" secondItem="W2x-Am-EmT" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Pm0-eI-unN"/>
-                            <constraint firstItem="gEW-bm-keZ" firstAttribute="baseline" secondItem="7UH-Lt-LnC" secondAttribute="baseline" type="default" id="Ppa-TJ-pai"/>
-                            <constraint firstItem="r58-Uk-AKg" firstAttribute="top" secondItem="3m8-3k-KNd" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="RXc-QV-pUq"/>
-                            <constraint firstItem="Ogc-nw-tV0" firstAttribute="leading" secondItem="C3Q-wc-Ms2" secondAttribute="leading" type="default" id="Sla-EN-Arg"/>
-                            <constraint firstItem="7UH-Lt-LnC" firstAttribute="top" secondItem="jTc-eG-B9S" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="TAZ-pW-SXq"/>
-                            <constraint firstItem="tgO-6Y-W0N" firstAttribute="leading" secondItem="7pk-2i-avX" secondAttribute="leading" type="default" id="U09-hM-1SB"/>
-                            <constraint firstItem="3m8-3k-KNd" firstAttribute="leading" secondItem="brv-BA-U8d" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="U3H-IF-9Rh"/>
-                            <constraint firstItem="KWZ-hB-gy8" firstAttribute="top" secondItem="jTc-eG-B9S" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="UP4-vt-mfa"/>
-                            <constraint firstItem="wfT-Qd-zEM" firstAttribute="top" secondItem="XTR-0f-HCK" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="V9i-zL-OwP"/>
-                            <constraint firstAttribute="trailing" secondItem="jTc-eG-B9S" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="VGM-oT-OdK"/>
-                            <constraint firstItem="Xfu-gs-ols" firstAttribute="leading" secondItem="IvG-Cz-WVU" secondAttribute="leading" type="default" id="VHO-4a-6ZX"/>
-                            <constraint firstItem="0MA-kW-MiX" firstAttribute="top" secondItem="r58-Uk-AKg" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="VO8-1t-wXP"/>
-                            <constraint firstItem="7UH-Lt-LnC" firstAttribute="leading" secondItem="m1c-3M-E65" secondAttribute="leading" type="default" id="W0T-eC-BlR"/>
-                            <constraint firstItem="0MA-kW-MiX" firstAttribute="leading" secondItem="brv-BA-U8d" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="WkH-PB-Rv0"/>
-                            <constraint firstItem="QeY-OI-deG" firstAttribute="baseline" secondItem="WHD-jV-ykf" secondAttribute="baseline" type="default" id="XZp-s0-aZL"/>
-                            <constraint firstAttribute="bottom" secondItem="nfs-Bc-JcQ" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="XbX-Fc-D7z"/>
-                            <constraint firstItem="KWZ-hB-gy8" firstAttribute="leading" secondItem="0MA-kW-MiX" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="YZb-Be-D37"/>
-                            <constraint firstItem="Ogc-nw-tV0" firstAttribute="top" secondItem="IG6-Xr-PQC" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Yu5-he-wxB"/>
-                            <constraint firstAttribute="bottom" secondItem="vBy-p2-peP" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="ZBf-xd-NbP"/>
-                            <constraint firstItem="ukm-O5-ZRa" firstAttribute="baseline" secondItem="H1U-hj-2GZ" secondAttribute="baseline" type="default" id="aes-te-2ak"/>
-                            <constraint firstItem="GqM-Tg-WbF" firstAttribute="top" secondItem="KWZ-hB-gy8" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="anH-iv-jNA"/>
-                            <constraint firstItem="bk5-sQ-N93" firstAttribute="leading" secondItem="vBy-p2-peP" secondAttribute="leading" type="default" id="b9y-5R-8pF"/>
-                            <constraint firstItem="Hks-qO-bFz" firstAttribute="top" secondItem="brv-BA-U8d" secondAttribute="top" constant="20" symbolic="YES" type="default" id="bGg-cq-H7J"/>
-                            <constraint firstItem="tgO-6Y-W0N" firstAttribute="baseline" secondItem="3s3-IQ-zpt" secondAttribute="baseline" type="default" id="bfR-g7-Xei"/>
-                            <constraint firstItem="wfT-Qd-zEM" firstAttribute="leading" secondItem="QeY-OI-deG" secondAttribute="leading" type="default" id="bgM-ns-z3E"/>
-                            <constraint firstItem="nGK-re-M4E" firstAttribute="leading" secondItem="IG6-Xr-PQC" secondAttribute="leading" type="default" id="bik-ga-yYn"/>
-                            <constraint firstItem="W2x-Am-EmT" firstAttribute="top" secondItem="YIW-ju-sJc" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="cgY-TH-ZAs"/>
-                            <constraint firstItem="ukm-O5-ZRa" firstAttribute="baseline" secondItem="2yk-Gd-dlh" secondAttribute="baseline" type="default" id="dSJ-Hg-JNf"/>
-                            <constraint firstItem="ukm-O5-ZRa" firstAttribute="baseline" secondItem="W2x-Am-EmT" secondAttribute="baseline" type="default" id="diC-Mr-9YM"/>
-                            <constraint firstItem="m1c-3M-E65" firstAttribute="leading" secondItem="bk5-sQ-N93" secondAttribute="leading" type="default" id="ehR-3i-PEd"/>
-                            <constraint firstItem="nGK-re-M4E" firstAttribute="leading" secondItem="3s3-IQ-zpt" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="ei5-0o-Prk"/>
-                            <constraint firstItem="Xfu-gs-ols" firstAttribute="leading" secondItem="9zg-g5-1an" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="fX9-XO-uH5"/>
-                            <constraint firstItem="3s3-IQ-zpt" firstAttribute="top" secondItem="jTc-eG-B9S" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="ftP-o3-dWm"/>
-                            <constraint firstAttribute="trailing" secondItem="gEW-bm-keZ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="gRA-EE-Buu"/>
-                            <constraint firstItem="WHD-jV-ykf" firstAttribute="leading" secondItem="YIW-ju-sJc" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="gbg-5V-xKd"/>
-                            <constraint firstItem="YIW-ju-sJc" firstAttribute="top" secondItem="0MA-kW-MiX" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="hAF-DR-X0f"/>
-                            <constraint firstItem="QeY-OI-deG" firstAttribute="top" secondItem="wfT-Qd-zEM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="hPt-DH-oyK"/>
-                            <constraint firstItem="GqM-Tg-WbF" firstAttribute="baseline" secondItem="wfT-Qd-zEM" secondAttribute="baseline" type="default" id="iW6-An-Jwu"/>
-                            <constraint firstItem="7pk-2i-avX" firstAttribute="leading" secondItem="9zg-g5-1an" secondAttribute="leading" type="default" id="iai-mU-jDd"/>
-                            <constraint firstItem="nfs-Bc-JcQ" firstAttribute="leading" secondItem="2yk-Gd-dlh" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="imU-vi-Csj"/>
-                            <constraint firstItem="wfT-Qd-zEM" firstAttribute="leading" secondItem="GqM-Tg-WbF" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="jZw-Yj-rYs"/>
-                            <constraint firstItem="gEW-bm-keZ" firstAttribute="top" secondItem="jTc-eG-B9S" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="jaJ-g8-RKt"/>
-                            <constraint firstItem="0MA-kW-MiX" firstAttribute="baseline" secondItem="KWZ-hB-gy8" secondAttribute="baseline" type="default" id="kH9-KG-Pk4"/>
-                            <constraint firstItem="r58-Uk-AKg" firstAttribute="leading" secondItem="brv-BA-U8d" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="lCO-i9-d4J"/>
-                            <constraint firstItem="m1c-3M-E65" firstAttribute="baseline" secondItem="IG6-Xr-PQC" secondAttribute="baseline" type="default" id="m1K-sT-SGy"/>
-                            <constraint firstItem="ukm-O5-ZRa" firstAttribute="baseline" secondItem="C3Q-wc-Ms2" secondAttribute="baseline" type="default" id="m5X-HH-EVp"/>
-                            <constraint firstItem="KWZ-hB-gy8" firstAttribute="leading" secondItem="jTc-eG-B9S" secondAttribute="leading" type="default" id="mee-wt-qbm"/>
-                            <constraint firstItem="3m8-3k-KNd" firstAttribute="top" secondItem="brv-BA-U8d" secondAttribute="top" constant="20" symbolic="YES" type="default" id="mzV-iE-2yh"/>
-                            <constraint firstItem="bk5-sQ-N93" firstAttribute="leading" secondItem="Ogc-nw-tV0" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="nKy-kk-19f"/>
-                            <constraint firstItem="nGK-re-M4E" firstAttribute="top" secondItem="jTc-eG-B9S" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="nPl-yK-RWv"/>
-                            <constraint firstItem="ukm-O5-ZRa" firstAttribute="leading" secondItem="vBy-p2-peP" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="nl8-di-hXb"/>
-                            <constraint firstAttribute="trailing" secondItem="spe-5P-jTn" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="npV-Ej-gM0"/>
-                            <constraint firstItem="GqM-Tg-WbF" firstAttribute="baseline" secondItem="0MA-kW-MiX" secondAttribute="baseline" type="default" id="ntc-Am-MNg"/>
-                            <constraint firstItem="cM0-ea-teg" firstAttribute="leading" secondItem="W2x-Am-EmT" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="o00-Zh-6Ri"/>
-                            <constraint firstItem="3s3-IQ-zpt" firstAttribute="leading" secondItem="IvG-Cz-WVU" secondAttribute="leading" type="default" id="oQh-53-7TT"/>
-                            <constraint firstItem="W2x-Am-EmT" firstAttribute="leading" secondItem="brv-BA-U8d" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="oZB-lq-hue"/>
-                            <constraint firstItem="IG6-Xr-PQC" firstAttribute="top" secondItem="nGK-re-M4E" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="owr-aP-9ry"/>
-                            <constraint firstAttribute="bottom" secondItem="ukm-O5-ZRa" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="pEx-5q-Kqe"/>
-                            <constraint firstItem="YIW-ju-sJc" firstAttribute="baseline" secondItem="GqM-Tg-WbF" secondAttribute="baseline" type="default" id="pFv-RP-iN4"/>
-                            <constraint firstItem="9zg-g5-1an" firstAttribute="baseline" secondItem="QeY-OI-deG" secondAttribute="baseline" type="default" id="plV-Bl-VVF"/>
-                            <constraint firstItem="IvG-Cz-WVU" firstAttribute="leading" secondItem="7pk-2i-avX" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="q9s-cD-dRA"/>
-                            <constraint firstItem="gEW-bm-keZ" firstAttribute="leading" secondItem="spe-5P-jTn" secondAttribute="leading" type="default" id="s3h-Zg-Owx"/>
-                            <constraint firstItem="tgO-6Y-W0N" firstAttribute="leading" secondItem="XTR-0f-HCK" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="seO-jo-Bz8"/>
-                            <constraint firstItem="KWZ-hB-gy8" firstAttribute="leading" secondItem="r58-Uk-AKg" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="t08-j6-gVD"/>
-                            <constraint firstItem="W2x-Am-EmT" firstAttribute="baseline" secondItem="WHD-jV-ykf" secondAttribute="baseline" type="default" id="tFz-cL-pkV"/>
-                            <constraint firstItem="m1c-3M-E65" firstAttribute="baseline" secondItem="spe-5P-jTn" secondAttribute="baseline" type="default" id="uSd-pm-w1r"/>
-                            <constraint firstItem="Xfu-gs-ols" firstAttribute="top" secondItem="IvG-Cz-WVU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="uUr-Nl-EmE"/>
-                            <constraint firstItem="ukm-O5-ZRa" firstAttribute="leading" secondItem="spe-5P-jTn" secondAttribute="leading" type="default" id="vhl-W7-7QE"/>
-                            <constraint firstItem="r58-Uk-AKg" firstAttribute="baseline" secondItem="KWZ-hB-gy8" secondAttribute="baseline" type="default" id="xhF-6v-HYt"/>
-                            <constraint firstItem="tgO-6Y-W0N" firstAttribute="top" secondItem="jTc-eG-B9S" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="xhm-NZ-pHz"/>
-                            <constraint firstItem="nGK-re-M4E" firstAttribute="baseline" secondItem="7UH-Lt-LnC" secondAttribute="baseline" type="default" id="yHh-aU-gXi"/>
-                            <constraint firstItem="Ogc-nw-tV0" firstAttribute="leading" secondItem="IG6-Xr-PQC" secondAttribute="leading" type="default" id="yku-RB-Iop"/>
-                            <constraint firstItem="m1c-3M-E65" firstAttribute="leading" secondItem="IG6-Xr-PQC" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="yx2-Dp-i5b"/>
-                            <constraint firstItem="KWZ-hB-gy8" firstAttribute="leading" secondItem="YIW-ju-sJc" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="zIb-7X-gD3"/>
-                            <constraint firstItem="spe-5P-jTn" firstAttribute="top" secondItem="gEW-bm-keZ" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="zXz-xg-Uwh"/>
-                        </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -1098,112 +833,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jPR-Uh-SLq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-500" y="634"/>
-        </scene>
-        <!--Graph Plotter View Controller - Graph Plotter-->
-        <scene sceneID="HP6-eZ-Eli">
-            <objects>
-                <viewController title="Graph Plotter" id="tIy-8r-wN4" customClass="GraphPlotterViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hfa-7C-s2Z">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jgX-Rc-bWp" customClass="GraphPlotterView">
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter function here ..." borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rSJ-G0-LGF">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Ergebnis" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eza-e9-Nhq">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="h9o-bc-hXk"/>
-                                    <constraint firstAttribute="width" constant="134" id="lm4-6i-sjN"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Nullpunkte" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pid-So-kNl">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="134" id="dot-W7-uzh"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="1. Ableitung" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3b-gR-6A6">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="LgT-5Q-hlA"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2. Ableitung" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJc-kf-cGm">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Wendepunkte" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7du-xI-kXe">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="24" id="9Cb-Xr-tR0"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Extrema" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hJ-Xl-tC7">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
-                        <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstItem="QJc-kf-cGm" firstAttribute="top" secondItem="Pid-So-kNl" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="09g-3c-9e9"/>
-                            <constraint firstItem="eza-e9-Nhq" firstAttribute="leading" secondItem="hfa-7C-s2Z" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="2W7-oH-0Im"/>
-                            <constraint firstItem="jgX-Rc-bWp" firstAttribute="leading" secondItem="hfa-7C-s2Z" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="2ow-sc-AKL"/>
-                            <constraint firstItem="7du-xI-kXe" firstAttribute="top" secondItem="x3b-gR-6A6" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="36Q-li-voC"/>
-                            <constraint firstAttribute="bottom" secondItem="3hJ-Xl-tC7" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="49s-Ya-7Hd"/>
-                            <constraint firstAttribute="trailing" secondItem="jgX-Rc-bWp" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="7B1-c0-tDT"/>
-                            <constraint firstItem="eza-e9-Nhq" firstAttribute="trailing" secondItem="x3b-gR-6A6" secondAttribute="trailing" type="default" id="ATb-pY-2Zu"/>
-                            <constraint firstItem="Pid-So-kNl" firstAttribute="leading" secondItem="QJc-kf-cGm" secondAttribute="leading" type="default" id="Beb-N8-4E9"/>
-                            <constraint firstItem="rSJ-G0-LGF" firstAttribute="leading" secondItem="hfa-7C-s2Z" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="H2N-8j-cRc"/>
-                            <constraint firstItem="jgX-Rc-bWp" firstAttribute="top" secondItem="hfa-7C-s2Z" secondAttribute="top" constant="20" symbolic="YES" type="default" id="JYB-AK-Ifi"/>
-                            <constraint firstItem="x3b-gR-6A6" firstAttribute="top" secondItem="eza-e9-Nhq" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="LAk-dg-grd"/>
-                            <constraint firstItem="x3b-gR-6A6" firstAttribute="trailing" secondItem="7du-xI-kXe" secondAttribute="trailing" type="default" id="PWy-Yr-dBk"/>
-                            <constraint firstItem="7du-xI-kXe" firstAttribute="leading" secondItem="hfa-7C-s2Z" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="RLB-g6-P7s"/>
-                            <constraint firstAttribute="trailing" secondItem="QJc-kf-cGm" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="WtS-XK-1ES"/>
-                            <constraint firstItem="Pid-So-kNl" firstAttribute="top" secondItem="eza-e9-Nhq" secondAttribute="top" type="default" id="ald-Xt-ZbN"/>
-                            <constraint firstItem="x3b-gR-6A6" firstAttribute="leading" secondItem="hfa-7C-s2Z" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="c30-zJ-BG5"/>
-                            <constraint firstAttribute="trailing" secondItem="3hJ-Xl-tC7" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="hhW-d2-IaJ"/>
-                            <constraint firstItem="eza-e9-Nhq" firstAttribute="baseline" secondItem="Pid-So-kNl" secondAttribute="baseline" type="default" id="j8B-S5-uPD"/>
-                            <constraint firstItem="QJc-kf-cGm" firstAttribute="leading" secondItem="3hJ-Xl-tC7" secondAttribute="leading" type="default" id="ldv-Fg-pcg"/>
-                            <constraint firstItem="3hJ-Xl-tC7" firstAttribute="top" secondItem="QJc-kf-cGm" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="leK-MQ-CjJ"/>
-                            <constraint firstItem="rSJ-G0-LGF" firstAttribute="top" secondItem="jgX-Rc-bWp" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="mHe-kJ-FHo"/>
-                            <constraint firstAttribute="bottom" secondItem="7du-xI-kXe" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="oac-lL-uXK"/>
-                            <constraint firstItem="x3b-gR-6A6" firstAttribute="baseline" secondItem="QJc-kf-cGm" secondAttribute="baseline" type="default" id="pju-Lz-8iU"/>
-                            <constraint firstAttribute="trailing" secondItem="rSJ-G0-LGF" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="sqn-CS-d7O"/>
-                            <constraint firstAttribute="trailing" secondItem="Pid-So-kNl" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="xiy-AV-YCh"/>
-                            <constraint firstAttribute="bottom" secondItem="rSJ-G0-LGF" secondAttribute="bottom" constant="122" id="xwn-5O-Fhw"/>
-                        </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="Rs8-FN-d14" appends="YES" id="MPc-In-Gna"/>
-                        </connections>
-                    </view>
-                    <connections>
-                        <segue destination="2" kind="modal" identifier="fromGraphToSpimple" id="dWK-fA-2cL"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="y63-FK-Brc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="left" id="Rs8-FN-d14">
-                    <connections>
-                        <action selector="swipeToSimpleCalc:" destination="tIy-8r-wN4" id="CWx-F0-cnU"/>
-                    </connections>
-                </swipeGestureRecognizer>
-            </objects>
-            <point key="canvasLocation" x="-184" y="-22"/>
         </scene>
     </scenes>
     <resources>
@@ -1215,32 +844,6 @@
         <image name="proCalc_enter_smpl@2x.png" width="64" height="94"/>
         <image name="proCalc_specFunct_smpl@2x.png" width="64" height="44"/>
     </resources>
-    <classes>
-        <class className="ComplexCalculatorViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ComplexCalculatorViewController.h"/>
-        </class>
-        <class className="GraphPlotterView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphPlotterView.h"/>
-        </class>
-        <class className="GraphPlotterViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphPlotterViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="swipeToSimpleCalc:" candidateClass="UISwipeGestureRecognizer"/>
-                <relationship kind="outlet" name="functionField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="graphPlotterView" candidateClass="GraphPlotterView"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="SimpleCalculatorViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SimpleCalculatorViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="computationDisplay" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="inputAndAnswerDisplay" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
