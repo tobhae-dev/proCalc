@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C54" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -485,7 +485,6 @@
                             <constraint firstItem="4CZ-j4-rR1" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="I25-s9-k9Z"/>
                             <constraint firstAttribute="bottom" secondItem="fmT-h5-f78" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="N9R-U7-0ds"/>
                             <constraint firstItem="Qai-2W-SXv" firstAttribute="top" secondItem="gOe-Pm-e2r" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="NLU-9z-AlV"/>
-                            <constraint firstItem="FdN-uz-bU2" firstAttribute="centerY" secondItem="aS6-Xu-3lW" secondAttribute="centerY" type="default" id="Of5-5j-oKR"/>
                             <constraint firstItem="C5A-Yv-nG4" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="Pkk-Y7-m5f"/>
                             <constraint firstItem="Q2i-mm-431" firstAttribute="leading" secondItem="FdU-O5-9ba" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="Q7L-rl-SKS"/>
                             <constraint firstItem="eKa-xv-Ypw" firstAttribute="top" secondItem="q66-7W-bps" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="QKT-oO-exU"/>
@@ -522,7 +521,6 @@
                             <constraint firstItem="65O-JQ-0xN" firstAttribute="leading" secondItem="Cvv-6e-J8K" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="pzH-ff-uSz"/>
                             <constraint firstAttribute="trailing" secondItem="4CZ-j4-rR1" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="q9g-bZ-AKX"/>
                             <constraint firstItem="FdU-O5-9ba" firstAttribute="leading" secondItem="960-LA-kl3" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="sPT-ak-UTG"/>
-                            <constraint firstItem="FdN-uz-bU2" firstAttribute="top" secondItem="aS6-Xu-3lW" secondAttribute="top" type="default" id="tSU-ah-1BM"/>
                             <constraint firstAttribute="trailing" secondItem="IS5-Nw-ouI" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="tcu-T3-Nla"/>
                             <constraint firstItem="Wfp-2s-7su" firstAttribute="top" secondItem="IS5-Nw-ouI" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="upy-1g-3tQ"/>
                             <constraint firstItem="VWz-AU-64H" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="vhy-0Y-Z7E"/>
@@ -553,7 +551,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-714" y="-22"/>
+            <point key="canvasLocation" x="-596" y="-22"/>
         </scene>
         <!--Complex Calculator View Controller - Complex Calculator-->
         <scene sceneID="Eif-Kd-nQJ">

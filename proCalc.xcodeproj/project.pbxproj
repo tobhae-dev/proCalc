@@ -42,6 +42,7 @@
 		0EC074DD174D089C00194B8D /* splashScreen-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EC074DC174D089C00194B8D /* splashScreen-568h@2x.png */; };
 		0ED1FB02174CB9DC00CAAB3A /* proCalc_NumberButton_smpl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ED1FB01174CB9DC00CAAB3A /* proCalc_NumberButton_smpl@2x.png */; };
 		DD7E6F3C17298C0900438777 /* taschenrechner.png in Resources */ = {isa = PBXBuildFile; fileRef = DD7E6F3B17298C0900438777 /* taschenrechner.png */; };
+		DDDE0E611769EA1F00B55346 /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = DDDE0E601769EA1F00B55346 /* Parser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +90,8 @@
 		0EC074DC174D089C00194B8D /* splashScreen-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splashScreen-568h@2x.png"; sourceTree = "<group>"; };
 		0ED1FB01174CB9DC00CAAB3A /* proCalc_NumberButton_smpl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "proCalc_NumberButton_smpl@2x.png"; path = "proCalc/proCalc_NumberButton_smpl@2x.png"; sourceTree = "<group>"; };
 		DD7E6F3B17298C0900438777 /* taschenrechner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = taschenrechner.png; sourceTree = "<group>"; };
+		DDDE0E5F1769EA1F00B55346 /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
+		DDDE0E601769EA1F00B55346 /* Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,9 +149,11 @@
 		0E21BC18170E2640001AE5AE /* proCalc */ = {
 			isa = PBXGroup;
 			children = (
+				0E21BC2E170E2640001AE5AE /* SimpleCalculatorViewController.m */,
+				DDDE0E601769EA1F00B55346 /* Parser.m */,
+				DDDE0E5F1769EA1F00B55346 /* Parser.h */,
 				0E21BC2A170E2640001AE5AE /* MainStoryboard.storyboard */,
 				0E21BC2D170E2640001AE5AE /* SimpleCalculatorViewController.h */,
-				0E21BC2E170E2640001AE5AE /* SimpleCalculatorViewController.m */,
 				0E1EA9C2174A7D8F00012C3F /* ComplexCalculatorViewController.h */,
 				0E1EA9C8174B424B00012C3F /* GraphPlotterView.h */,
 				0E1EA9C9174B424B00012C3F /* GraphPlotterView.m */,
@@ -304,6 +309,7 @@
 				0E1EA9C4174A7D8F00012C3F /* ComplexCalculatorViewController.m in Sources */,
 				0E1EA9C7174A7FB000012C3F /* GraphPlotterViewController.m in Sources */,
 				0E1EA9CA174B424B00012C3F /* GraphPlotterView.m in Sources */,
+				DDDE0E611769EA1F00B55346 /* Parser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
