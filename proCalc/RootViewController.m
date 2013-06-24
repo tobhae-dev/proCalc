@@ -8,6 +8,7 @@
 
 #import "RootViewController.h"
 #import "SimpleCalculatorView.h"
+#import "ComplexCalculatorView.h"
 #import "GraphPlotterView.h"
 #import "Calculator.h"
 
@@ -15,10 +16,10 @@
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (strong, nonatomic) IBOutlet UIPageControl *pageControl;
+@property (nonatomic, strong) NSMutableArray *calcPortraitViews;
+@property (nonatomic, strong) NSMutableArray *calcLandscapeViews;
 
-@property (nonatomic, strong) NSMutableArray *calcViews;
-
-@property (nonatomic) BOOL reminderDidShow; // Funktioniert nicht da ViewController anscheinend nicht mehr auf dem Heap
+@property (nonatomic) BOOL swipeWarningShouldShow;
 
 @property (weak, nonatomic) IBOutlet UILabel *inputAndAnswerDisplay;
 @property (weak, nonatomic) IBOutlet UILabel *computationDisplay;
@@ -31,14 +32,21 @@
 
 @implementation RootViewController
 
-@synthesize calcViews;
+@synthesize calcPortraitViews;
+@synthesize calcLandscapeViews;
 @synthesize scrollView;
 @synthesize pageControl;
 
+const CGFloat kPortraitViewHeight   = 440.0;
+const CGFloat kPortraitViewWidth    = 320.0;
+const CGFloat kLandscapeViewHeight  = 300.0;
+const CGFloat kLandscapeViewWidth   = 460.0;
+const NSUInteger kNumberOfPages     = 2;
 
-const CGFloat kScrollObjHeight  = 440.0;
-const CGFloat kScrollObjWidth   = 320.0;
-const NSUInteger kNumImages     = 2;
+#define kSwipeWarningKey @"swipeWarning"
+#define kVersionKey @"version"
+
+#define degreesToRadians(x) (M_PI * (x) / 180.0)
 
 const CGFloat proCalcBackroundColorRed      = 51.0;
 const CGFloat proCalcBackroundColorGreen    = 51.0;
@@ -47,28 +55,15 @@ const CGFloat proCalcBackroundColorAlpha    = 1.0;
 
 - (void)viewDidLoad
 {
-    if (!self.reminderDidShow) {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    self.swipeWarningShouldShow = [defaults boolForKey:kSwipeWarningKey];
+    if (self.swipeWarningShouldShow) {
         [self showSwipeReminder];
     }
     
-//    self.view.backgroundColor = [UIColor colorWithRed:proCalcBackroundColorRed green:proCalcBackroundColorGreen blue:proCalcBackroundColorBlue alpha:proCalcBackroundColorAlpha];
+    //    self.view.backgroundColor = [UIColor colorWithRed:proCalcBackroundColorRed green:proCalcBackroundColorGreen blue:proCalcBackroundColorBlue alpha:proCalcBackroundColorAlpha];
     
-    calcViews = [[NSMutableArray alloc] init];
-    [calcViews addObject: [[SimpleCalculatorView alloc] init]];
-    [calcViews addObject: [[GraphPlotterView alloc] init]];
-    
-    for (NSUInteger i = 0; i < calcViews.count; i++)
-    {
-        UIView *thisView = [calcViews objectAtIndex:i];
-        // setup each frame to a default height and width, it will be properly placed when we call "updateScrollList"
-        CGRect rect = thisView.frame;
-        rect.size.height = kScrollObjHeight;
-        rect.size.width = kScrollObjWidth;
-        thisView.frame = rect;
-        thisView.tag = i;  // tag our views for later use when we place them in serial fashion
-        [scrollView addSubview:thisView];
-    }
-    
+    // Initializing Scrollview
     // a page is the width of the scroll view
     scrollView.pagingEnabled = YES;
     scrollView.bounces = NO;
@@ -77,20 +72,60 @@ const CGFloat proCalcBackroundColorAlpha    = 1.0;
     scrollView.scrollsToTop = NO;
     scrollView.delegate = self;
     
-    self.pageControl.numberOfPages = kNumImages;
+    // Initializing PageControl
+    self.pageControl.numberOfPages = kNumberOfPages;
     self.pageControl.currentPage = 0;
     
-    [self layoutScrollImages];  // now place the views in serial layout within the scrollview
+    // Initializing correspondig View-Container
+    calcPortraitViews = [[NSMutableArray alloc] init];
+//    [calcPortraitViews addObject: [[SimpleCalculatorView alloc] init]];
+//    [calcPortraitViews addObject: [[GraphPlotterView alloc] init]];
+    
+    calcLandscapeViews = [[NSMutableArray alloc] init];
+    [calcLandscapeViews addObject: [[ComplexCalculatorView alloc] init]];
+    [calcLandscapeViews addObject: [[ComplexCalculatorView alloc] init]]; // Durch GraphPlotterLandscapeView ersetzen
+    
+    // Set the view due to AutoRotation 
+    UIApplication *app = [UIApplication sharedApplication];
+    UIInterfaceOrientation currentOrientation = app.statusBarOrientation;
+    [self doLayoutForOrientation:currentOrientation];
 }
 
-- (void)showSwipeReminder {
-    UIAlertView *swipeAlert = [[UIAlertView alloc] initWithTitle:@"Hinweis" message:@"Wischen Sie nach rechts um zum Plotter zu wechseln." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-    [swipeAlert show];
-    self.reminderDidShow = YES;
+- (void)doLayoutForOrientation:(UIInterfaceOrientation)orientation {
+        
+    if (UIInterfaceOrientationIsPortrait(orientation)) {
+        [self layoutPortraitScrollImages];  // now place the views in serial layout within the scrollview
+    } else {
+        [self layoutLandscapeScrollImages];
+    }
 }
 
-- (void)layoutScrollImages
+- (void)layoutPortraitScrollImages
 {
+    NSLog(@"%i", self.scrollView.subviews.count);
+    
+//    // remove all the subviews from our scrollview
+//    for (UIView *view in self.scrollView.subviews)
+//    {
+//        
+//        [view removeFromSuperview];
+//    }
+    
+    NSLog(@"layoutPotrait");
+    
+    for (NSUInteger i = 0; i < calcPortraitViews.count; i++)
+    {
+        UIView *thisView = [calcPortraitViews objectAtIndex:i];
+        // setup each frame to a default height and width, it will be properly placed when we call "updateScrollList"
+        CGRect rect = thisView.frame;
+        rect.size.height = kPortraitViewHeight;
+        rect.size.width = kPortraitViewWidth;
+        thisView.frame = rect;
+        thisView.tag = i;  // tag our views for later use when we place them in serial fashion
+        [scrollView addSubview:thisView];
+//         NSLog(@"x: %@",thisView);
+    }
+
     UIView *view = nil;
     NSArray *subviews = [scrollView subviews];
     
@@ -104,17 +139,54 @@ const CGFloat proCalcBackroundColorAlpha    = 1.0;
             frame.origin = CGPointMake(curXLoc, 0);
             view.frame = frame;
             
-            curXLoc += (kScrollObjWidth);
+            curXLoc += (kPortraitViewWidth);
         }
     }
     // set the content size so it can be scrollable
-    [scrollView setContentSize:CGSizeMake((kNumImages * kScrollObjWidth), [scrollView bounds].size.height)];
+    [scrollView setContentSize:CGSizeMake((kNumberOfPages * kPortraitViewWidth), [scrollView bounds].size.height)];
+}
+
+- (void)layoutLandscapeScrollImages
+{
+    
+
+    
+    for (NSUInteger i = 0; i < calcLandscapeViews.count; i++)
+    {
+        UIView *thisView = [calcLandscapeViews objectAtIndex:i];
+        // setup each frame to a default height and width, it will be properly placed when we call "updateScrollList"
+        CGRect rect = thisView.frame;
+        rect.size.height = kLandscapeViewHeight;
+        rect.size.width = kLandscapeViewWidth;
+        thisView.frame = rect;
+        thisView.tag = i;  // tag our views for later use when we place them in serial fashion
+        [scrollView addSubview:thisView];
+    }
+    
+    UIView *view = nil;
+    NSArray *subviews = [scrollView subviews];
+    
+    // reposition all image subviews in a horizontal serial fashion
+    CGFloat curXLoc = 0;
+    for (view in subviews)
+    {
+        if ([view isKindOfClass:[UIView class]] && view.tag >= 0)
+        {
+            CGRect frame = view.frame;
+            frame.origin = CGPointMake(curXLoc, 0);
+            view.frame = frame;
+            
+            curXLoc += (kLandscapeViewWidth);
+        }
+    }
+    // set the content size so it can be scrollable
+    [scrollView setContentSize:CGSizeMake((kNumberOfPages * kLandscapeViewWidth), [scrollView bounds].size.height)];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)sender
 {
     // Update the page when more than 50% of the previous/next page is visible
-    CGFloat pageWidth = self.scrollView.frame.size.width;
+    CGFloat pageWidth = self.scrollView.bounds.size.width;
     int page = floor((self.scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
     self.pageControl.currentPage = page;
 }
@@ -134,6 +206,52 @@ const CGFloat proCalcBackroundColorAlpha    = 1.0;
 {
     [self gotoPage:YES];    // YES = animate
 }
+
+- (void)showSwipeReminder {
+    UIAlertView *swipeAlert = [[UIAlertView alloc] initWithTitle:@"Hinweis" message:@"Wischen Sie nach rechts um zum Plotter zu wechseln." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    [swipeAlert show];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setBool:NO forKey:kSwipeWarningKey];
+}
+
+#pragma mark - AutoRotation
+
+- (NSUInteger)supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskAllButUpsideDown;
+}
+
+// NUR FÜR DEN PLOTTER, DER CALCULATOR MACHT VIEW SWAPPING
+
+- (void)willRotationToInterfaceOrientation:(UIInterfaceOrientation) toInterfaceOrientation duration:(NSTimeInterval)duration {
+  
+   [self doLayoutForOrientation:toInterfaceOrientation];
+}
+
+//- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)
+//interfaceOrientation duration:(NSTimeInterval)duration {
+//    if (interfaceOrientation == UIInterfaceOrientationPortrait) {
+//        self.view = self.simpleCalculatorViewPortrait;
+//        self.view.transform = CGAffineTransformIdentity;
+//        self.view.transform =
+//        CGAffineTransformMakeRotation(degreesToRadians(0));
+//        self.view.bounds = CGRectMake(0.0, 0.0, 320.0, 460.0);
+//    }
+//    else if (interfaceOrientation == UIInterfaceOrientationLandscapeLeft) {
+//        self.view = self.complexCalculatorViewLandscape;
+//        self.view.transform = CGAffineTransformIdentity;
+//        self.view.transform = CGAffineTransformMakeRotation(degreesToRadians(-90));
+//        self.view.bounds = CGRectMake(0.0, 0.0, 480.0, 300.0);
+//    }
+//    else if (interfaceOrientation ==
+//             UIInterfaceOrientationLandscapeRight) {
+//        self.view = self.complexCalculatorViewLandscape;
+//        self.view.transform = CGAffineTransformIdentity;
+//        self.view.transform =
+//        CGAffineTransformMakeRotation(degreesToRadians(90));
+//        self.view.bounds = CGRectMake(0.0, 0.0, 480.0, 300.0);
+//    }
+//}
+
 
 #pragma mark - Mathematical ViewController Stubs
 
