@@ -89,6 +89,8 @@ const CGFloat proCalcBackroundColorAlpha    = 1.0;
     UIApplication *app = [UIApplication sharedApplication];
     UIInterfaceOrientation currentOrientation = app.statusBarOrientation;
     [self doLayoutForOrientation:currentOrientation];
+    
+    self.scroller.contentSize = CGSizeMake(kDefaultGraphWidth, kGraphHeight);
 }
 
 - (void)doLayoutForOrientation:(UIInterfaceOrientation)orientation {
