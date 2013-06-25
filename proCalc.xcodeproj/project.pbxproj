@@ -25,6 +25,7 @@
 		0E9088C9177487EE005BC7EA /* PhoneContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E9088C8177487EE005BC7EA /* PhoneContent.xib */; };
 		0E9088CB1778D5A3005BC7EA /* CalcView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E9088CA1778D5A3005BC7EA /* CalcView.xib */; };
 		0E9088CF1778D857005BC7EA /* PhoneContentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E9088CD1778D857005BC7EA /* PhoneContentController.m */; };
+		0E9088DA17798C17005BC7EA /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E9088D917798C17005BC7EA /* Parser.m */; };
 		0EA6473C175DF06100F097E4 /* ComplexCalculatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA6473B175DF06100F097E4 /* ComplexCalculatorView.m */; };
 		0EA6473E175DF22900F097E4 /* ComplexCalculatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EA6473D175DF22900F097E4 /* ComplexCalculatorView.xib */; };
 		0EC074BD174CCB6700194B8D /* proCalc_MemoryButton_smpl.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EC074BA174CCB6700194B8D /* proCalc_MemoryButton_smpl.png */; };
@@ -79,6 +80,8 @@
 		0E9088CA1778D5A3005BC7EA /* CalcView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CalcView.xib; sourceTree = "<group>"; };
 		0E9088CC1778D857005BC7EA /* PhoneContentController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneContentController.h; sourceTree = "<group>"; };
 		0E9088CD1778D857005BC7EA /* PhoneContentController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneContentController.m; sourceTree = "<group>"; };
+		0E9088D817798C17005BC7EA /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
+		0E9088D917798C17005BC7EA /* Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parser.m; sourceTree = "<group>"; };
 		0EA6473A175DF06100F097E4 /* ComplexCalculatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComplexCalculatorView.h; sourceTree = "<group>"; };
 		0EA6473B175DF06100F097E4 /* ComplexCalculatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComplexCalculatorView.m; sourceTree = "<group>"; };
 		0EA6473D175DF22900F097E4 /* ComplexCalculatorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ComplexCalculatorView.xib; sourceTree = "<group>"; };
@@ -122,6 +125,8 @@
 		0E1EA94217482A3000012C3F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0E9088D817798C17005BC7EA /* Parser.h */,
+				0E9088D917798C17005BC7EA /* Parser.m */,
 				0E1EA93F1748292700012C3F /* Calculator.h */,
 				0E1EA9401748292700012C3F /* Calculator.m */,
 			);
@@ -340,6 +345,7 @@
 				0E7F4E9C175A8E7100559B67 /* GraphDrawingView.m in Sources */,
 				0EA6473C175DF06100F097E4 /* ComplexCalculatorView.m in Sources */,
 				0E9088CF1778D857005BC7EA /* PhoneContentController.m in Sources */,
+				0E9088DA17798C17005BC7EA /* Parser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
