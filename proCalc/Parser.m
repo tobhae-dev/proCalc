@@ -7,9 +7,8 @@
 //
 
 #import "Parser.h"
+
 @implementation Parser
-
-
 
 -(double) ParseNumber
 {
@@ -677,6 +676,10 @@
     fnkt=[fnkt stringByReplacingOccurrencesOfString:@" " withString:@""];
     fnkt=[NSString stringWithFormat:@"(%@)",fnkt];
     int klammern=0;
+    
+    if (([fnkt characterAtIndex:1] == '^')) {
+        return FALSE;
+    }
     for(int i=1;i< fnkt.length-1;i++){
         if([fnkt characterAtIndex:i]=='('){
             klammern++;
@@ -684,7 +687,7 @@
         if([fnkt characterAtIndex:i]==')'){
             klammern--;
         }
-        if(!([fnkt characterAtIndex:i] >= '0' && [fnkt characterAtIndex:i] <= '9')&&([fnkt characterAtIndex:i] != 'c')&&([fnkt characterAtIndex:i] != 'o')&&([fnkt characterAtIndex:i] != 's')&&([fnkt characterAtIndex:i] != 'i')&&([fnkt characterAtIndex:i] != 'n')&&([fnkt characterAtIndex:i] != 'q')&&([fnkt characterAtIndex:i] != 'r')&&([fnkt characterAtIndex:i] != 't')&&([fnkt characterAtIndex:i] != 'a')&&([fnkt characterAtIndex:i] != 'n')&&([fnkt characterAtIndex:i] != 'e')&&([fnkt characterAtIndex:i] != 'x')&&([fnkt characterAtIndex:i] != '+')&&([fnkt characterAtIndex:i] != '-')&&([fnkt characterAtIndex:i] != '*')&&([fnkt characterAtIndex:i] != '/')&&([fnkt characterAtIndex:i] != '%')&&([fnkt characterAtIndex:i] != '.')&&([fnkt characterAtIndex:i] != '^')&&([fnkt characterAtIndex:i] != '(')&&([fnkt characterAtIndex:i] != ')')){
+        if(!([fnkt characterAtIndex:i] >= '0' && [fnkt characterAtIndex:i] <= '9')&&([fnkt characterAtIndex:i] != 'c')&&([fnkt characterAtIndex:i] != 'o')&&([fnkt characterAtIndex:i] != 's')&&([fnkt characterAtIndex:i] != 'i')&&([fnkt characterAtIndex:i] != 'n')&&([fnkt characterAtIndex:i] != 'q')&&([fnkt characterAtIndex:i] != 'r')&&([fnkt characterAtIndex:i] != 't')&&([fnkt characterAtIndex:i] != 'a')&&([fnkt characterAtIndex:i] != 'n')&&([fnkt characterAtIndex:i] != 'e')&&([fnkt characterAtIndex:i] != 'g')&&([fnkt characterAtIndex:i] != 'l')&&([fnkt characterAtIndex:i] != 'x')&&([fnkt characterAtIndex:i] != '+')&&([fnkt characterAtIndex:i] != '-')&&([fnkt characterAtIndex:i] != '*')&&([fnkt characterAtIndex:i] != '/')&&([fnkt characterAtIndex:i] != '%')&&([fnkt characterAtIndex:i] != '.')&&([fnkt characterAtIndex:i] != '^')&&([fnkt characterAtIndex:i] != '(')&&([fnkt characterAtIndex:i] != ')')){
             return FALSE;
         }
         switch ([fnkt characterAtIndex:i])
@@ -699,7 +702,7 @@
             case '7':
             case '8':
             case '9':
-                if (!([fnkt characterAtIndex:i+1] >= '0' && [fnkt characterAtIndex:i+1] <= '9')&&([fnkt characterAtIndex:i+1] != '.')&&([fnkt characterAtIndex:i+1] != '+')&&([fnkt characterAtIndex:i+1] != '-')&&([fnkt characterAtIndex:i+1] != '*')&&([fnkt characterAtIndex:i+1] != '/')&&([fnkt characterAtIndex:i+1] != '%')&&([fnkt characterAtIndex:i+1] != '^')&&([fnkt characterAtIndex:i+1] != ')')) {
+                if (!([fnkt characterAtIndex:i+1] >= '0' && [fnkt characterAtIndex:i+1] <= '9')&&([fnkt characterAtIndex:i+1] != '.')&&([fnkt characterAtIndex:i+1] != '+')&&([fnkt characterAtIndex:i+1] != '-')&&([fnkt characterAtIndex:i+1] != '*')&&([fnkt characterAtIndex:i+1] != '/')&&([fnkt characterAtIndex:i+1] != '%')&&([fnkt characterAtIndex:i+1] != '^')&&([fnkt characterAtIndex:i+1] != '^')&&([fnkt characterAtIndex:i+1] != ')')) {
                     return FALSE;
                 }
                 break;
@@ -709,7 +712,12 @@
                 }
                 break;
             case 'o':
-                if ([fnkt characterAtIndex:i+1] != 's') {
+                if ([fnkt characterAtIndex:i+1] != 's'&&([fnkt characterAtIndex:i+1] != 'g')) {
+                    return FALSE;
+                }
+                break;
+            case 'l':
+                if (([fnkt characterAtIndex:i+1] != 'o')&&([fnkt characterAtIndex:i+1] != 'n')) {
                     return FALSE;
                 }
                 break;
@@ -802,6 +810,7 @@
 - (double) xReplace:(NSString *)expr xwert:(NSString*)zahl
         {
             funktion=[expr stringByReplacingOccurrencesOfString:@" " withString:@""];
+            zahl=[NSString stringWithFormat:@"(%@)",zahl];
             funktion=[funktion stringByReplacingOccurrencesOfString:@"x" withString:zahl];
             funktion=[funktion stringByReplacingOccurrencesOfString:@"e" withString:@"2.71828182846"];
             [self potenz];

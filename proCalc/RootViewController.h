@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface RootViewController : UIViewController <UIScrollViewDelegate>
-@property (strong, nonatomic) IBOutlet UIScrollView *scroller;
+
+@property (weak, nonatomic) IBOutlet UILabel *gleichung;
+@property (weak, nonatomic) IBOutlet UILabel *ergebniss;
+
 
 @end

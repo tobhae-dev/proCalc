@@ -8,16 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
-#define kGraphHeight 300
-#define kDefaultGraphWidth 900
-#define kOffsetX 0
-#define kStepX 70
-#define kGraphBottom 280
+#define kGraphHeight 2000       //Höhe Zeichenfläche
+#define kDefaultGraphWidth 2000 //Breite Zeichenfläche
+#define kStepX 20              //koordinatensystem x-Abstand
+#define kStepY 20              //koordinatensystem y-Abstand
+#define kOffsetX 0              //verschiebung des in X-Richung
+#define kCircleRadius 2 //punktradius
+
+
+#define kGraphBottom 2000
 #define kGraphTop 0
-#define kStepY 50
-#define kOffsetY 10
-#define kCircleRadius 3
+
+#define kOffsetY 0
+
 
 @interface GraphDrawingView : UIView
 
 @end
+

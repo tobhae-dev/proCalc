@@ -7,19 +7,46 @@
 //
 
 #import "GraphDrawingView.h"
+#import "Parser.h"
+#import "ZeichnerViewController.h"
 
+float data[(kDefaultGraphWidth/kStepX)*10];
+float Ytext[(kGraphHeight/kStepY)*10];
+float Xtext[(kDefaultGraphWidth/kStepX)*10];
 @implementation GraphDrawingView
 
 
-float data[] = {0.7, 0.4, 0.9, 1.0, 0.2, 0.85, 0.11, 0.75, 0.53, 0.44, 0.88, 0.77};
+
 
 - (void)setup
 {
-    // do initialization here
+    double startY=-1*(((kGraphHeight/kStepY)+2)/2);
+    double startX=-1*(((kDefaultGraphWidth/kStepX)+2)/2);
+    for (int i=0; i<=kGraphHeight/kStepY*10; i++) {
+        Ytext[i]=startY*-1;
+        startY=startY+0.1;
+    }
+    for (int i=0; i<=kDefaultGraphWidth/kStepX*10; i++) {
+        Xtext[i]=startX;
+        startX=startX+0.1;
+    }
+    
+    double zahl;
+    Parser *parser=[[Parser alloc] init];
+   NSString *gleichung=@"e^x";
+    for (int i=0; i<=kDefaultGraphWidth/kStepX*10; i++) {
+        NSString *xwerte=[NSString stringWithFormat:@"%f", Xtext[i]];
+        zahl=[parser xReplace:gleichung xwert:xwerte];
+        data[i]=zahl;
+
+    }
+    
+  
 }
 
 - (void)awakeFromNib
 {
+    NSLog(@"bla");
     [self setup];
 }
 
@@ -33,29 +60,28 @@ float data[] = {0.7, 0.4, 0.9, 1.0, 0.2, 0.85, 0.11, 0.75, 0.53, 0.44, 0.88, 0.7
 // Drawing a function
 - (void)drawLineGraphWithContext:(CGContextRef)ctx
 {
-    CGContextSetLineWidth(ctx, 2.0);
+    CGContextSetLineWidth(ctx, 1);
     CGContextSetStrokeColorWithColor(ctx, [[UIColor colorWithRed:1.0 green:0.5 blue:0 alpha:1.0] CGColor]);
-    int maxGraphHeight = kGraphHeight - kOffsetY;
     CGContextBeginPath(ctx);
-    CGContextMoveToPoint(ctx, kOffsetX, kGraphHeight - maxGraphHeight * data[0]);
-    for (int i = 1; i < sizeof(data); i++)
+    CGContextMoveToPoint(ctx, kOffsetX,kGraphHeight/2- (kStepY * data[0]));
+    for (int i = 0; i < sizeof(data); i++)
     {
-        CGContextAddLineToPoint(ctx, kOffsetX + i * kStepX, kGraphHeight - maxGraphHeight * data[i]);
+        CGContextAddLineToPoint(ctx, kOffsetX + i * kStepX/10,kGraphHeight/2- (kStepY * data[i]));
     }
     CGContextDrawPath(ctx, kCGPathStroke);
     
     CGContextSetFillColorWithColor(ctx, [[UIColor colorWithRed:1.0 green:0.5 blue:0 alpha:1.0] CGColor]);
     
+    /*
     for (int i = 1; i < sizeof(data) - 1; i++)
     {
         float x = kOffsetX + i * kStepX;
-        float y = kGraphHeight - maxGraphHeight * data[i];
+        float y = kGraphHeight/2- (kStepY * data[i]);
         CGRect rect = CGRectMake(x - kCircleRadius, y - kCircleRadius, 2 * kCircleRadius, 2 * kCircleRadius);
         CGContextAddEllipseInRect(ctx, rect);
-    }
+    }*/
     CGContextDrawPath(ctx, kCGPathFillStroke);
 }
-
 
 - (void)drawRect:(CGRect)rect
 {
@@ -66,6 +92,7 @@ float data[] = {0.7, 0.4, 0.9, 1.0, 0.2, 0.85, 0.11, 0.75, 0.53, 0.44, 0.88, 0.7
     CGFloat dash[] = {2.0, 2.0};
     CGContextSetLineDash(context, 0.0, dash, 2);
     // How many lines?
+    
     int howMany = (kDefaultGraphWidth - kOffsetX) / kStepX;
     // Here the lines go
     for (int i = 0; i < howMany; i++)
@@ -89,21 +116,33 @@ float data[] = {0.7, 0.4, 0.9, 1.0, 0.2, 0.85, 0.11, 0.75, 0.53, 0.44, 0.88, 0.7
     
     // Lableing the x-Axis of the Coordinate System
     CGContextSetTextMatrix(context, CGAffineTransformMake(1.0, 0.0, 0.0, -1.0, 0.0, 0.0));
-    CGContextSelectFont(context, "Helvetica", 18, kCGEncodingMacRoman);
+    CGContextSelectFont(context, "Helvetica", 10, kCGEncodingMacRoman);
     CGContextSetTextDrawingMode(context, kCGTextFill);
     CGContextSetFillColorWithColor(context, [[UIColor colorWithRed:0 green:0 blue:0 alpha:1.0] CGColor]);
-    for (int i = 1; i < sizeof(data); i++)
+    for (int i = 0; i < (kGraphHeight/kStepY)*10; i=i+10)
     {
-        NSString *theText = [NSString stringWithFormat:@"%d", i];
-        CGSize labelSize = [theText sizeWithFont:[UIFont fontWithName:@"Helvetica" size:18]];
-        CGContextShowTextAtPoint(context, kOffsetX + i * kStepX - labelSize.width/2, kGraphBottom - 5, [theText cStringUsingEncoding:NSUTF8StringEncoding], [theText length]);
+        NSString *theText = [NSString stringWithFormat:@"%4.0f", Xtext[i]];
+        CGSize labelSize = [theText sizeWithFont:[UIFont fontWithName:@"Helvetica" size:10]];
+        CGContextShowTextAtPoint(context, kOffsetX + i/10 * kStepX - labelSize.width/2-2, kGraphHeight/2+4, [theText cStringUsingEncoding:NSUTF8StringEncoding], [theText length]);
 
  
     }
+    
+    // Lableing the Y-Axis of the Coordinate System
+    CGContextSetTextMatrix(context, CGAffineTransformMake(1.0, 0.0, 0.0, -1.0, 0.0, 0.0));
+    CGContextSelectFont(context, "Helvetica", 10, kCGEncodingMacRoman);
+    CGContextSetTextDrawingMode(context, kCGTextFill);
+    CGContextSetFillColorWithColor(context, [[UIColor colorWithRed:0 green:0 blue:0 alpha:1.0] CGColor]);
+   
+    for (int i = 0; i < (kDefaultGraphWidth/kStepX)*10; i=i+10)
+    {
+        NSString *theText = [NSString stringWithFormat:@"%4.0f", Ytext[i]];
+        CGSize labelSize = [theText sizeWithFont:[UIFont fontWithName:@"Helvetica" size:10]];
+        CGContextShowTextAtPoint(context, kDefaultGraphWidth/2 +kStepX/2, kOffsetY + i/10 * kStepY - labelSize.width/2-kStepY/2,  [theText cStringUsingEncoding:NSUTF8StringEncoding], [theText length]);
+        
+        
+    }
 }
-
-
-
 
 
 @end
