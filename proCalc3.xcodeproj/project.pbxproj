@@ -7,20 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E0A7C4217A3CF1E00009876 /* calculator.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E0A7C4117A3CF1E00009876 /* calculator.png */; };
+		0E0A7C4417A3D06000009876 /* vector.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E0A7C4317A3D06000009876 /* vector.png */; };
+		0E0A7C4717A3DCE800009876 /* GraphDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0A7C4617A3DCE800009876 /* GraphDrawingView.m */; };
 		0E7A0D6E1799C1C20057DB09 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7A0D6D1799C1C20057DB09 /* UIKit.framework */; };
 		0E7A0D701799C1C20057DB09 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7A0D6F1799C1C20057DB09 /* Foundation.framework */; };
 		0E7A0D721799C1C20057DB09 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7A0D711799C1C20057DB09 /* CoreGraphics.framework */; };
 		0E7A0D781799C1C20057DB09 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E7A0D761799C1C20057DB09 /* InfoPlist.strings */; };
 		0E7A0D7A1799C1C20057DB09 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7A0D791799C1C20057DB09 /* main.m */; };
 		0E7A0D7E1799C1C20057DB09 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7A0D7D1799C1C20057DB09 /* AppDelegate.m */; };
-		0E7A0D801799C1C20057DB09 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E7A0D7F1799C1C20057DB09 /* Default.png */; };
-		0E7A0D821799C1C20057DB09 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E7A0D811799C1C20057DB09 /* Default@2x.png */; };
-		0E7A0D841799C1C20057DB09 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E7A0D831799C1C20057DB09 /* Default-568h@2x.png */; };
 		0E7A0D871799C1C20057DB09 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E7A0D851799C1C20057DB09 /* MainStoryboard.storyboard */; };
 		0E7A0D8A1799C1C20057DB09 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7A0D891799C1C20057DB09 /* ViewController.m */; };
+		0EA17ABD17A308F700812C60 /* SimpleCalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA17ABC17A308F700812C60 /* SimpleCalcViewController.m */; };
+		0EA17AD617A311E400812C60 /* proCalc_4Funct_smpl.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA17AC717A311E400812C60 /* proCalc_4Funct_smpl.png */; };
+		0EA17AD717A311E400812C60 /* proCalc_4Funct_smpl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA17AC817A311E400812C60 /* proCalc_4Funct_smpl@2x.png */; };
+		0EA17AD817A311E400812C60 /* proCalc_ClearButtons_smpl.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA17AC917A311E400812C60 /* proCalc_ClearButtons_smpl.png */; };
+		0EA17AD917A311E400812C60 /* proCalc_ClearButtons_smpl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA17ACA17A311E400812C60 /* proCalc_ClearButtons_smpl@2x.png */; };
+		0EA17ADA17A311E400812C60 /* proCalc_enter_smpl.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA17ACB17A311E400812C60 /* proCalc_enter_smpl.png */; };
+		0EA17ADB17A311E400812C60 /* proCalc_enter_smpl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA17ACC17A311E400812C60 /* proCalc_enter_smpl@2x.png */; };
+		0EA17ADC17A311E400812C60 /* proCalc_MemoryButton_smpl.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA17ACD17A311E400812C60 /* proCalc_MemoryButton_smpl.png */; };
+		0EA17ADD17A311E400812C60 /* proCalc_MemoryButton_smpl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA17ACE17A311E400812C60 /* proCalc_MemoryButton_smpl@2x.png */; };
+		0EA17ADE17A311E400812C60 /* proCalc_NumberButton_smpl.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA17ACF17A311E400812C60 /* proCalc_NumberButton_smpl.png */; };
+		0EA17ADF17A311E400812C60 /* proCalc_RevPeriod_smpl.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA17AD017A311E400812C60 /* proCalc_RevPeriod_smpl.png */; };
+		0EA17AE017A311E400812C60 /* proCalc_RevPeriod_smpl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA17AD117A311E400812C60 /* proCalc_RevPeriod_smpl@2x.png */; };
+		0EA17AE117A311E400812C60 /* proCalc_specFunct_smpl.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA17AD217A311E400812C60 /* proCalc_specFunct_smpl.png */; };
+		0EA17AE217A311E400812C60 /* proCalc_specFunct_smpl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA17AD317A311E400812C60 /* proCalc_specFunct_smpl@2x.png */; };
+		0EA17AE517A3137C00812C60 /* proCalc_NumberButton_smpl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA17AE417A3137C00812C60 /* proCalc_NumberButton_smpl@2x.png */; };
+		0EA17AE817A3185D00812C60 /* SimpleGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA17AE717A3185D00812C60 /* SimpleGraphViewController.m */; };
+		0EA17AF117A3197C00812C60 /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA17AF017A3197C00812C60 /* Parser.m */; };
+		0EA17AF917A3231600812C60 /* PCappicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA17AF817A3231600812C60 /* PCappicon.png */; };
+		0EA17AFB17A3232800812C60 /* PCappicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA17AFA17A3232800812C60 /* PCappicon@2x.png */; };
+		0EA17B1B17A3291A00812C60 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA17B1A17A3291A00812C60 /* Default.png */; };
+		0EA17B1D17A3292500812C60 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA17B1C17A3292500812C60 /* Default@2x.png */; };
+		0EA17B1F17A3292C00812C60 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA17B1E17A3292C00812C60 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E0A7C4117A3CF1E00009876 /* calculator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calculator.png; sourceTree = "<group>"; };
+		0E0A7C4317A3D06000009876 /* vector.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vector.png; sourceTree = "<group>"; };
+		0E0A7C4517A3DCE800009876 /* GraphDrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphDrawingView.h; sourceTree = "<group>"; };
+		0E0A7C4617A3DCE800009876 /* GraphDrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphDrawingView.m; sourceTree = "<group>"; };
 		0E7A0D6A1799C1C20057DB09 /* proCalc3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = proCalc3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E7A0D6D1799C1C20057DB09 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0E7A0D6F1799C1C20057DB09 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -31,12 +57,34 @@
 		0E7A0D7B1799C1C20057DB09 /* proCalc3-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "proCalc3-Prefix.pch"; sourceTree = "<group>"; };
 		0E7A0D7C1799C1C20057DB09 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0E7A0D7D1799C1C20057DB09 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		0E7A0D7F1799C1C20057DB09 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		0E7A0D811799C1C20057DB09 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		0E7A0D831799C1C20057DB09 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		0E7A0D861799C1C20057DB09 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		0E7A0D881799C1C20057DB09 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		0E7A0D891799C1C20057DB09 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0EA17ABB17A308F700812C60 /* SimpleCalcViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCalcViewController.h; sourceTree = "<group>"; };
+		0EA17ABC17A308F700812C60 /* SimpleCalcViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleCalcViewController.m; sourceTree = "<group>"; };
+		0EA17AC717A311E400812C60 /* proCalc_4Funct_smpl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = proCalc_4Funct_smpl.png; sourceTree = "<group>"; };
+		0EA17AC817A311E400812C60 /* proCalc_4Funct_smpl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "proCalc_4Funct_smpl@2x.png"; sourceTree = "<group>"; };
+		0EA17AC917A311E400812C60 /* proCalc_ClearButtons_smpl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = proCalc_ClearButtons_smpl.png; sourceTree = "<group>"; };
+		0EA17ACA17A311E400812C60 /* proCalc_ClearButtons_smpl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "proCalc_ClearButtons_smpl@2x.png"; sourceTree = "<group>"; };
+		0EA17ACB17A311E400812C60 /* proCalc_enter_smpl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = proCalc_enter_smpl.png; sourceTree = "<group>"; };
+		0EA17ACC17A311E400812C60 /* proCalc_enter_smpl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "proCalc_enter_smpl@2x.png"; sourceTree = "<group>"; };
+		0EA17ACD17A311E400812C60 /* proCalc_MemoryButton_smpl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = proCalc_MemoryButton_smpl.png; sourceTree = "<group>"; };
+		0EA17ACE17A311E400812C60 /* proCalc_MemoryButton_smpl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "proCalc_MemoryButton_smpl@2x.png"; sourceTree = "<group>"; };
+		0EA17ACF17A311E400812C60 /* proCalc_NumberButton_smpl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = proCalc_NumberButton_smpl.png; sourceTree = "<group>"; };
+		0EA17AD017A311E400812C60 /* proCalc_RevPeriod_smpl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = proCalc_RevPeriod_smpl.png; sourceTree = "<group>"; };
+		0EA17AD117A311E400812C60 /* proCalc_RevPeriod_smpl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "proCalc_RevPeriod_smpl@2x.png"; sourceTree = "<group>"; };
+		0EA17AD217A311E400812C60 /* proCalc_specFunct_smpl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = proCalc_specFunct_smpl.png; sourceTree = "<group>"; };
+		0EA17AD317A311E400812C60 /* proCalc_specFunct_smpl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "proCalc_specFunct_smpl@2x.png"; sourceTree = "<group>"; };
+		0EA17AE417A3137C00812C60 /* proCalc_NumberButton_smpl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "proCalc_NumberButton_smpl@2x.png"; sourceTree = "<group>"; };
+		0EA17AE617A3185D00812C60 /* SimpleGraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleGraphViewController.h; sourceTree = "<group>"; };
+		0EA17AE717A3185D00812C60 /* SimpleGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleGraphViewController.m; sourceTree = "<group>"; };
+		0EA17AEF17A3197C00812C60 /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
+		0EA17AF017A3197C00812C60 /* Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parser.m; sourceTree = "<group>"; };
+		0EA17AF817A3231600812C60 /* PCappicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PCappicon.png; path = ../PCappicon.png; sourceTree = "<group>"; };
+		0EA17AFA17A3232800812C60 /* PCappicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "PCappicon@2x.png"; path = "../PCappicon@2x.png"; sourceTree = "<group>"; };
+		0EA17B1A17A3291A00812C60 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		0EA17B1C17A3292500812C60 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		0EA17B1E17A3292C00812C60 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "../Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +131,12 @@
 		0E7A0D731799C1C20057DB09 /* proCalc3 */ = {
 			isa = PBXGroup;
 			children = (
-				0E7A0D7C1799C1C20057DB09 /* AppDelegate.h */,
-				0E7A0D7D1799C1C20057DB09 /* AppDelegate.m */,
 				0E7A0D851799C1C20057DB09 /* MainStoryboard.storyboard */,
 				0E7A0D881799C1C20057DB09 /* ViewController.h */,
 				0E7A0D891799C1C20057DB09 /* ViewController.m */,
+				0EA17AE317A311F100812C60 /* Icons */,
+				0EA17AE917A3192100812C60 /* Model */,
+				0EA17ABA17A308B700812C60 /* Views */,
 				0E7A0D741799C1C20057DB09 /* Supporting Files */,
 			);
 			path = proCalc3;
@@ -96,15 +145,64 @@
 		0E7A0D741799C1C20057DB09 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0E7A0D7C1799C1C20057DB09 /* AppDelegate.h */,
+				0E7A0D7D1799C1C20057DB09 /* AppDelegate.m */,
 				0E7A0D751799C1C20057DB09 /* proCalc3-Info.plist */,
 				0E7A0D761799C1C20057DB09 /* InfoPlist.strings */,
 				0E7A0D791799C1C20057DB09 /* main.m */,
 				0E7A0D7B1799C1C20057DB09 /* proCalc3-Prefix.pch */,
-				0E7A0D7F1799C1C20057DB09 /* Default.png */,
-				0E7A0D811799C1C20057DB09 /* Default@2x.png */,
-				0E7A0D831799C1C20057DB09 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0EA17ABA17A308B700812C60 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0EA17ABB17A308F700812C60 /* SimpleCalcViewController.h */,
+				0EA17ABC17A308F700812C60 /* SimpleCalcViewController.m */,
+				0EA17AE617A3185D00812C60 /* SimpleGraphViewController.h */,
+				0EA17AE717A3185D00812C60 /* SimpleGraphViewController.m */,
+				0E0A7C4517A3DCE800009876 /* GraphDrawingView.h */,
+				0E0A7C4617A3DCE800009876 /* GraphDrawingView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		0EA17AE317A311F100812C60 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				0EA17B1E17A3292C00812C60 /* Default-568h@2x.png */,
+				0EA17B1C17A3292500812C60 /* Default@2x.png */,
+				0EA17B1A17A3291A00812C60 /* Default.png */,
+				0E0A7C4317A3D06000009876 /* vector.png */,
+				0E0A7C4117A3CF1E00009876 /* calculator.png */,
+				0EA17AFA17A3232800812C60 /* PCappicon@2x.png */,
+				0EA17AF817A3231600812C60 /* PCappicon.png */,
+				0EA17AE417A3137C00812C60 /* proCalc_NumberButton_smpl@2x.png */,
+				0EA17AC717A311E400812C60 /* proCalc_4Funct_smpl.png */,
+				0EA17AC817A311E400812C60 /* proCalc_4Funct_smpl@2x.png */,
+				0EA17AC917A311E400812C60 /* proCalc_ClearButtons_smpl.png */,
+				0EA17ACA17A311E400812C60 /* proCalc_ClearButtons_smpl@2x.png */,
+				0EA17ACB17A311E400812C60 /* proCalc_enter_smpl.png */,
+				0EA17ACC17A311E400812C60 /* proCalc_enter_smpl@2x.png */,
+				0EA17ACD17A311E400812C60 /* proCalc_MemoryButton_smpl.png */,
+				0EA17ACE17A311E400812C60 /* proCalc_MemoryButton_smpl@2x.png */,
+				0EA17ACF17A311E400812C60 /* proCalc_NumberButton_smpl.png */,
+				0EA17AD017A311E400812C60 /* proCalc_RevPeriod_smpl.png */,
+				0EA17AD117A311E400812C60 /* proCalc_RevPeriod_smpl@2x.png */,
+				0EA17AD217A311E400812C60 /* proCalc_specFunct_smpl.png */,
+				0EA17AD317A311E400812C60 /* proCalc_specFunct_smpl@2x.png */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
+		0EA17AE917A3192100812C60 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0EA17AEF17A3197C00812C60 /* Parser.h */,
+				0EA17AF017A3197C00812C60 /* Parser.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,10 +257,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E7A0D781799C1C20057DB09 /* InfoPlist.strings in Resources */,
-				0E7A0D801799C1C20057DB09 /* Default.png in Resources */,
-				0E7A0D821799C1C20057DB09 /* Default@2x.png in Resources */,
-				0E7A0D841799C1C20057DB09 /* Default-568h@2x.png in Resources */,
 				0E7A0D871799C1C20057DB09 /* MainStoryboard.storyboard in Resources */,
+				0EA17AD617A311E400812C60 /* proCalc_4Funct_smpl.png in Resources */,
+				0EA17AD717A311E400812C60 /* proCalc_4Funct_smpl@2x.png in Resources */,
+				0EA17AD817A311E400812C60 /* proCalc_ClearButtons_smpl.png in Resources */,
+				0EA17AD917A311E400812C60 /* proCalc_ClearButtons_smpl@2x.png in Resources */,
+				0EA17ADA17A311E400812C60 /* proCalc_enter_smpl.png in Resources */,
+				0EA17ADB17A311E400812C60 /* proCalc_enter_smpl@2x.png in Resources */,
+				0EA17ADC17A311E400812C60 /* proCalc_MemoryButton_smpl.png in Resources */,
+				0EA17ADD17A311E400812C60 /* proCalc_MemoryButton_smpl@2x.png in Resources */,
+				0EA17ADE17A311E400812C60 /* proCalc_NumberButton_smpl.png in Resources */,
+				0EA17ADF17A311E400812C60 /* proCalc_RevPeriod_smpl.png in Resources */,
+				0EA17AE017A311E400812C60 /* proCalc_RevPeriod_smpl@2x.png in Resources */,
+				0EA17AE117A311E400812C60 /* proCalc_specFunct_smpl.png in Resources */,
+				0EA17AE217A311E400812C60 /* proCalc_specFunct_smpl@2x.png in Resources */,
+				0EA17AE517A3137C00812C60 /* proCalc_NumberButton_smpl@2x.png in Resources */,
+				0EA17AF917A3231600812C60 /* PCappicon.png in Resources */,
+				0EA17AFB17A3232800812C60 /* PCappicon@2x.png in Resources */,
+				0EA17B1B17A3291A00812C60 /* Default.png in Resources */,
+				0EA17B1D17A3292500812C60 /* Default@2x.png in Resources */,
+				0EA17B1F17A3292C00812C60 /* Default-568h@2x.png in Resources */,
+				0E0A7C4217A3CF1E00009876 /* calculator.png in Resources */,
+				0E0A7C4417A3D06000009876 /* vector.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +292,10 @@
 				0E7A0D7A1799C1C20057DB09 /* main.m in Sources */,
 				0E7A0D7E1799C1C20057DB09 /* AppDelegate.m in Sources */,
 				0E7A0D8A1799C1C20057DB09 /* ViewController.m in Sources */,
+				0EA17ABD17A308F700812C60 /* SimpleCalcViewController.m in Sources */,
+				0EA17AE817A3185D00812C60 /* SimpleGraphViewController.m in Sources */,
+				0EA17AF117A3197C00812C60 /* Parser.m in Sources */,
+				0E0A7C4717A3DCE800009876 /* GraphDrawingView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +418,7 @@
 				0E7A0D8F1799C1C20057DB09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
