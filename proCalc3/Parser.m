@@ -45,6 +45,7 @@
             op -= op1;
         }
     }
+    
     return op;
 }
 
@@ -91,6 +92,7 @@
             op /= op1;
         }
     }
+    NSLog(@"Funktion:%@",funktion);
     return op;
 }
 
@@ -809,6 +811,7 @@
 //startfunktion
 - (double) xReplace:(NSString *)expr xwert:(NSString*)zahl
 {
+
     funktion=[expr stringByReplacingOccurrencesOfString:@" " withString:@""];
     zahl=[NSString stringWithFormat:@"(%@)",zahl];
     funktion=[funktion stringByReplacingOccurrencesOfString:@"x" withString:zahl];
@@ -823,6 +826,7 @@
     [self loga10];
     [self root];
     double rueck=[self ParseExpr];
+
     return rueck;
 }
 @end
