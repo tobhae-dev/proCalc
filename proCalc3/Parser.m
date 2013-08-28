@@ -95,40 +95,40 @@
 }
 
 
-//berechnen der potenz und erstezen
--(void) potenz
+//berechnen der potenz und erstetzen
+-(void) power
 {
     int i=0;
     int x=0;
     int y=0;
-    int anzahl=0;   //anzahl der potenzen
-    int klammern=1; //anzahl der klammern
+    int count=0;   //anzahl der potenzen
+    int braces=1; //anzahl der klammern
     
-    NSString *hochzahl=@""; //zahl die oben steht
-    NSString *untenzahl=@""; //zahl die unten steht
-    double ergebniss=0;
-    double oben=0;  //wert fuer oben
-    double unten=0; //wert fuer unten
+    NSString *upNumber=@""; //zahl die oben steht
+    NSString *downNumber=@""; //zahl die unten steht
+    double result=0;
+    double up=0;  //wert fuer oben
+    double down=0; //wert fuer unten
     
     
     //suche nach den Potenzen
     while (i < funktion.length )
     {
         if([funktion characterAtIndex:i]=='^'){
-            anzahl++;
+            count++;
         }
         i++;
     }
     //so oft potenzen vorkommen
-    for(int t=anzahl;t>0;t--){
+    for(int t=count;t>0;t--){
         i=0;
         x=0;
         y=0;
-        ergebniss=0;
-        oben=0;
-        unten=0;
-        hochzahl=@"";
-        untenzahl=@"";
+        result=0;
+        up=0;
+        down=0;
+        upNumber=@"";
+        downNumber=@"";
         
         //nach stelle der potenz suchen
         while ((i < funktion.length ) && ([funktion characterAtIndex:i]!='^'))
@@ -141,67 +141,67 @@
             
             for (int c=i+1; (c < funktion.length && (([funktion characterAtIndex:c] >= '0' && [funktion characterAtIndex:c] <= '9')| ([funktion characterAtIndex:c]=='.'))); c++)
             {
-                hochzahl = [NSString stringWithFormat:@"%@%c", hochzahl,[funktion characterAtIndex:c]];
+                upNumber = [NSString stringWithFormat:@"%@%c", upNumber,[funktion characterAtIndex:c]];
                 x=c;
             }
-            oben= [hochzahl doubleValue];
+            up= [upNumber doubleValue];
         }
         //teilfunktion
         else{
-            for (int c=i+2; (c < funktion.length) & (klammern>0); c++)
+            for (int c=i+2; (c < funktion.length) & (braces>0); c++)
             {
                 
                 if([funktion characterAtIndex:c]=='('){
-                    klammern++;
+                    braces++;
                 }
                 if([funktion characterAtIndex:c]==')'){
-                    klammern--;
+                    braces--;
                 }
                 //teilfunktion
-                hochzahl = [NSString stringWithFormat:@"%@%c", hochzahl,[funktion characterAtIndex:c]];
+                upNumber = [NSString stringWithFormat:@"%@%c", upNumber,[funktion characterAtIndex:c]];
                 x=c;
             }
-            hochzahl=[hochzahl substringToIndex:hochzahl.length-1];
+            upNumber=[upNumber substringToIndex:upNumber.length-1];
             Parser *bla=[[Parser alloc] init];
             //mithilfe des parser teilfunktion berechnen lassen
-            oben=[bla xReplace:hochzahl xwert:(@"1")];
+            up=[bla xReplace:upNumber xwert:(@"1")];
             
         }
         
-        klammern=1;
+        braces=1;
         //unten zahl wie oben zahl
         if([funktion characterAtIndex:i-1] >= '0' && [funktion characterAtIndex:i-1] <= '9'){
             
             for (int c=i-1; (c >= 0 && (([funktion characterAtIndex:c] >= '0' && [funktion characterAtIndex:c] <= '9') | ([funktion characterAtIndex:c]=='.'))); c--)
             {
-                untenzahl = [NSString stringWithFormat:@"%c%@",[funktion characterAtIndex:c], untenzahl];
+                downNumber = [NSString stringWithFormat:@"%c%@",[funktion characterAtIndex:c], downNumber];
                 y=c;
             }
-            unten=[untenzahl doubleValue];
+            down=[downNumber doubleValue];
         }
         else{
-            for (int c=i-2; (c >=0) & (klammern>0); c--)
+            for (int c=i-2; (c >=0) & (braces>0); c--)
             {
                 
                 if([funktion characterAtIndex:c]=='('){
-                    klammern--;
+                    braces--;
                 }
                 if([funktion characterAtIndex:c]==')'){
-                    klammern++;
+                    braces++;
                 }
                 
-                untenzahl = [NSString stringWithFormat:@"%c%@",[funktion characterAtIndex:c], untenzahl];
+                downNumber = [NSString stringWithFormat:@"%c%@",[funktion characterAtIndex:c], downNumber];
                 y=c;
             }
-            untenzahl=[untenzahl substringFromIndex:1];
+            downNumber=[downNumber substringFromIndex:1];
             Parser *bla=[[Parser alloc] init];
-            unten=[bla xReplace:untenzahl xwert:(@"1")];
+            down=[bla xReplace:downNumber xwert:(@"1")];
         }
         
         
         //potenz berechnen
-        ergebniss=pow(unten, oben);
-        funktion=[NSString stringWithFormat:@"%@(%f)%@",[funktion substringToIndex:y],ergebniss,[funktion substringFromIndex:x+1]];
+        result=pow(down, up);
+        funktion=[NSString stringWithFormat:@"%@(%f)%@",[funktion substringToIndex:y],result,[funktion substringFromIndex:x+1]];
         t=0;
         i=0;
         while (i < funktion.length-1 )
@@ -216,33 +216,33 @@
 }
 
 //berechnung der tangenz und ersetzen
--(void) tangenz
+-(void) tangent
 {
     int i=0;
     int x=0;
     int y=0;
-    int anzahl=0;   //anzahl der tan
-    int klammern=0; //klammern anzahl
+    int count=0;   //anzahl der tan
+    int braces=0; //klammern anzahl
     
     NSString *term=@"";
-    double ergebniss=0;
-    double wert=0;
+    double result=0;
+    double value=0;
     
     //anzahl bestimmen
     while (i < funktion.length-1 )
     {
         if(([funktion characterAtIndex:i]=='t') && ([funktion characterAtIndex:i+1]=='a')){
-            anzahl++;
+            count++;
         }
         i++;
     }
     //sooft tangenz vorhanden
-    for(int t=anzahl;t>0;t--){
+    for(int t=count;t>0;t--){
         i=0;
         x=0;
         y=0;
-        klammern=1;
-        ergebniss=0;
+        braces=1;
+        result=0;
         term=@"";
         
         //suchen nach positon von tan()
@@ -253,13 +253,13 @@
         }
         
         //Teilfunktion extrahieren
-        for (int c=i+4; ((c < funktion.length) & (klammern>0)); c++)
+        for (int c=i+4; ((c < funktion.length) & (braces>0)); c++)
         {
             if([funktion characterAtIndex:c]=='('){
-                klammern++;
+                braces++;
             }
             if([funktion characterAtIndex:c]==')'){
-                klammern--;
+                braces--;
             }
             
             term = [NSString stringWithFormat:@"%@%c", term,[funktion characterAtIndex:c]];
@@ -269,10 +269,10 @@
         
         //teilfunktion berechnen
         Parser *bla=[[Parser alloc] init];
-        wert=[bla xReplace:term xwert:(@"1")];
-        ergebniss=tan(wert);
+        value=[bla xReplace:term xwert:(@"1")];
+        result=tan(value);
         //teil der funktion ersetzen
-        funktion=[NSString stringWithFormat:@"%@(%f)%@",[funktion substringToIndex:y],ergebniss,[funktion substringFromIndex:x+1]];
+        funktion=[NSString stringWithFormat:@"%@(%f)%@",[funktion substringToIndex:y],result,[funktion substringFromIndex:x+1]];
         t=0;
         i=0;
         while (i < funktion.length-1 )
@@ -290,29 +290,29 @@
     int i=0;
     int x=0;
     int y=0;
-    int anzahl=0; //sinusanzhal
-    int klammern=1;//anzahl der klammern
+    int count=0; //sinusanzhal
+    int braces=1;//anzahl der klammern
     
     NSString *term=@"";
-    double ergebniss=0;
-    double wert=0;
+    double result=0;
+    double value=0;
     
     //anzahl bestimmen
     while (i < funktion.length-1 )
     {
         if(([funktion characterAtIndex:i]=='s') && ([funktion characterAtIndex:i+1]=='i')){
-            anzahl++;
+            count++;
         }
         i++;
     }
     
     //so oft wie sin() vorhanden
-    for(int t=anzahl;t>0;t--){
+    for(int t=count;t>0;t--){
         i=0;
         x=0;
         y=0;
-        klammern=1;
-        ergebniss=0;
+        braces=1;
+        result=0;
         term=@"";
         
         //position suchen
@@ -322,13 +322,13 @@
             y=i;
         }
         
-        for (int c=i+4; (c < funktion.length) & (klammern>0); c++)
+        for (int c=i+4; (c < funktion.length) & (braces>0); c++)
         {
             if([funktion characterAtIndex:c]=='('){
-                klammern++;
+                braces++;
             }
             if([funktion characterAtIndex:c]==')'){
-                klammern--;
+                braces--;
             }
             
             term = [NSString stringWithFormat:@"%@%c", term,[funktion characterAtIndex:c]];
@@ -336,9 +336,9 @@
         }
         term=[term substringToIndex:term.length-1];
         Parser *bla=[[Parser alloc] init];
-        wert=[bla xReplace:term xwert:(@"1")];
-        ergebniss=sin(wert);
-        funktion=[NSString stringWithFormat:@"%@(%f)%@",[funktion substringToIndex:y],ergebniss,[funktion substringFromIndex:x+1]];
+        value=[bla xReplace:term xwert:(@"1")];
+        result=sin(value);
+        funktion=[NSString stringWithFormat:@"%@(%f)%@",[funktion substringToIndex:y],result,[funktion substringFromIndex:x+1]];
         
         t=0;
         i=0;
@@ -357,26 +357,26 @@
     int i=0;
     int x=0;
     int y=0;
-    int anzahl=0;
-    int klammern=1;
+    int count=0;
+    int braces=1;
     
     NSString *term=@"";
-    double ergebniss=0;
-    double wert=0;
+    double result=0;
+    double value=0;
     
     while (i < funktion.length )
     {
         if([funktion characterAtIndex:i]=='c'){
-            anzahl++;
+            count++;
         }
         i++;
     }
-    for(int t=anzahl;t>0;t--){
+    for(int t=count;t>0;t--){
         i=0;
         x=0;
         y=0;
-        klammern=1;
-        ergebniss=0;
+        braces=1;
+        result=0;
         term=@"";
         
         while ((i < funktion.length ) && ([funktion characterAtIndex:i]!='c'))
@@ -385,13 +385,13 @@
             y=i;
         }
         
-        for (int c=i+4; (c < funktion.length) & (klammern>0); c++)
+        for (int c=i+4; (c < funktion.length) & (braces>0); c++)
         {
             if([funktion characterAtIndex:c]=='('){
-                klammern++;
+                braces++;
             }
             if([funktion characterAtIndex:c]==')'){
-                klammern--;
+                braces--;
             }
             
             term = [NSString stringWithFormat:@"%@%c", term,[funktion characterAtIndex:c]];
@@ -400,9 +400,9 @@
         
         term=[term substringToIndex:term.length-1];
         Parser *bla=[[Parser alloc] init];
-        wert=[bla xReplace:term xwert:(@"1")];
-        ergebniss=cos(wert);
-        funktion=[NSString stringWithFormat:@"%@(%f)%@",[funktion substringToIndex:y],ergebniss,[funktion substringFromIndex:x+1]];
+        value=[bla xReplace:term xwert:(@"1")];
+        result=cos(value);
+        funktion=[NSString stringWithFormat:@"%@(%f)%@",[funktion substringToIndex:y],result,[funktion substringFromIndex:x+1]];
         t=0;
         i=0;
         while (i < funktion.length-1 )
@@ -416,28 +416,28 @@
     }
 }
 
--(void) prozent
+-(void) percent
 {
     int i=0;
     int x=0;
     int y=0;
-    int anzahl=0;
-    int klammern=1;
+    int count=0;
+    int braces=1;
     NSString *term=@"";
-    double zahl=0;
+    double number=0;
     
     while (i < funktion.length )
     {
         if([funktion characterAtIndex:i]=='%'){
-            anzahl++;
+            count++;
         }
         i++;
     }
-    for(int t=anzahl;t>0;t--){
+    for(int t=count;t>0;t--){
         i=0;
         x=0;
         y=0;
-        zahl=0;
+        number=0;
         term=@"";
         
         while ((i < funktion.length ) && ([funktion characterAtIndex:i]!='%'))
@@ -453,17 +453,17 @@
                 term = [NSString stringWithFormat:@"%c%@",[funktion characterAtIndex:c], term];
                 y=c;
             }
-            zahl=[term doubleValue];
+            number=[term doubleValue];
         }
         else{
-            for (int c=i-2; (c >=0) & (klammern>0); c--)
+            for (int c=i-2; (c >=0) & (braces>0); c--)
             {
                 
                 if([funktion characterAtIndex:c]=='('){
-                    klammern--;
+                    braces--;
                 }
                 if([funktion characterAtIndex:c]==')'){
-                    klammern++;
+                    braces++;
                 }
                 
                 term = [NSString stringWithFormat:@"%c%@",[funktion characterAtIndex:c], term];
@@ -471,12 +471,12 @@
             }
             term=[term substringFromIndex:1];
             Parser *bla=[[Parser alloc] init];
-            zahl=[bla xReplace:term xwert:(@"1")];
+            number=[bla xReplace:term xwert:(@"1")];
         }
         
-        zahl=zahl/100;
+        number=number/100;
         
-        funktion=[NSString stringWithFormat:@"%@(%f)%@",[funktion substringToIndex:y],zahl,[funktion substringFromIndex:x]];
+        funktion=[NSString stringWithFormat:@"%@(%f)%@",[funktion substringToIndex:y],number,[funktion substringFromIndex:x]];
     }
 }
 
@@ -486,26 +486,26 @@
     int i=0;
     int x=0;
     int y=0;
-    int anzahl=0;
-    int klammern=0;
+    int count=0;
+    int braces=0;
     
     NSString *term=@"";
-    double ergebniss=0;
-    double wert=0;
+    double result=0;
+    double value=0;
     
     while (i < funktion.length-1 )
     {
         if(([funktion characterAtIndex:i]=='l')&&([funktion characterAtIndex:i+1]=='o')){
-            anzahl++;
+            count++;
         }
         i++;
     }
-    for(int t=anzahl;t>0;t--){
+    for(int t=count;t>0;t--){
         i=0;
         x=0;
         y=0;
-        klammern=1;
-        ergebniss=0;
+        braces=1;
+        result=0;
         term=@"";
         
         while ((i < funktion.length-1 ) && !(([funktion characterAtIndex:i]=='l') & ([funktion characterAtIndex:i+1]=='o')))
@@ -514,13 +514,13 @@
             y=i;
         }
         
-        for (int c=i+4; ((c < funktion.length) & (klammern>0)); c++)
+        for (int c=i+4; ((c < funktion.length) & (braces>0)); c++)
         {
             if([funktion characterAtIndex:c]=='('){
-                klammern++;
+                braces++;
             }
             if([funktion characterAtIndex:c]==')'){
-                klammern--;
+                braces--;
             }
             
             term = [NSString stringWithFormat:@"%@%c", term,[funktion characterAtIndex:c]];
@@ -528,10 +528,10 @@
         }
         term=[term substringToIndex:term.length-1];
         
-        Parser *bla=[[Parser alloc] init];
-        wert=[bla xReplace:term xwert:(@"1")];
-        ergebniss=log10(wert);
-        funktion=[NSString stringWithFormat:@"%@(%f)%@",[funktion substringToIndex:y],ergebniss,[funktion substringFromIndex:x+1]];
+        Parser *parsObj=[[Parser alloc] init];
+        value=[parsObj xReplace:term xwert:(@"1")];
+        result=log10(value);
+        funktion=[NSString stringWithFormat:@"%@(%f)%@",[funktion substringToIndex:y],result,[funktion substringFromIndex:x+1]];
         
         t=0;
         i=0;
@@ -552,25 +552,25 @@
     int i=0;
     int x=0;
     int y=0;
-    int anzahl=0;
-    int klammern=0;
+    int count=0;
+    int braces=0;
     
     NSString *term=@"";
-    double ergebniss=0;
-    double wert=0;
+    double result=0;
+    double value=0;
     while (i < funktion.length-1)
     {
         if(([funktion characterAtIndex:i]=='l') && ([funktion characterAtIndex:i+1]=='n')){
-            anzahl++;
+            count++;
         }
         i++;
     }
-    for(int t=anzahl;t>0;t--){
+    for(int t=count;t>0;t--){
         i=0;
         x=0;
         y=0;
-        klammern=1;
-        ergebniss=0;
+        braces=1;
+        result=0;
         term=@"";
         
         while ((i < funktion.length-1 ) && !(([funktion characterAtIndex:i]=='l')&& ([funktion characterAtIndex:i+1]=='n')))
@@ -578,13 +578,13 @@
             i++;
             y=i;
         }
-        for (int c=i+3; ((c < funktion.length) & (klammern>0)); c++)
+        for (int c=i+3; ((c < funktion.length) & (braces>0)); c++)
         {
             if([funktion characterAtIndex:c]=='('){
-                klammern++;
+                braces++;
             }
             if([funktion characterAtIndex:c]==')'){
-                klammern--;
+                braces--;
             }
             
             term = [NSString stringWithFormat:@"%@%c", term,[funktion characterAtIndex:c]];
@@ -592,10 +592,10 @@
         }
         term=[term substringToIndex:term.length-1];
         
-        Parser *bla=[[Parser alloc] init];
-        wert=[bla xReplace:term xwert:(@"1")];
-        ergebniss=log(wert);
-        funktion=[NSString stringWithFormat:@"%@(%f)%@",[funktion substringToIndex:y],ergebniss,[funktion substringFromIndex:x+1]];
+        Parser *parsObj=[[Parser alloc] init];
+        value=[parsObj xReplace:term xwert:(@"1")];
+        result=log(value);
+        funktion=[NSString stringWithFormat:@"%@(%f)%@",[funktion substringToIndex:y],result,[funktion substringFromIndex:x+1]];
         
         t=0;
         i=0;
@@ -609,30 +609,30 @@
         t++;
     }
 }
--(void) wurzel
+-(void) root
 {
     int i=0;
     int x=0;
     int y=0;
-    int anzahl=0;
-    int klammern=0;
+    int count=0;
+    int braces=0;
     
     NSString *term=@"";
-    double ergebniss=0;
+    double result=0;
     double wert=0;
     while (i < funktion.length-1)
     {
         if(([funktion characterAtIndex:i]=='s') && ([funktion characterAtIndex:i+1]=='q')){
-            anzahl++;
+            count++;
         }
         i++;
     }
-    for(int t=anzahl;t>0;t--){
+    for(int t=count;t>0;t--){
         i=0;
         x=0;
         y=0;
-        klammern=1;
-        ergebniss=0;
+        braces=1;
+        result=0;
         term=@"";
         
         while ((i < funktion.length-1 ) && !(([funktion characterAtIndex:i]=='s')& ([funktion characterAtIndex:i+1]=='q')))
@@ -640,13 +640,13 @@
             i++;
             y=i;
         }
-        for (int c=i+5; ((c < funktion.length) & (klammern>0)); c++)
+        for (int c=i+5; ((c < funktion.length) & (braces>0)); c++)
         {
             if([funktion characterAtIndex:c]=='('){
-                klammern++;
+                braces++;
             }
             if([funktion characterAtIndex:c]==')'){
-                klammern--;
+                braces--;
             }
             
             term = [NSString stringWithFormat:@"%@%c", term,[funktion characterAtIndex:c]];
@@ -654,10 +654,10 @@
         }
         term=[term substringToIndex:term.length-1];
         
-        Parser *bla=[[Parser alloc] init];
-        wert=[bla xReplace:term xwert:(@"1")];
-        ergebniss=sqrt(wert);
-        funktion=[NSString stringWithFormat:@"%@(%f)%@",[funktion substringToIndex:y],ergebniss,[funktion substringFromIndex:x+1]];
+        Parser *parsObj=[[Parser alloc] init];
+        wert=[parsObj xReplace:term xwert:(@"1")];
+        result=sqrt(wert);
+        funktion=[NSString stringWithFormat:@"%@(%f)%@",[funktion substringToIndex:y],result,[funktion substringFromIndex:x+1]];
         t=0;
         i=0;
         while (i < funktion.length-1 )
@@ -671,21 +671,21 @@
     }
 }
 
--(bool) kontrolle:(NSString *)fnkt
+-(bool) control:(NSString *)fnkt
 {
     fnkt=[fnkt stringByReplacingOccurrencesOfString:@" " withString:@""];
     fnkt=[NSString stringWithFormat:@"(%@)",fnkt];
-    int klammern=0;
+    int braces=0;
     
     if (([fnkt characterAtIndex:1] == '^')) {
         return FALSE;
     }
     for(int i=1;i< fnkt.length-1;i++){
         if([fnkt characterAtIndex:i]=='('){
-            klammern++;
+            braces++;
         }
         if([fnkt characterAtIndex:i]==')'){
-            klammern--;
+            braces--;
         }
         if(!([fnkt characterAtIndex:i] >= '0' && [fnkt characterAtIndex:i] <= '9')&&([fnkt characterAtIndex:i] != 'c')&&([fnkt characterAtIndex:i] != 'o')&&([fnkt characterAtIndex:i] != 's')&&([fnkt characterAtIndex:i] != 'i')&&([fnkt characterAtIndex:i] != 'n')&&([fnkt characterAtIndex:i] != 'q')&&([fnkt characterAtIndex:i] != 'r')&&([fnkt characterAtIndex:i] != 't')&&([fnkt characterAtIndex:i] != 'a')&&([fnkt characterAtIndex:i] != 'n')&&([fnkt characterAtIndex:i] != 'e')&&([fnkt characterAtIndex:i] != 'g')&&([fnkt characterAtIndex:i] != 'l')&&([fnkt characterAtIndex:i] != 'x')&&([fnkt characterAtIndex:i] != '+')&&([fnkt characterAtIndex:i] != '-')&&([fnkt characterAtIndex:i] != '*')&&([fnkt characterAtIndex:i] != '/')&&([fnkt characterAtIndex:i] != '%')&&([fnkt characterAtIndex:i] != '.')&&([fnkt characterAtIndex:i] != '^')&&([fnkt characterAtIndex:i] != '(')&&([fnkt characterAtIndex:i] != ')')){
             return FALSE;
@@ -798,7 +798,7 @@
         
     }
     
-    if (klammern!=0) {
+    if (braces!=0) {
         return FALSE;
     }
     
@@ -813,14 +813,15 @@
     zahl=[NSString stringWithFormat:@"(%@)",zahl];
     funktion=[funktion stringByReplacingOccurrencesOfString:@"x" withString:zahl];
     funktion=[funktion stringByReplacingOccurrencesOfString:@"e" withString:@"2.71828182846"];
-    [self potenz];
+    funktion=[funktion stringByReplacingOccurrencesOfString:@"π" withString:@"3.141"];
+    [self power];
     [self cosinus];
-    [self tangenz];
+    [self tangent];
     [self sinus];
-    [self prozent];
+    [self percent];
     [self loga];
     [self loga10];
-    [self wurzel];
+    [self root];
     double rueck=[self ParseExpr];
     return rueck;
 }

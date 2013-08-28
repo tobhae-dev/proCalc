@@ -13,9 +13,27 @@
 float data[(kDefaultGraphWidth/kStepX)*10];
 float Ytext[(kGraphHeight/kStepY)*10];
 float Xtext[(kDefaultGraphWidth/kStepX)*10];
+
 @implementation GraphDrawingView
 
-- (void)setup
+- (void)setup:(NSString *)expr
+{
+    double zahl;
+    Parser *parser=[[Parser alloc] init];
+   NSString *gleichung=expr;
+    if ([parser control:gleichung] && gleichung.length>0) {
+        for (int i=0; i<=kDefaultGraphWidth/kStepX*10; i++) {
+            NSString *xwerte=[NSString stringWithFormat:@"%f", Xtext[i]];
+            zahl=[parser xReplace:gleichung xwert:xwerte];
+            data[i]=zahl;
+            
+        } 
+    }
+
+  
+}
+
+- (void)awakeFromNib
 {
     double startY=-1*(((kGraphHeight/kStepY)+2)/2);
     double startX=-1*(((kDefaultGraphWidth/kStepX)+2)/2);
@@ -27,30 +45,13 @@ float Xtext[(kDefaultGraphWidth/kStepX)*10];
         Xtext[i]=startX;
         startX=startX+0.1;
     }
-    
-    double zahl;
-    Parser *parser=[[Parser alloc] init];
-   NSString *gleichung=@"e^x";
-    for (int i=0; i<=kDefaultGraphWidth/kStepX*10; i++) {
-        NSString *xwerte=[NSString stringWithFormat:@"%f", Xtext[i]];
-        zahl=[parser xReplace:gleichung xwert:xwerte];
-        data[i]=zahl;
-
-    }
-  
-}
-
-- (void)awakeFromNib
-{
-    NSLog(@"bla");
-    [self setup];
 }
 
 - (id)initWithFrame:(CGRect)frame
 {
-    self = [super initWithFrame:frame];
-    [self setup];
-    return self;
+    //self = [super initWithFrame:frame];
+    //[self setup:@"0"];
+    //return self;
 }
 
 // Drawing a function

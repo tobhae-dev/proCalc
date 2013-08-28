@@ -17,13 +17,13 @@
 - (double) ParseFactor;
 - (double) ParseTerm;
 - (double) ParseNumber;
-- (void) potenz;
+- (void) power;
 - (void) cosinus;
 - (void) sinus;
-- (void) tangenz;
-- (void) prozent;
-- (void) wurzel;
+- (void) tangent;
+- (void) percent;
+- (void) root;
 - (void) loga;
 - (void) loga10;
--(bool) kontrolle:(NSString *)fnkt;
+-(bool) control:(NSString *)fnkt;
 @end

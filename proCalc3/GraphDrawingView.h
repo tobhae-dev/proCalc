@@ -22,7 +22,9 @@
 #define kOffsetY 0
 
 
-@interface GraphDrawingView : UIView
-
+@interface GraphDrawingView : UIView{
+}
+- (void)setup:(NSString *)expr;
 @end
+
 

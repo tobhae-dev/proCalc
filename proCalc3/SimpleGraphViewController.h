@@ -11,6 +11,7 @@
 
 @interface SimpleGraphViewController : UIViewController <UIScrollViewDelegate>
 
+
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet GraphDrawingView *zeichnung;
 @property (weak, nonatomic) IBOutlet UITextField *gleichungsText;

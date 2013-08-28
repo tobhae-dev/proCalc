@@ -707,9 +707,14 @@
     double zahl;
     Parser *parser=[[Parser alloc] init];
     NSString *expression = self.computationDisplay.text;
-    if([parser kontrolle:expression]){
+    if([parser control:expression]){
         zahl=[parser xReplace:expression xwert:@"1"];
-        self.inputAndAnswerDisplay.text=[NSString stringWithFormat:@"%f", zahl];
+        if (zahl!=INFINITY) {
+           self.inputAndAnswerDisplay.text=[NSString stringWithFormat:@"%f", zahl];
+        }
+        else{
+            self.inputAndAnswerDisplay.text=[NSString stringWithFormat:@"Division durch Null"];
+        }
     }else{
         self.inputAndAnswerDisplay.text=[NSString stringWithFormat:@"Die Funktion ist ungültig"];
     }

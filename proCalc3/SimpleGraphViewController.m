@@ -18,7 +18,8 @@
 
 - (IBAction)funktionZeichnen:(id)sender {
     
-    NSLog(@"Testausgabe");
+    [self.zeichnung setup:self.gleichungsText.text];
+    [self.zeichnung setNeedsDisplay];
 }
 
 - (IBAction)textFieldDoneEditing:(id)sender{
