@@ -22,7 +22,7 @@
         c++;
     }
     funktion =[funktion substringFromIndex:c];
-    
+    NSLog(@"Funktion:%@",funktion);
     return [numberTemp doubleValue];
 }
 
@@ -45,7 +45,7 @@
             op -= op1;
         }
     }
-    
+    NSLog(@"Funktion:%@",funktion);
     return op;
 }
 
@@ -68,6 +68,7 @@
             return returnValue;
         }
     }
+    NSLog(@"Funktion:%@",funktion);
     return returnValue;
 }
 
@@ -92,7 +93,7 @@
             op /= op1;
         }
     }
-    NSLog(@"Funktion:%@",funktion);
+    
     return op;
 }
 
@@ -826,7 +827,6 @@
     [self loga10];
     [self root];
     double rueck=[self ParseExpr];
-
     return rueck;
 }
 @end

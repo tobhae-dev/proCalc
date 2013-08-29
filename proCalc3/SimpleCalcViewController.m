@@ -707,6 +707,7 @@
     double zahl;
     Parser *parser=[[Parser alloc] init];
     NSString *expression = self.computationDisplay.text;
+    expression=@"8/9-6+3*9";
     if([parser control:expression]){
         zahl=[parser xReplace:expression xwert:@"1"];
         if (zahl!=INFINITY) {
