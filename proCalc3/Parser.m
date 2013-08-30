@@ -22,7 +22,7 @@
         c++;
     }
     funktion =[funktion substringFromIndex:c];
-    NSLog(@"Funktion:%@",funktion);
+
     return [numberTemp doubleValue];
 }
 
@@ -34,6 +34,7 @@
     {
         if ([funktion characterAtIndex:0]== '+')
         {
+            
             funktion =[funktion substringFromIndex:1];
             op1=[self ParseExpr];
             op += op1;
@@ -41,11 +42,11 @@
         else if ([funktion characterAtIndex:0]=='-')
         {
             funktion =[funktion substringFromIndex:1];
-            op1= [self ParseExpr];
+            op1= [self ParseFactor];
             op -= op1;
+            op+=[self ParseExpr];
         }
     }
-    NSLog(@"Funktion:%@",funktion);
     return op;
 }
 
@@ -68,7 +69,6 @@
             return returnValue;
         }
     }
-    NSLog(@"Funktion:%@",funktion);
     return returnValue;
 }
 
@@ -815,6 +815,7 @@
 
     funktion=[expr stringByReplacingOccurrencesOfString:@" " withString:@""];
     zahl=[NSString stringWithFormat:@"(%@)",zahl];
+    funktion=[funktion stringByReplacingOccurrencesOfString:@"--" withString:@"+"];
     funktion=[funktion stringByReplacingOccurrencesOfString:@"x" withString:zahl];
     funktion=[funktion stringByReplacingOccurrencesOfString:@"e" withString:@"2.71828182846"];
     funktion=[funktion stringByReplacingOccurrencesOfString:@"π" withString:@"3.141"];
