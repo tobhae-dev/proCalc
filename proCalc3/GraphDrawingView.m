@@ -51,7 +51,7 @@ float Xtext[(kDefaultGraphWidth/kStepX)*10];
 {
     //self = [super initWithFrame:frame];
     //[self setup:@"0"];
-    //return self;
+   return self;
 }
 
 // Drawing a function
