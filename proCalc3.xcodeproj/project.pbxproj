@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		0E0A7C4217A3CF1E00009876 /* calculator.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E0A7C4117A3CF1E00009876 /* calculator.png */; };
 		0E0A7C4417A3D06000009876 /* vector.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E0A7C4317A3D06000009876 /* vector.png */; };
-		0E0A7C4717A3DCE800009876 /* GraphDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0A7C4617A3DCE800009876 /* GraphDrawingView.m */; };
+		0E0A7C4717A3DCE800009876 /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E0A7C4617A3DCE800009876 /* GraphView.m */; };
+		0E27060D17D9CEBE00518EC5 /* digital-7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0E27060C17D9CEBE00518EC5 /* digital-7.ttf */; };
+		0E27061017DC9EAC00518EC5 /* AxesDrawer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E27060F17DC9EAC00518EC5 /* AxesDrawer.m */; };
 		0E2FCD4D17D711B1006ED5BB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E2FCD4C17D711B1006ED5BB /* Default.png */; };
 		0E2FCD4F17D711BA006ED5BB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E2FCD4E17D711BA006ED5BB /* Default@2x.png */; };
 		0E2FCD5117D711C0006ED5BB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E2FCD5017D711C0006ED5BB /* Default-568h@2x.png */; };
@@ -21,7 +23,7 @@
 		0E7A0D7E1799C1C20057DB09 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7A0D7D1799C1C20057DB09 /* AppDelegate.m */; };
 		0E7A0D871799C1C20057DB09 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E7A0D851799C1C20057DB09 /* MainStoryboard.storyboard */; };
 		0E7A0D8A1799C1C20057DB09 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E7A0D891799C1C20057DB09 /* ViewController.m */; };
-		0EA17ABD17A308F700812C60 /* SimpleCalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA17ABC17A308F700812C60 /* SimpleCalcViewController.m */; };
+		0EA17ABD17A308F700812C60 /* CalcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA17ABC17A308F700812C60 /* CalcViewController.m */; };
 		0EA17AD617A311E400812C60 /* proCalc_4Funct_smpl.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA17AC717A311E400812C60 /* proCalc_4Funct_smpl.png */; };
 		0EA17AD717A311E400812C60 /* proCalc_4Funct_smpl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA17AC817A311E400812C60 /* proCalc_4Funct_smpl@2x.png */; };
 		0EA17AD817A311E400812C60 /* proCalc_ClearButtons_smpl.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA17AC917A311E400812C60 /* proCalc_ClearButtons_smpl.png */; };
@@ -36,7 +38,7 @@
 		0EA17AE117A311E400812C60 /* proCalc_specFunct_smpl.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA17AD217A311E400812C60 /* proCalc_specFunct_smpl.png */; };
 		0EA17AE217A311E400812C60 /* proCalc_specFunct_smpl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA17AD317A311E400812C60 /* proCalc_specFunct_smpl@2x.png */; };
 		0EA17AE517A3137C00812C60 /* proCalc_NumberButton_smpl@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA17AE417A3137C00812C60 /* proCalc_NumberButton_smpl@2x.png */; };
-		0EA17AE817A3185D00812C60 /* SimpleGraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA17AE717A3185D00812C60 /* SimpleGraphViewController.m */; };
+		0EA17AE817A3185D00812C60 /* GraphViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA17AE717A3185D00812C60 /* GraphViewController.m */; };
 		0EA17AF117A3197C00812C60 /* Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA17AF017A3197C00812C60 /* Parser.m */; };
 		0EA17AF917A3231600812C60 /* PCappicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA17AF817A3231600812C60 /* PCappicon.png */; };
 		0EA17AFB17A3232800812C60 /* PCappicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0EA17AFA17A3232800812C60 /* PCappicon@2x.png */; };
@@ -45,8 +47,11 @@
 /* Begin PBXFileReference section */
 		0E0A7C4117A3CF1E00009876 /* calculator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calculator.png; sourceTree = "<group>"; };
 		0E0A7C4317A3D06000009876 /* vector.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vector.png; sourceTree = "<group>"; };
-		0E0A7C4517A3DCE800009876 /* GraphDrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphDrawingView.h; sourceTree = "<group>"; };
-		0E0A7C4617A3DCE800009876 /* GraphDrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphDrawingView.m; sourceTree = "<group>"; };
+		0E0A7C4517A3DCE800009876 /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphView.h; sourceTree = "<group>"; };
+		0E0A7C4617A3DCE800009876 /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphView.m; sourceTree = "<group>"; };
+		0E27060C17D9CEBE00518EC5 /* digital-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "digital-7.ttf"; sourceTree = "<group>"; };
+		0E27060E17DC9EAC00518EC5 /* AxesDrawer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AxesDrawer.h; sourceTree = "<group>"; };
+		0E27060F17DC9EAC00518EC5 /* AxesDrawer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AxesDrawer.m; sourceTree = "<group>"; };
 		0E2FCD4C17D711B1006ED5BB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		0E2FCD4E17D711BA006ED5BB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		0E2FCD5017D711C0006ED5BB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -63,8 +68,8 @@
 		0E7A0D861799C1C20057DB09 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		0E7A0D881799C1C20057DB09 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		0E7A0D891799C1C20057DB09 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		0EA17ABB17A308F700812C60 /* SimpleCalcViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleCalcViewController.h; sourceTree = "<group>"; };
-		0EA17ABC17A308F700812C60 /* SimpleCalcViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleCalcViewController.m; sourceTree = "<group>"; };
+		0EA17ABB17A308F700812C60 /* CalcViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalcViewController.h; sourceTree = "<group>"; };
+		0EA17ABC17A308F700812C60 /* CalcViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalcViewController.m; sourceTree = "<group>"; };
 		0EA17AC717A311E400812C60 /* proCalc_4Funct_smpl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = proCalc_4Funct_smpl.png; sourceTree = "<group>"; };
 		0EA17AC817A311E400812C60 /* proCalc_4Funct_smpl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "proCalc_4Funct_smpl@2x.png"; sourceTree = "<group>"; };
 		0EA17AC917A311E400812C60 /* proCalc_ClearButtons_smpl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = proCalc_ClearButtons_smpl.png; sourceTree = "<group>"; };
@@ -79,8 +84,8 @@
 		0EA17AD217A311E400812C60 /* proCalc_specFunct_smpl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = proCalc_specFunct_smpl.png; sourceTree = "<group>"; };
 		0EA17AD317A311E400812C60 /* proCalc_specFunct_smpl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "proCalc_specFunct_smpl@2x.png"; sourceTree = "<group>"; };
 		0EA17AE417A3137C00812C60 /* proCalc_NumberButton_smpl@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "proCalc_NumberButton_smpl@2x.png"; sourceTree = "<group>"; };
-		0EA17AE617A3185D00812C60 /* SimpleGraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleGraphViewController.h; sourceTree = "<group>"; };
-		0EA17AE717A3185D00812C60 /* SimpleGraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleGraphViewController.m; sourceTree = "<group>"; };
+		0EA17AE617A3185D00812C60 /* GraphViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphViewController.h; sourceTree = "<group>"; };
+		0EA17AE717A3185D00812C60 /* GraphViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphViewController.m; sourceTree = "<group>"; };
 		0EA17AEF17A3197C00812C60 /* Parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
 		0EA17AF017A3197C00812C60 /* Parser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parser.m; sourceTree = "<group>"; };
 		0EA17AF817A3231600812C60 /* PCappicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PCappicon.png; path = ../PCappicon.png; sourceTree = "<group>"; };
@@ -101,6 +106,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E27060B17D9CEBE00518EC5 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0E27060C17D9CEBE00518EC5 /* digital-7.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		0E7A0D611799C1C20057DB09 = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +150,7 @@
 				0E7A0D851799C1C20057DB09 /* MainStoryboard.storyboard */,
 				0E7A0D881799C1C20057DB09 /* ViewController.h */,
 				0E7A0D891799C1C20057DB09 /* ViewController.m */,
+				0E27060B17D9CEBE00518EC5 /* fonts */,
 				0EA17AE317A311F100812C60 /* Icons */,
 				0EA17AE917A3192100812C60 /* Model */,
 				0EA17ABA17A308B700812C60 /* Views */,
@@ -161,12 +175,14 @@
 		0EA17ABA17A308B700812C60 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0EA17ABB17A308F700812C60 /* SimpleCalcViewController.h */,
-				0EA17ABC17A308F700812C60 /* SimpleCalcViewController.m */,
-				0EA17AE617A3185D00812C60 /* SimpleGraphViewController.h */,
-				0EA17AE717A3185D00812C60 /* SimpleGraphViewController.m */,
-				0E0A7C4517A3DCE800009876 /* GraphDrawingView.h */,
-				0E0A7C4617A3DCE800009876 /* GraphDrawingView.m */,
+				0EA17ABB17A308F700812C60 /* CalcViewController.h */,
+				0EA17ABC17A308F700812C60 /* CalcViewController.m */,
+				0EA17AE617A3185D00812C60 /* GraphViewController.h */,
+				0EA17AE717A3185D00812C60 /* GraphViewController.m */,
+				0E0A7C4517A3DCE800009876 /* GraphView.h */,
+				0E0A7C4617A3DCE800009876 /* GraphView.m */,
+				0E27060E17DC9EAC00518EC5 /* AxesDrawer.h */,
+				0E27060F17DC9EAC00518EC5 /* AxesDrawer.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -279,6 +295,7 @@
 				0E2FCD4D17D711B1006ED5BB /* Default.png in Resources */,
 				0E2FCD4F17D711BA006ED5BB /* Default@2x.png in Resources */,
 				0E2FCD5117D711C0006ED5BB /* Default-568h@2x.png in Resources */,
+				0E27060D17D9CEBE00518EC5 /* digital-7.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,10 +309,11 @@
 				0E7A0D7A1799C1C20057DB09 /* main.m in Sources */,
 				0E7A0D7E1799C1C20057DB09 /* AppDelegate.m in Sources */,
 				0E7A0D8A1799C1C20057DB09 /* ViewController.m in Sources */,
-				0EA17ABD17A308F700812C60 /* SimpleCalcViewController.m in Sources */,
-				0EA17AE817A3185D00812C60 /* SimpleGraphViewController.m in Sources */,
+				0EA17ABD17A308F700812C60 /* CalcViewController.m in Sources */,
+				0EA17AE817A3185D00812C60 /* GraphViewController.m in Sources */,
 				0EA17AF117A3197C00812C60 /* Parser.m in Sources */,
-				0E0A7C4717A3DCE800009876 /* GraphDrawingView.m in Sources */,
+				0E0A7C4717A3DCE800009876 /* GraphView.m in Sources */,
+				0E27061017DC9EAC00518EC5 /* AxesDrawer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

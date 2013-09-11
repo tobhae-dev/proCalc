@@ -1,5 +1,5 @@
 //
-//  SimpleGraphViewController.h
+//  GraphViewController.h
 //  proCalc3
 //
 //  Created by Tobias Hähnel on 26.07.13.
@@ -7,17 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GraphDrawingView.h"
+#import "GraphView.h"
 
-@interface SimpleGraphViewController : UIViewController <UIScrollViewDelegate>
+@interface GraphViewController : UIViewController
 
 
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) IBOutlet GraphDrawingView *zeichnung;
+//@property (weak, nonatomic) IBOutlet GraphView *graphView;
 @property (weak, nonatomic) IBOutlet UITextField *gleichungsText;
 @property (weak, nonatomic) IBOutlet UIButton *zeichenButton;
+@property (nonatomic, strong) id program;
 
 - (IBAction)textFieldDoneEditing:(id)sender;
+- (void)refreshProgramDependancies;
 
 @end
 

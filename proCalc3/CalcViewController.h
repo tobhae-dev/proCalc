@@ -1,5 +1,5 @@
 //
-//  SimpleCalcViewController.h
+//  CalcViewController.h
 //  proCalc3
 //
 //  Created by Tobias Hähnel on 26.07.13.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SimpleCalcViewController : UIViewController
+@interface CalcViewController : UIViewController
 
 
 @end
