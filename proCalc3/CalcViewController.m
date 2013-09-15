@@ -638,26 +638,24 @@
 - (IBAction)clearTheDisplays:(UIButton *)sender
 {
     if (!self.isUserPressingShift) {
-        if ([self.inputAndAnswerDisplay.text isEqual: @"0"]) {
+        if ([self.inputAndAnswerDisplay.text isEqual: @""]) {
             _computationDisplay.text = @"";
         }
-        _inputAndAnswerDisplay.text = @"0";
+        _inputAndAnswerDisplay.text = @"";
         NSLog(@"ACC");
         
     } else {
+        if (_computationDisplay.text.length>0) {
         NSString *expression;
         expression = self.computationDisplay.text;
         expression = [expression substringToIndex:expression.length-1];
         _computationDisplay.text = expression;
-        NSLog(@"Pfeil");
+}
     }
 }
 
 #pragma mark - Simple Calculations
 
-// TODO
-// n-te Wurzel mit pow(double, double) aus <cmath> ,zb: 4te Wurzel aus 81 : pow(81.0, 1.0/4.0)
-// Division durch 0 ?
 
 - (IBAction)userPressedMathematicalOperation:(UIButton *)sender
 {
@@ -668,14 +666,19 @@
         _computationDisplay.text = [_computationDisplay.text stringByAppendingString:@"/"];
     }
     else if ([sender.currentTitle isEqualToString:@"."]) {
-        // In a floating point Number, one Comma only is allowed. Therefor, we have to check the input.
-        if ([_inputAndAnswerDisplay.text rangeOfString:@"."].location == NSNotFound) {
-            _inputAndAnswerDisplay.text = [_inputAndAnswerDisplay.text stringByAppendingString:@"."];
             _computationDisplay.text = [_computationDisplay.text stringByAppendingString:@"."];
-        }
     }
     else if ([sender.currentTitle isEqualToString:@"±"]) {
-        self.computationDisplay.text=[self.computationDisplay.text stringByAppendingString:@"-"];
+        if((self.computationDisplay.text.length>0)&&([self.computationDisplay.text characterAtIndex:0]=='-')&& ([self.computationDisplay.text characterAtIndex:1]=='(')){
+            self.computationDisplay.text=[self.computationDisplay.text substringFromIndex:2];
+            }else{
+        if (_inputAndAnswerDisplay.text.length!=0) {
+        self.computationDisplay.text=[NSString stringWithFormat:@"-(%@",_inputAndAnswerDisplay.text];
+        _inputAndAnswerDisplay.text=@"";
+            }else{
+            self.computationDisplay.text=[NSString stringWithFormat:@"-(%@",self.computationDisplay.text];
+            }
+                }
     }
     else if ([sender.currentTitle isEqualToString:@"x²"]) {
         if(self.isUserPressingShift) {
@@ -707,9 +710,9 @@
     }
     else if ([sender.currentTitle isEqualToString:@"√"]) {
         if(self.isUserPressingShift) {
-            _computationDisplay.text=[_computationDisplay.text stringByAppendingString:@"∛"];
+            _computationDisplay.text=[_computationDisplay.text stringByAppendingString:@"∛("];
         } else {
-            _computationDisplay.text=[_computationDisplay.text stringByAppendingString:@"√"];
+            _computationDisplay.text=[_computationDisplay.text stringByAppendingString:@"√("];
         }
     }
     else if ([sender.currentTitle isEqualToString:@"tan"]) {
@@ -740,39 +743,32 @@
 }
 
 - (IBAction)solveExpression {
-    
-    double zahl;
-    Parser *parser=[[Parser alloc] init];
-    NSString *expression = _computationDisplay.text;
-    if([parser control:expression]){
-        zahl=[parser xReplace:expression xwert:@"1"];
-        if (zahl!=INFINITY) {
-            _inputAndAnswerDisplay.text=[NSString stringWithFormat:@"%f", zahl];
+    if (_computationDisplay.text.length>0) {
+        double zahl;
+        Parser *parser=[[Parser alloc] init];
+        NSString *expression = _computationDisplay.text;
+        expression=[expression stringByReplacingOccurrencesOfString:@"√" withString:@"sqrt"];
+        expression=[expression stringByReplacingOccurrencesOfString:@"∛" withString:@"curt"];
+        expression=[expression stringByReplacingOccurrencesOfString:@"²" withString:@"^2"];
+        expression=[expression stringByReplacingOccurrencesOfString:@"³" withString:@"^3"];
+        expression=[expression stringByReplacingOccurrencesOfString:@"π" withString:@"pi"];
+        if([parser control:expression]){
+            zahl=[parser xReplace:expression xwert:@"1"];
+            if (zahl!=INFINITY) {
+                _inputAndAnswerDisplay.text=[NSString stringWithFormat:@"%.15g", zahl];
+            }
+            else{
+                _inputAndAnswerDisplay.text=[NSString stringWithFormat:@"Division durch Null"];
+            }
+        }else{
+            _inputAndAnswerDisplay.text=[NSString stringWithFormat:@"Die Funktion ist ungültig"];
         }
-        else{
-            _inputAndAnswerDisplay.text=[NSString stringWithFormat:@"Division durch Null"];
-        }
-    }else{
-        _inputAndAnswerDisplay.text=[NSString stringWithFormat:@"Die Funktion ist ungültig"];
-    }
-}
 
-//- (IBAction)solveExpression {
-//
-//    // Weiterleitung zur Parser-Implementierung
-//    //    eval(self.computationDisplay.text);
-//
-//    //
-//    //    } else if ([self.waitingOperation isEqualToString:@"÷"]) {
-//    //        if (operant != 0.0) {
-//    //            operant = self.waitingOperant / operant;
-//    //        } else {
-//    //            NSLog(@"Fehler: Division durch Null!");
-//    //            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Division durch Null!" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-//    //            [alert show];
-//    //            return @"Fehler";
-//    //        }
-//}
+    }else{
+        _inputAndAnswerDisplay.text=@"Keine Eingabe";
+    }
+    }
+
 
 #pragma mark - Memory Functions
 
@@ -801,7 +797,7 @@
     }
     if ([sender.currentTitle isEqualToString:@"MR"]) {
         // Memory Recall -> Show on inputAndAnswerDisplay
-        _inputAndAnswerDisplay.text = [NSString stringWithFormat:@"%f", _memoryContent];
+        _inputAndAnswerDisplay.text = [NSString stringWithFormat:@"%.15g", _memoryContent];
     }
 }
 
