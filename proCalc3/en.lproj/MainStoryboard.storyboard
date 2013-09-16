@@ -596,6 +596,47 @@
         <image name="proCalc_specFunct_smpl@2x.png" width="64" height="44"/>
         <image name="vector.png" width="29" height="30"/>
     </resources>
+    <classes>
+        <class className="CalcViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CalcViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="accButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="baseAndNaturalLogButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="closeBracketAndCosButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="computationDisplay" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="divideButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="inputAndAnswerDisplay" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="inverseAndPiButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="memoryClearButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="memoryMinusButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="memoryPlusButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="memoryRecallButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="multiplyButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="numpadView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="openBracketAndSinButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="percentageAndEButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="shiftButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="squareAndCubeButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="squareAndCubeRootButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="xyAndTanButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="GraphView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphView.h"/>
+            <relationships>
+                <relationship kind="outlet" name="dataSource"/>
+            </relationships>
+        </class>
+        <class className="GraphViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GraphViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="textFieldDoneEditing:"/>
+                <relationship kind="outlet" name="gleichungsText" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="graphView" candidateClass="GraphView"/>
+                <relationship kind="outlet" name="zeichenButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
