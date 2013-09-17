@@ -11,10 +11,8 @@
 #import "GraphViewController.h"
 #import "AxesDrawer.h"
 
-float data[(kDefaultGraphWidth/kStepX)*10];
-float Ytext[(kGraphHeight/kStepY)*10];
-float Xtext[(kDefaultGraphWidth/kStepX)*10];
 
+NSString *gleichung=@"";
 @implementation GraphView
 
 @synthesize dataSource = _datasource;
@@ -27,71 +25,9 @@ float Xtext[(kDefaultGraphWidth/kStepX)*10];
 
 - (void)setup:(NSString *)expr
 {
-    double zahl;
-    Parser *parser=[[Parser alloc] init];
-   NSString *gleichung=expr;
-    if ([parser control:gleichung] && gleichung.length>0) {
-        for (int i=0; i<=kDefaultGraphWidth/kStepX*10; i++) {
-            NSString *xwerte=[NSString stringWithFormat:@"%f", Xtext[i]];
-            zahl=[parser xReplace:gleichung xwert:xwerte];
-            data[i]=zahl;
-        } 
-    }
-}
 
-// BRAUCH MAN DAS NOCH  ?!
-- (void)awakeFromNib
-{
-//    double startY=-1*(((kGraphHeight/kStepY)+2)/2);
-//    double startX=-1*(((kDefaultGraphWidth/kStepX)+2)/2);
-//    for (int i=0; i<=kGraphHeight/kStepY*10; i++) {
-//        Ytext[i]=startY*-1;
-//        startY=startY+0.1;
-//    }
-//    for (int i=0; i<=kDefaultGraphWidth/kStepX*10; i++) {
-//        Xtext[i]=startX;
-//        startX=startX+0.1;
-//    }
-}
+gleichung=expr;
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-	if (self) {
-//    [self setup:@"0"];        // MUSS DAS DRIN SEIN ?
-    }
-	return self;
-}
-
-// Drawing a function DIESE FUNKTION EVENTUELL ÜBERARBEITEN/BENUTZEN UM EINE FUNKTION ZU ZEICHNEN
-- (void)drawLineGraphWithContext:(CGContextRef)ctx
-{
-//    CGContextSetLineWidth(ctx, 1);
-//    CGContextSetStrokeColorWithColor(ctx, [[UIColor colorWithRed:1.0 green:0.5 blue:0 alpha:1.0] CGColor]);
-//    
-//    int maxGraphHeight = kGraphHeight - kOffsetY;
-//    CGContextBeginPath(ctx);
-////    CGContextMoveToPoint(ctx, kOffsetX,kGraphHeight/2- (kStepY * data[0]));
-//    
-//    CGContextMoveToPoint(ctx, kOffsetX, kGraphHeight - maxGraphHeight * data[0]);
-//    for (int i = 0; i < sizeof(data); i++)
-//    {
-////        CGContextAddLineToPoint(ctx, kOffsetX + i * kStepX/10,kGraphHeight/2- (kStepY * data[i]));
-//        CGContextAddLineToPoint(ctx, kOffsetX + i * kStepX, kGraphHeight - maxGraphHeight * data[i]);
-//    }
-//    CGContextDrawPath(ctx, kCGPathStroke);
-//    
-//    CGContextSetFillColorWithColor(ctx, [[UIColor colorWithRed:1.0 green:0.5 blue:0 alpha:1.0] CGColor]);
-//    
-//    /*
-//    for (int i = 1; i < sizeof(data) - 1; i++)
-//    {
-//        float x = kOffsetX + i * kStepX;
-//        float y = kGraphHeight/2- (kStepY * data[i]);
-//        CGRect rect = CGRectMake(x - kCircleRadius, y - kCircleRadius, 2 * kCircleRadius, 2 * kCircleRadius);
-//        CGContextAddEllipseInRect(ctx, rect);
-//    }*/
-//    CGContextDrawPath(ctx, kCGPathFillStroke);
 }
 
 - (CGFloat)scale {
@@ -151,7 +87,6 @@ float Xtext[(kDefaultGraphWidth/kStepX)*10];
 - (CGPoint)convertToGraphCoordinateFromViewCoordinate:(CGPoint)coordinate {
 	
 	CGPoint graphCoordinate;
-	
 	graphCoordinate.x = (coordinate.x - self.axisOrigin.x) / self.scale;
 	graphCoordinate.y = (self.axisOrigin.y - coordinate.y) / self.scale;
     
@@ -199,7 +134,15 @@ float Xtext[(kDefaultGraphWidth/kStepX)*10];
 		CGPoint coordinate;
 		coordinate.x = x;
 		coordinate = [self convertToGraphCoordinateFromViewCoordinate:coordinate];
-		coordinate.y = [self.dataSource YValueForXValue:coordinate.x inGraphView:self];
+     
+        double zahl;
+        Parser *parser=[[Parser alloc] init];
+        if ([parser control:gleichung] && gleichung.length>0) {
+            NSString *xwert=[NSString stringWithFormat:@"%f",coordinate.x];
+                zahl=[parser xReplace:gleichung xwert:xwert];
+                coordinate.y =zahl;
+            } 
+ 
 		coordinate = [self convertToViewCoordinateFromGraphCoordinate:coordinate];
 		coordinate.x = x;
 		

@@ -8,12 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-#define kGraphHeight 300       //Höhe Zeichenfläche
-#define kDefaultGraphWidth 900 //Breite Zeichenfläche
-#define kStepX 70              //koordinatensystem x-Abstand
-#define kStepY 50              //koordinatensystem y-Abstand
-#define kOffsetY 10             //verschiebung des in Y-Richung
-#define kOffsetX 10              //verschiebung des in X-Richung
 
 @class GraphView;
 

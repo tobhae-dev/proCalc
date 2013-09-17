@@ -91,6 +91,7 @@
             funktion =[funktion substringFromIndex:1];
             op1=[ self ParseFactor];
             op /= op1;
+            
         }
     }
     
@@ -690,7 +691,7 @@
         if([fnkt characterAtIndex:i]==')'){
             braces--;
         }
-        if(!([fnkt characterAtIndex:i] >= '0' && [fnkt characterAtIndex:i] <= '9')&&([fnkt characterAtIndex:i] != 'c')&&([fnkt characterAtIndex:i] != 'o')&&([fnkt characterAtIndex:i] != 's')&&([fnkt characterAtIndex:i] != 'i')&&([fnkt characterAtIndex:i] != 'n')&&([fnkt characterAtIndex:i] != 'q')&&([fnkt characterAtIndex:i] != 'r')&&([fnkt characterAtIndex:i] != 't')&&([fnkt characterAtIndex:i] != 'a')&&([fnkt characterAtIndex:i] != 'n')&&([fnkt characterAtIndex:i] != 'e')&&([fnkt characterAtIndex:i] != 'g')&&([fnkt characterAtIndex:i] != 'l')&&([fnkt characterAtIndex:i] != 'x')&&([fnkt characterAtIndex:i] != '+')&&([fnkt characterAtIndex:i] != '-')&&([fnkt characterAtIndex:i] != '*')&&([fnkt characterAtIndex:i] != '/')&&([fnkt characterAtIndex:i] != '%')&&([fnkt characterAtIndex:i] != '.')&&([fnkt characterAtIndex:i] != '^')&&([fnkt characterAtIndex:i] != '(')&&([fnkt characterAtIndex:i] != ')')){
+        if(!([fnkt characterAtIndex:i] >= '0' && [fnkt characterAtIndex:i] <= '9')&&([fnkt characterAtIndex:i] != 'c')&&([fnkt characterAtIndex:i] != 'o')&&([fnkt characterAtIndex:i] != 's')&&([fnkt characterAtIndex:i] != 'i')&&([fnkt characterAtIndex:i] != 'n')&&([fnkt characterAtIndex:i] != 'q')&&([fnkt characterAtIndex:i] != 'r')&&([fnkt characterAtIndex:i] != 't')&&([fnkt characterAtIndex:i] != 'a')&&([fnkt characterAtIndex:i] != 'n')&&([fnkt characterAtIndex:i] != 'e')&&([fnkt characterAtIndex:i] != 'g')&&([fnkt characterAtIndex:i] != 'l')&&([fnkt characterAtIndex:i] != 'x')&&([fnkt characterAtIndex:i] != '+')&&([fnkt characterAtIndex:i] != '-')&&([fnkt characterAtIndex:i] != '*')&&([fnkt characterAtIndex:i] != '/')&&([fnkt characterAtIndex:i] != '%')&&([fnkt characterAtIndex:i] != '.')&&([fnkt characterAtIndex:i] != '^')&&([fnkt characterAtIndex:i] != '(')&&([fnkt characterAtIndex:i] != ')')&&([fnkt characterAtIndex:i] != 'p')&&([fnkt characterAtIndex:i] != 'i')&&([fnkt characterAtIndex:i] != 'u')){
             return FALSE;
         }
         switch ([fnkt characterAtIndex:i])
@@ -710,12 +711,12 @@
                 }
                 break;
             case 'c':
-                if ([fnkt characterAtIndex:i+1] != 'o') {
+                if (([fnkt characterAtIndex:i+1] != 'o')&&([fnkt characterAtIndex:i+1] != 'u')) {
                     return FALSE;
                 }
                 break;
             case 'o':
-                if ([fnkt characterAtIndex:i+1] != 's'&&([fnkt characterAtIndex:i+1] != 'g')) {
+                if (([fnkt characterAtIndex:i+1] != 's')&&([fnkt characterAtIndex:i+1] != 'g')) {
                     return FALSE;
                 }
                 break;
@@ -730,7 +731,7 @@
                 }
                 break;
             case 'i':
-                if (([fnkt characterAtIndex:i+1] != 'n')) {
+                if (([fnkt characterAtIndex:i+1] != 'n')&&([fnkt characterAtIndex:i+1] != '+')&&([fnkt characterAtIndex:i+1] != '-')&&([fnkt characterAtIndex:i+1] != '*')&&([fnkt characterAtIndex:i+1] != '/')&&([fnkt characterAtIndex:i+1] != '^')&&([fnkt characterAtIndex:i+1] != ')')) {
                     return FALSE;
                 }
                 break;
@@ -746,6 +747,16 @@
                 break;
             case 'r':
                 if ([fnkt characterAtIndex:i+1] != 't') {
+                    return FALSE;
+                }
+                break;
+            case 'u':
+                if ([fnkt characterAtIndex:i+1] != 'r') {
+                    return FALSE;
+                }
+                break;
+            case 'p':
+                if ([fnkt characterAtIndex:i+1] != 'i') {
                     return FALSE;
                 }
                 break;
@@ -770,7 +781,7 @@
             case '*':
             case '/':
             case'(':
-                if (!([fnkt characterAtIndex:i+1] >= '0' && [fnkt characterAtIndex:i+1] <= '9')&&([fnkt characterAtIndex:i+1] != 'c')&&([fnkt characterAtIndex:i+1] != 't')&&([fnkt characterAtIndex:i+1] != 's')&&([fnkt characterAtIndex:i+1] != 'e')&&([fnkt characterAtIndex:i+1] != 'x')&&([fnkt characterAtIndex:i+1] != '(')&&([fnkt characterAtIndex:i+1] != '+')&&([fnkt characterAtIndex:i+1] != '-')) {
+                if (!([fnkt characterAtIndex:i+1] >= '0' && [fnkt characterAtIndex:i+1] <= '9')&&([fnkt characterAtIndex:i+1] != 'c')&&([fnkt characterAtIndex:i+1] != 't')&&([fnkt characterAtIndex:i+1] != 'p')&&([fnkt characterAtIndex:i+1] != 's')&&([fnkt characterAtIndex:i+1] != 'e')&&([fnkt characterAtIndex:i+1] != 'x')&&([fnkt characterAtIndex:i+1] != '(')&&([fnkt characterAtIndex:i+1] != '+')&&([fnkt characterAtIndex:i+1] != '-')&&([fnkt characterAtIndex:i+1] != 'l')) {
                     return FALSE;
                 }
                 break;
@@ -808,6 +819,195 @@
     return TRUE;
 }
 
+-(void) curt
+{
+    int i=0;
+    int x=0;
+    int y=0;
+    int count=0;
+    int braces=1;
+    
+    NSString *term=@"";
+    double result=0;
+    double value=0;
+    
+    while (i < funktion.length )
+    {
+        if(([funktion characterAtIndex:i]=='c')&&([funktion characterAtIndex:i+1]=='u')){
+            count++;
+        }
+        i++;
+    }
+    for(int t=count;t>0;t--){
+        i=0;
+        x=0;
+        y=0;
+        braces=1;
+        result=0;
+        term=@"";
+        
+        while ((i < funktion.length ) && ([funktion characterAtIndex:i]!='c'))
+        {
+            i++;
+            y=i;
+        }
+        
+        for (int c=i+5; (c < funktion.length) & (braces>0); c++)
+        {
+            if([funktion characterAtIndex:c]=='('){
+                braces++;
+            }
+            if([funktion characterAtIndex:c]==')'){
+                braces--;
+            }
+            
+            term = [NSString stringWithFormat:@"%@%c", term,[funktion characterAtIndex:c]];
+            x=c;
+        }
+        
+        term=[term substringToIndex:term.length-1];
+        Parser *bla=[[Parser alloc] init];
+        value=[bla xReplace:term xwert:(@"1")];
+        float up=0.333333333333;
+        result=pow(value, up);
+        NSLog(@"%f",result);
+        funktion=[NSString stringWithFormat:@"%@(%f)%@",[funktion substringToIndex:y],result,[funktion substringFromIndex:x+1]];
+        t=0;
+        i=0;
+        while (i < funktion.length-1 )
+        {
+            if(([funktion characterAtIndex:i]=='c')&&([funktion characterAtIndex:i+1]=='u')){
+                t++;
+            }
+            i++;
+        }
+        t++;
+    }
+}
+-(void) div
+{
+    int i=0;
+    int x=0;
+    int y=0;
+    int count=0;
+    int braces=0;
+    
+    NSString *term=@"";
+    funktion=[NSString stringWithFormat:@"+%@",funktion ];
+    while (i < funktion.length )
+    {
+        if([funktion characterAtIndex:i]=='/'){
+            count++;
+        }
+        i++;
+    }
+    i=0;
+    for(int t=count;t>0;t--){
+        x=0;//start
+        y=0;//end
+        braces=0;
+        
+        term=@"";
+        while ((i < funktion.length ) && ([funktion characterAtIndex:i]!='/'))
+        {
+            i++;
+        }
+        
+        for (int c=i+1; ((c < funktion.length)&&(([funktion characterAtIndex:c]!='+')&&([funktion characterAtIndex:c]!='-')&&([funktion characterAtIndex:c]!='*')&&([funktion characterAtIndex:c]!='/')))|((braces>0)&&(c < funktion.length)); c++)
+        {
+            if([funktion characterAtIndex:c]=='('){
+                braces++;
+            }
+            if([funktion characterAtIndex:c]==')'){
+                braces--;
+            }
+            x=c;
+            
+        }
+
+        for (int t=i-1; ((t >0) &&(([funktion characterAtIndex:t]!='+')&&([funktion characterAtIndex:t]!='-')&&([funktion characterAtIndex:t]!='*')&&([funktion characterAtIndex:t]!='/')))|((braces>0)&&(t >0)); t--)
+        {
+            if([funktion characterAtIndex:t]=='('){
+                braces--;
+            }
+            if([funktion characterAtIndex:t]==')'){
+                braces++;
+            }
+            y=t;
+        }
+
+        NSString *term=funktion;
+        term=[term substringToIndex:x+1];
+
+        
+        term=[term substringFromIndex:y];
+       funktion=[NSString stringWithFormat:@"%@(%@)%@",[funktion substringToIndex:y],term,[funktion substringFromIndex:x+1]];
+
+        i=x+2;
+    }
+}
+
+-(void) sub
+{
+    int i=0;
+    int x=0;
+    int y=0;
+    int count=0;
+    int braces=0;
+    
+    NSString *term=@"";
+    while (i < funktion.length )
+    {
+        if((([funktion characterAtIndex:i]=='/')|([funktion characterAtIndex:i]=='*'))&& ([funktion characterAtIndex:i+1]=='-')){
+            count++;
+        }
+        i++;
+    }
+    i=0;
+    for(int t=count;t>0;t--){
+        x=0;//start
+        y=0;//end
+        braces=0;
+        
+        term=@"";
+        while ((i < funktion.length ) && ((([funktion characterAtIndex:i]!='/')|([funktion characterAtIndex:i]!='*'))&& ([funktion characterAtIndex:i+1]!='-')))
+        {
+            i++;
+        }
+        NSLog(@"I:%i",i);
+        for (int c=i+2; ((c < funktion.length)&&(([funktion characterAtIndex:c]!='+')&&([funktion characterAtIndex:c]!='-')&&([funktion characterAtIndex:c]!='*')&&([funktion characterAtIndex:c]!='/')))|((braces>0)&&(c < funktion.length)); c++)
+        {
+            if([funktion characterAtIndex:c]=='('){
+                braces++;
+            }
+            if([funktion characterAtIndex:c]==')'){
+                braces--;
+            }
+            x=c;
+            
+        }
+        
+        for (int t=i-1; ((t >0) &&(([funktion characterAtIndex:t]!='+')&&([funktion characterAtIndex:t]!='-')&&([funktion characterAtIndex:t]!='*')&&([funktion characterAtIndex:t]!='/')))|((braces>0)&&(t >0)); t--)
+        {
+            if([funktion characterAtIndex:t]=='('){
+                braces--;
+            }
+            if([funktion characterAtIndex:t]==')'){
+                braces++;
+            }
+            y=t;
+        }
+        
+        NSString *term=funktion;
+        term=[term substringToIndex:x+1];
+        
+        
+        term=[term substringFromIndex:i+1];
+        funktion=[NSString stringWithFormat:@"%@(%@)%@",[funktion substringToIndex:i+1],term,[funktion substringFromIndex:x+1]];
+        NSLog(@"Funktion:%@",funktion);
+        i=x+2;
+    }
+}
 
 //startfunktion
 - (double) xReplace:(NSString *)expr xwert:(NSString*)zahl
@@ -817,8 +1017,9 @@
     zahl=[NSString stringWithFormat:@"(%@)",zahl];
     funktion=[funktion stringByReplacingOccurrencesOfString:@"--" withString:@"+"];
     funktion=[funktion stringByReplacingOccurrencesOfString:@"x" withString:zahl];
-    funktion=[funktion stringByReplacingOccurrencesOfString:@"e" withString:@"2.71828182846"];
-    funktion=[funktion stringByReplacingOccurrencesOfString:@"π" withString:@"3.141"];
+    funktion=[funktion stringByReplacingOccurrencesOfString:@"e" withString:@"2.71828182845904523536028"];
+    funktion=[funktion stringByReplacingOccurrencesOfString:@"pi" withString:@"3.14159265358979323846264"];   
+    [self curt];
     [self power];
     [self cosinus];
     [self tangent];
@@ -827,6 +1028,8 @@
     [self loga];
     [self loga10];
     [self root];
+    [self sub];
+    [self div];
     double rueck=[self ParseExpr];
     return rueck;
 }

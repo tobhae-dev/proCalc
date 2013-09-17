@@ -24,7 +24,8 @@
 }
 
 - (IBAction)funktionZeichnen:(id)sender {
-    
+
+    self.gleichungsText.text=[self.gleichungsText.text stringByReplacingOccurrencesOfString:@"X" withString:@"x"];
     [_graphView setup:self.gleichungsText.text];
     [_graphView setNeedsDisplay];
 }
